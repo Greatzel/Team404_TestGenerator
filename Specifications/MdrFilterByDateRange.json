@@ -1,0 +1,144 @@
+{
+	"Name": "MdrFilterByDateRange",
+	"Text": "Issue MDR commands that are filtered by date range",
+	"CoverageGroups": [{
+		"Name": "Pairwise14",
+		"Parameters": ["RangeStartDate", "RangeEndDate"]
+	}],
+	"InputParameters": {
+		"RangeStartDate": {
+			"Name": "RangeStartDate",
+			"Text": "Starting date of the range",
+			"EquivalenceClasses": {
+				"DeepPast": {
+					"Name": "DeepPast",
+					"Text": "02/01/2018"
+				},
+				"Past": {
+					"Name": "Past",
+					"Text": "02/12/2018"
+				},
+				"JustBefore": {
+					"Name": "JustBefore",
+					"Text": "02/15/2018"
+				},
+				"Date1": {
+					"Name": "Date1",
+					"Text": "02/16/2018"
+				},
+				"BetweenDate1Date2": {
+					"Name": "BetweenDate1Date2",
+					"Text": "02/17/2018",
+				},
+				"Date2": {
+					"Name": "Date2",
+					"Text": "02/19/2018"
+				},
+				"Date3": {
+					"Name": "Date3",
+					"Text": "02/20/2018"
+				},
+				"Date4": {
+					"Name": "Date4",
+					"Text": "02/21/2018"
+				},
+				"JustAfter": {
+					"Name": "JustAfter",
+					"Text": "02/22/2018"
+				},
+				"WayAfter": {
+					"Name": "WayAfter",
+					"Text": "02/28/2018"
+				}
+			}
+		},
+		"RangeEndDate": {
+			"Name": "RangeEndDate",
+			"Text": "Ending date of the range",
+			"EquivalenceClasses": {
+				"Past": {
+					"Name": "Past",
+					"Text": "02/14/2018",
+					"Condition": "RangeStartDate = DeepPast or RangeStartDate = Past"
+				},
+				"JustBefore": {
+					"Name": "JustBefore",
+					"Text": "02/15/2018",
+					"Condition": "RangeStartDate = Past"
+				},
+				"Date1": {
+					"Name": "Date1",
+					"Text": "02/16/2018",
+					"Condition": "RangeStartDate = Past"
+				},
+				"BetweenDate1Date2": {
+					"Name": "BetweenDate1Date2",
+					"Text": "02/18/2018",
+					"Condition": "RangeStartDate = Date1 or RangeStartDate = BetweenDate1Date2"
+				},
+				"Date2": {
+					"Name": "Date2",
+					"Text": "02/19/2018",
+					"Condition": "RangeStartDate = Past"
+				},
+				"Date3": {
+					"Name": "Date3",
+					"Text": "02/20/2018",
+					"Condition": "RangeStartDate = Date1 or RangeStartDate = Date2"
+				},
+				"Date4": {
+					"Name": "Date4",
+					"Text": "02/21/2018",
+					"Condition": "RangeStartDate = Past or RangeStartDate = Date1 or RangeStartDate = Date2 or RangeStartDate = Date3"
+				},
+				"JustAfter": {
+					"Name": "JustAfter",
+					"Text": "02/23/2018",
+					"Condition": "RangeStartDate = Date4"
+				},
+				"WayAfter": {
+					"Name": "WayAfter",
+					"Text": "03/02/2018",
+					"Condition": "RangeStartDate = Date3 or RangeStartDate = WayAfter"
+				}
+			}
+		}
+	},
+	"ExpectedResults": {
+		"Date1Included": {
+			"Name": "Date1Included",
+			"Text": "6337 candidates are included",
+			"Condition": "RangeStartDate = [DeepPast,Past,JustBefore,Date1] and RangeEndDate = [Date1,BetweenDate1Date2,Date2,Date3,Date4,JustAfter,WayAfter]"
+		},
+		"Date2Included": {
+			"Name": "Date2Included",
+			"Text": "4 candidates are included",
+			"Condition": "RangeStartDate = [DeepPast,Past,JustBefore,Date1,BetweenDate1Date2] and RangeEndDate = [Date2,Date3,Date4,JustAfter,WayAfter]"
+		},
+		"Date3Included": {
+			"Name": "Date3Included",
+			"Text": "37 candidates, 33 applications, 12 opportunities are included",
+			"Condition": "RangeStartDate = [DeepPast,Past,JustBefore,Date1,BetweenDate1Date2,Date2,Date3] and RangeEndDate = [Date3,Date4,JustAfter,WayAfter]"
+		},
+		"Date4Included": {
+			"Name": "Date4Included",
+			"Text": "42 candidates, 42 applications, 15 opportunities are included",
+			"Condition": "RangeStartDate = [DeepPast,Past,JustBefore,Date1,BetweenDate1Date2,Date2,Date3,Date4] and RangeEndDate = [Date4,JustAfter,WayAfter]"
+		},
+		"NoObjectsIncluded1": {
+			"Name": "NoObjectsIncluded1",
+			"Text": "No objects are included (range is before)",
+			"Condition": "RangeEndDate = [DeepPast,Past,JustBefore]"
+		},
+		"NoObjectsIncluded2": {
+			"Name": "NoObjectsIncluded2",
+			"Text": "No objects are included (range is after)",
+			"Condition": "RangeStartDate = [JustAfter,WayAfter]"
+		},
+		"NoObjectsIncluded3": {
+			"Name": "NoObjectsIncluded3",
+			"Text": "No objects are included (range is in the middle)",
+			"Condition": "RangeStartDate = [BetweenDate1Date2,BetweenDate1Date2]"
+		}
+	}
+}

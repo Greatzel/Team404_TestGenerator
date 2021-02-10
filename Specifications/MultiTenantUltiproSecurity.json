@@ -1,0 +1,55 @@
+{
+	"Given": null,
+	"Name": "Multi-tenant Ultipro Security",
+	"Text": "Test planning for multi-tenant security for Ultipro",
+	"CoverageGroups": [{
+		"Name": "Ultipro",
+		"Parameters": ["Domain", "UltiproObjects"]
+	}],
+	"InputParameters": {
+		"Domain": {
+			"Name": "Domain",
+			"Text": "HR domain",
+			"EquivalenceClasses": {
+				"Ultipro": {
+					"Name": "Ultipro",
+					"Text": "Ultipro"
+				}
+			}
+		},
+		"UltiproObjects": {
+			"Name": "UltiproObjects",
+			"Text": "Ultipro objects",
+			"EquivalenceClasses": {
+				"Company": {
+					"Name": "Company",
+					"Text": "Company"
+				},
+				"TaxLocation": {
+					"Name": "TaxLocation",
+					"Text": "Tax location"
+				},
+				"WorkLocation": {
+					"Name": "WorkLocation",
+					"Text": "Work location"
+				},
+				"ComponentCompany": {
+					"Name": "ComponentCompany",
+					"Text": "Component company"
+				},
+				"Job": {
+					"Name": "Job",
+					"Text": "Job"
+				}
+			}
+		}
+	},
+	"ExpectedResults": {
+		"UltiproJiraIsCreated": {
+			"Given": null,
+			"Name": "UltiproJiraIsCreated",
+			"Text": "JIRA is created for Ultipro",
+			"Condition": "Domain = Ultipro"
+		}
+	}
+}

@@ -1,0 +1,54 @@
+{
+	"Name": "IcmVerboseLogging",
+	"Text": "Issue ICM Updater commands",
+	"CoverageGroups": [{
+		"Name": "ExpirationAndAge",
+		"Parameters": ["ExpirationDays", "AgeOfFiles"]
+	}],
+	"InputParameters": {
+		"ExpirationDays": {
+			"Name": "ExpirationDays",
+			"Text": "number of days until files expire",
+			"EquivalenceClasses": {
+				"1": {
+					"Name": "1",
+					"Text": "1"
+				},
+				"2": {
+					"Name": "2",
+					"Text": "2",
+				}
+			}
+		},
+		"AgeOfFiles": {
+			"Name": "AgeOfFiles",
+			"Text": "age of files",
+			"EquivalenceClasses": {
+				"LessThan1": {
+					"Name": "LessThan1",
+					"Text": "less than 1 day"
+				},
+				"Between1And2": {
+					"Name": "Between1And2",
+					"Text": "older than 1 day"
+				},
+				"MoreThan2": {
+					"Name": "MoreThan2",
+					"Text": "older than 2 days"
+				}
+			}
+		}
+	},
+	"ExpectedResults": {
+		"FilesAreDeleted": {
+			"Name": "FilesAreDeleted",
+			"Text": "files are deleted",
+			"Condition": "(ExpirationDays = 1 and AgeOfFiles = LessThan1) or (ExpirationDays = 2 and AgeOfFiles = MoreThan2)"
+		},
+		"FilesAreNotDeleted": {
+			"Name": "FilesAreNotDeleted",
+			"Text": "files are not deleted",
+			"Condition": "(ExpirationDays = 1 and AgeOfFiles = LessThan1) or (ExpirationDays = 2 and AgeOfFiles != MoreThan2)"
+		}
+	}
+}

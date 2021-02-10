@@ -1,0 +1,95 @@
+{
+	"Name": "StatusMessages249896",
+	"Text": "Error status messages (ULTI-249896)",
+	"CoverageGroups": [{
+		"Name": "GridMessages",
+		"Parameters": ["ViewedGrid", "StudioActivitiesView"]
+	}],
+	"InputParameters": {
+		"InterfaceVersion": {
+			"Name": "InterfaceVersion",
+			"Text": "interface",
+			"EquivalenceClasses": {
+				"MK2Non834": {
+					"Name": "MK2Non834",
+					"Text": "MK2 non-834"
+				},
+				"MK2834": {
+					"Name": "MK2834",
+					"Text": "MK2 834",
+				},
+				"MK3Non834": {
+					"Name": "MK3Non834",
+					"Text": "MK3 non-834"
+				},
+				"MK3834": {
+					"Name": "MK3834",
+					"Text": "MK3 834"
+				}
+			}
+		},
+		"ViewedGrid": {
+			"Name": "ViewedGrid",
+			"Text": "UltiPro page",
+			"EquivalenceClasses": {
+				"FileTransfersMonitoring": {
+					"Name": "FileTransfersMonitoring",
+					"Text": "FT monitoring grid"
+				},
+				"IntegrationStudioActivityLog": {
+					"Name": "IntegrationStudioActivityLog",
+					"Text": "activity log"
+				},
+				"IntegrationStudioUCN": {
+					"Name": "IntegrationStudioUCN",
+					"Text": "UCN grid"
+				}
+			},
+			"Constraints": []
+		},
+		"StudioActivitiesView": {
+			"Name": "StudioActivitiesView",
+			"Text": "activities view for 'Informatica Status Event'",
+			"EquivalenceClasses": {
+				"State00": {
+					"Name": "State00",
+					"Text": "without any error"
+				},
+				"State01": {
+					"Name": "State01",
+					"Text": "with 'file transmission' error"
+				},
+				"State02": {
+					"Name": "State02",
+					"Text": "with 'HIPAA validation' error"
+				},
+				"State03": {
+					"Name": "State03",
+					"Text": "with 'profile not set up' error"
+				}
+			}
+		}
+	},
+	"ExpectedResults": {
+		"StatusMessage00": {
+			"Name": "StatusMessage00",
+			"Text": "no error message is displayed in the grid",
+			"Condition": "StudioActivitiesView = State00"
+		},
+		"StatusMessage01": {
+			"Name": "StatusMessage01",
+			"Text": "message is displayed: 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.'",
+			"Condition": "StudioActivitiesView = State01"
+		},
+		"StatusMessage02": {
+			"Name": "StatusMessage02",
+			"Text": "message is displayed: 'Interface processing failed due to HIPAA validation errors. Please contact your support representative.'",
+			"Condition": "StudioActivitiesView = State02"
+		},
+		"StatusMessage03": {
+			"Name": "StatusMessage03",
+			"Text": "message is displayed: 'Interface processing failed due to missing file transfer profile. Please contact your support representative.'",
+			"Condition": "StudioActivitiesView = State03"
+		}
+	}
+}

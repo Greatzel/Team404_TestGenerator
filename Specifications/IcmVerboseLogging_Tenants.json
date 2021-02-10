@@ -1,0 +1,129 @@
+{
+	"Name": "IcmVerboseLogging",
+	"Text": "Issue ICM Updater commands",
+	"CoverageGroups": [{
+		"Name": "WhetherFilesLogged",
+		"Parameters": ["LoggingIsEnabled", "LoggingFolder"]
+	}, {
+		"Name": "WhetherNewFilesCreated",
+		"Parameters": ["TenantConfiguration", "FileSizeLimit"]
+	}],
+	"InputParameters": {
+		"TenantConfiguration": {
+			"Name": "TenantConfiguration",
+			"Text": "configured tenants",
+			"EquivalenceClasses": {
+				"CalendarTenant": {
+					"Name": "CalendarTenant",
+					"Text": "ARCALEN"
+				},
+				"M0021Tenant": {
+					"Name": "M0021Tenant",
+					"Text": "ARM0021"
+				},
+				"BothTenants": {
+					"Name": "BothTenants",
+					"Text": "ARCALEN, ARM0021"
+				}
+			}
+		},
+		"FileSizeLimit": {
+			"Name": "FileSizeLimit",
+			"Text": "limit of file sizes",
+			"EquivalenceClasses": {
+				"LessThanM0021": {
+					"Name": "LessThanM0021",
+					"Text": "less than ARM0021",
+					"Condition": "TenantConfiguration != CalendarTenant"
+				},
+				"MoreThanM0021": {
+					"Name": "MoreThanM0021",
+					"Text": "between ARM0021 and ARCALEN",
+					"Condition": "TenantConfiguration != BothTenants"
+				},
+				"MoreThanCalendar": {
+					"Name": "MoreThanCalendar",
+					"Text": "larger than ARCALEN but smaller than ARCALEN + ARM0021",
+					"Condition": "TenantConfiguration != M0021Tenant"
+				},
+				"MoreThanCalendarPlusM0021": {
+					"Name": "MoreThanCalendarPlusM0021",
+					"Text": "larger than ARCALEN but smaller than ARCALEN + ARM0021",
+					"Condition": "TenantConfiguration = BothTenants"
+				}
+			}
+		},
+		"LoggingIsEnabled": {
+			"Name": "LoggingIsEnabled",
+			"Text": "logging is enabled",
+			"EquivalenceClasses": {
+				"true": {
+					"Name": "true",
+					"Text": "true"
+				},
+				"false": {
+					"Name": "false",
+					"Text": "false"
+				}
+			}
+		},
+		"LoggingFolder": {
+			"Name": "LoggingFolder",
+			"Text": "folder where logs are written",
+			"EquivalenceClasses": {
+				"ValidFolder": {
+					"Name": "ValidFolder",
+					"Text": "Logs",
+					"Condition": "LoggingIsEnabled = true"
+				},
+				"NoFolder": {
+					"Name": "NoFolder",
+					"Text": "none",
+					"Condition": "LoggingIsEnabled = false"
+				}
+			}
+		}
+	},
+	"ExpectedResults": {
+		"FilesAreLogged": {
+			"Name": "FilesAreLogged",
+			"Text": "files are logged",
+			"Condition": "LoggingIsEnabled = true and LoggingFolder = ValidFolder"
+		},
+		"FilesAreNotLogged": {
+			"Name": "FilesAreNotLogged",
+			"Text": "files are not logged",
+			"Condition": "LoggingIsEnabled = false or LoggingFolder = NoFolder"
+		},
+		"CalendarDataIsGenerated": {
+			"Name": "CalendarDataIsGenerated",
+			"Text": "ARCALEN data is generated",
+			"Condition": "TenantConfiguration = CalendarTenant or TenantConfiguration = BothTenants"
+		},
+		"CalendarDataIsNotGenerated": {
+			"Name": "CalendarDataIsNotGenerated",
+			"Text": "ARCALEN data is not generated",
+			"Condition": "TenantConfiguration = M0021Tenant"
+		},
+		"M0021DataIsGenerated": {
+			"Name": "M0021DataIsGenerated",
+			"Text": "ARM0021 data is generated",
+			"Condition": "TenantConfiguration = M0021Tenant or TenantConfiguration = BothTenants"
+		},
+		"M0021DataIsNotGenerated": {
+			"Name": "M0021DataIsNotGenerated",
+			"Text": "ARM0021 data is not generated",
+			"Condition": "TenantConfiguration = CalendarTenant"
+		},
+		"DataIsWrittenTo2Files": {
+			"Name": "DataIsWrittenTo2Files",
+			"Text": "data is written to 2 files",
+			"Condition": "TenantConfiguration = BothTenants and (FileSizeLimit = LessThanM0021 or FileSizeLimit = MoreThanM0021)"
+		},
+		"DataIsWrittenTo1File": {
+			"Name": "DataIsWrittenTo1File",
+			"Text": "data is written to 1 file",
+			"Condition": "TenantConfiguration = BothTenants and (FileSizeLimit = MoreThanCalendar or FileSizeLimit = MoreThanCalendarPlusM0021)"
+		}
+	}
+}
