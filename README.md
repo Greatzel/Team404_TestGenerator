@@ -9,7 +9,7 @@
   * Programming lead
   
   
-* Syrone Robinson, srobinson31@ggc.edu :leo:
+* Syrone Robinson, srobinson31@ggc.edu :gemini:
   * UI/UX Design Lead
   * Data Modeler
 
