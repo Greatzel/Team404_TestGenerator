@@ -1,6 +1,6 @@
 ## 	:biohazard: Test Case Generator using Category Partition Method 	:biohazard:
 
-### Team 404
+### Team 404 (Spring 2021)
 
 #### Members:
 
