@@ -4,7 +4,7 @@
 
 ### Members:
 
-* Roberto Salas Montoya, rsalasmontoya@ggc.edu :taurus:
+* Roberto Salas Montoya, rsalasmontoya@ggc.edu :libra:
   * Team Lead
   * Programming lead
   
