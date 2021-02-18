@@ -5,19 +5,16 @@
 ### Members:
 
 *Roberto Salas Montoya, rsalasmontoya@ggc.edu
-
-  *Team Lead
-  *Programming lead
+  * Team Lead
+  * Programming lead
   
   
 *Syrone Robinson, srobinson31@ggc.edu
-
   * UI/UX Design Lead
   * Data Modeler
 
 
 *Greatzel Unabia, lunabia@ggc.edu
-
   * Client Liaison
   * Testing Lead
   * Documentation Lead
