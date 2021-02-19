@@ -35,3 +35,10 @@ A prototype of this project has been implemented already as a Windows console ap
        * cd Greatzel/Team404_TestGenerator
    3. install the repo with npm
       * npm install
+   4. install Nunit package framework
+      * Newtonsoft.json
+      * Nunit.Engine.Api
+      * Nunit.json
+      * Nunit.JS
+   5. Add Assemblies
+      * Assembly/System.Windows.Forms
