@@ -30,8 +30,8 @@ A prototype of this project has been implemented already as a Windows console ap
 
 ### Setup
    1. clone the repo
-      git clone https://github.com/Greatzel/Team404_TestGenerator.git
+      * git clone https://github.com/Greatzel/Team404_TestGenerator.git
    2. change directory
-      cd Greatzel/Team404_TestGenerator
+       * cd Greatzel/Team404_TestGenerator
    3. install the repo with npm
-      npm install
+      * npm install
