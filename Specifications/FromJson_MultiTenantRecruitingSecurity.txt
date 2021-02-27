@@ -1,0 +1,195 @@
+Test suite Multi-tenant Recruiting Security : Test planning for multi-tenant security for Recruiting
+Number of generated test cases included : 13
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-19 : Test 19
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is Application 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-37 : Test 37
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is Candidate 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-55 : Test 55
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is Opportunity 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-73 : Test 73
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is Location 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-91 : Test 91
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is RecruitingProcess 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-109 : Test 109
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Recruiting 
+    and Recruiting objects is ApplicationNote 
+    and Onboarding objects is No selection 
+    and Ultipro objects is No selection 
+Then JIRA is created for Recruiting 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-133 : Test 133
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Onboarding 
+    and Recruiting objects is No selection 
+    and Onboarding objects is New hire 
+    and Ultipro objects is No selection 
+Then JIRA is created for Onboarding 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-139 : Test 139
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Onboarding 
+    and Recruiting objects is No selection 
+    and Onboarding objects is Process step 
+    and Ultipro objects is No selection 
+Then JIRA is created for Onboarding 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-254 : Test 254
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Ultipro 
+    and Recruiting objects is No selection 
+    and Onboarding objects is No selection 
+    and Ultipro objects is Company 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-255 : Test 255
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Ultipro 
+    and Recruiting objects is No selection 
+    and Onboarding objects is No selection 
+    and Ultipro objects is Tax location 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-256 : Test 256
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Ultipro 
+    and Recruiting objects is No selection 
+    and Onboarding objects is No selection 
+    and Ultipro objects is Work location 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-257 : Test 257
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Ultipro 
+    and Recruiting objects is No selection 
+    and Onboarding objects is No selection 
+    and Ultipro objects is Component company 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Recruiting Security-258 : Test 258
+Given We are undertaking analysis for multi-tenant security
+    and There is a testable domain
+    and Recruiting has testable objects
+    and Onboarding has testable objects
+    and Ultipro has testable objects
+When Domain is Ultipro 
+    and Recruiting objects is No selection 
+    and Onboarding objects is No selection 
+    and Ultipro objects is Job 
+Then JIRA is created for Ultipro 
+
+
+Number of contradictory test cases excluded : 365
+
+
+Coverage metrics:
+
+Number of tests generated to cover combinations of Recruiting coverage = 378
+All combinations in Recruiting coverage are used in tests
+
+All coverage groups are used in tests
+

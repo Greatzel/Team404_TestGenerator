@@ -40,6 +40,7 @@ namespace Generator.Engine
 
         /// <summary>
         /// Condition represented as strings (INFIX notation).
+        /// >>operator of a binary expression is in the middle a + b
         /// </summary>
         public string Condition { get; set; }
 

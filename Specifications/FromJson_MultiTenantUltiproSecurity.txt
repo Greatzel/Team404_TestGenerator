@@ -1,0 +1,51 @@
+Test suite Multi-tenant Ultipro Security : Test planning for multi-tenant security for Ultipro
+Number of generated test cases included : 5
+
+----------------------------------------------------------------
+Test case Multi-tenant Ultipro Security-1 : Test 1
+
+When HR domain is Ultipro 
+    and Ultipro objects is Company 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Ultipro Security-2 : Test 2
+
+When HR domain is Ultipro 
+    and Ultipro objects is Tax location 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Ultipro Security-3 : Test 3
+
+When HR domain is Ultipro 
+    and Ultipro objects is Work location 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Ultipro Security-4 : Test 4
+
+When HR domain is Ultipro 
+    and Ultipro objects is Component company 
+Then JIRA is created for Ultipro 
+
+
+----------------------------------------------------------------
+Test case Multi-tenant Ultipro Security-5 : Test 5
+
+When HR domain is Ultipro 
+    and Ultipro objects is Job 
+Then JIRA is created for Ultipro 
+
+
+
+Coverage metrics:
+
+Number of tests generated to cover combinations of Ultipro = 5
+All combinations in Ultipro are used in tests
+
+All coverage groups are used in tests
+

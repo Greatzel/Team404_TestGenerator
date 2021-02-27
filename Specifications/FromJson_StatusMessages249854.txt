@@ -1,0 +1,392 @@
+Test suite StatusMessages249854 : Error status messages (ULTI-249854)
+Number of generated test cases included : 42
+
+----------------------------------------------------------------
+Test case StatusMessages249854-1 : Test 1
+
+When UltiPro page is FT monitoring grid 
+    and activities view is without error for the interface 
+    and interface is MK3 non-834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-2 : Test 2
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'output path in IEX_InterfaceConfig inaccessible' error 
+    and interface is MK2 834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-3 : Test 3
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'output path in RbsSiteValues inaccessible' error 
+    and interface is MK2 834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-4 : Test 4
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'Informatica status unavailable' error 
+    and interface is MK2 834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-5 : Test 5
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'Informatica data transformation unavailable' error 
+    and interface is MK2 834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-6 : Test 6
+
+When UltiPro page is FT monitoring grid 
+    and activities view is without error in the DQR 
+    and interface is MK2 non-834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-7 : Test 7
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'fatal SQL error in MK2' error 
+    and interface is MK3 834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-8 : Test 8
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'fatal configured-file-stop error in MK2' error 
+    and interface is MK2 834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-9 : Test 9
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'data transformation error' error (DT error log) 
+    and interface is MK3 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-10 : Test 10
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'partner inactive' error 
+    and interface is MK2 834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-11 : Test 11
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with (AR number, company code) mismatch error 
+    and interface is MK3 834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-12 : Test 12
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with endpoint mismatch error 
+    and interface is MK3 834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-13 : Test 13
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with HIPAA validation error 
+    and interface is MK3 834 
+Then 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-14 : Test 14
+
+When UltiPro page is FT monitoring grid 
+    and activities view is with 'profile not set up' error 
+    and interface is MK3 834 
+Then 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-15 : Test 15
+
+When UltiPro page is activity log 
+    and activities view is without error for the interface 
+    and interface is MK3 non-834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-16 : Test 16
+
+When UltiPro page is activity log 
+    and activities view is with 'output path in IEX_InterfaceConfig inaccessible' error 
+    and interface is MK2 834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-17 : Test 17
+
+When UltiPro page is activity log 
+    and activities view is with 'output path in RbsSiteValues inaccessible' error 
+    and interface is MK2 834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-18 : Test 18
+
+When UltiPro page is activity log 
+    and activities view is with 'Informatica status unavailable' error 
+    and interface is MK3 834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-19 : Test 19
+
+When UltiPro page is activity log 
+    and activities view is with 'Informatica data transformation unavailable' error 
+    and interface is MK2 non-834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-20 : Test 20
+
+When UltiPro page is activity log 
+    and activities view is without error in the DQR 
+    and interface is MK3 834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-21 : Test 21
+
+When UltiPro page is activity log 
+    and activities view is with 'fatal SQL error in MK2' error 
+    and interface is MK2 non-834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-22 : Test 22
+
+When UltiPro page is activity log 
+    and activities view is with 'fatal configured-file-stop error in MK2' error 
+    and interface is MK2 non-834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-23 : Test 23
+
+When UltiPro page is activity log 
+    and activities view is with 'data transformation error' error (DT error log) 
+    and interface is MK2 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-24 : Test 24
+
+When UltiPro page is activity log 
+    and activities view is with 'partner inactive' error 
+    and interface is MK3 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-25 : Test 25
+
+When UltiPro page is activity log 
+    and activities view is with (AR number, company code) mismatch error 
+    and interface is MK2 834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-26 : Test 26
+
+When UltiPro page is activity log 
+    and activities view is with endpoint mismatch error 
+    and interface is MK2 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-27 : Test 27
+
+When UltiPro page is activity log 
+    and activities view is with HIPAA validation error 
+    and interface is MK3 834 
+Then 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-28 : Test 28
+
+When UltiPro page is activity log 
+    and activities view is with 'profile not set up' error 
+    and interface is MK2 non-834 
+Then 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-29 : Test 29
+
+When UltiPro page is UCN grid 
+    and activities view is without error for the interface 
+    and interface is MK3 non-834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-30 : Test 30
+
+When UltiPro page is UCN grid 
+    and activities view is with 'output path in IEX_InterfaceConfig inaccessible' error 
+    and interface is MK2 834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-31 : Test 31
+
+When UltiPro page is UCN grid 
+    and activities view is with 'output path in RbsSiteValues inaccessible' error 
+    and interface is MK2 non-834 
+Then 'Output directory path not available. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-32 : Test 32
+
+When UltiPro page is UCN grid 
+    and activities view is with 'Informatica status unavailable' error 
+    and interface is MK3 non-834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-33 : Test 33
+
+When UltiPro page is UCN grid 
+    and activities view is with 'Informatica data transformation unavailable' error 
+    and interface is MK2 non-834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-34 : Test 34
+
+When UltiPro page is UCN grid 
+    and activities view is without error in the DQR 
+    and interface is MK3 834 
+Then 'Interface data processing executed. File formatting and transmission not selected.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-35 : Test 35
+
+When UltiPro page is UCN grid 
+    and activities view is with 'fatal SQL error in MK2' error 
+    and interface is MK3 834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-36 : Test 36
+
+When UltiPro page is UCN grid 
+    and activities view is with 'fatal configured-file-stop error in MK2' error 
+    and interface is MK2 834 
+Then 'Interface processing failed; please see error log for details or contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-37 : Test 37
+
+When UltiPro page is UCN grid 
+    and activities view is with 'data transformation error' error (DT error log) 
+    and interface is MK3 834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-38 : Test 38
+
+When UltiPro page is UCN grid 
+    and activities view is with 'partner inactive' error 
+    and interface is MK3 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-39 : Test 39
+
+When UltiPro page is UCN grid 
+    and activities view is with (AR number, company code) mismatch error 
+    and interface is MK3 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-40 : Test 40
+
+When UltiPro page is UCN grid 
+    and activities view is with endpoint mismatch error 
+    and interface is MK2 non-834 
+Then 'Interface processing failed. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-41 : Test 41
+
+When UltiPro page is UCN grid 
+    and activities view is with HIPAA validation error 
+    and interface is MK2 non-834 
+Then 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249854-42 : Test 42
+
+When UltiPro page is UCN grid 
+    and activities view is with 'profile not set up' error 
+    and interface is MK2 834 
+Then 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+
+Coverage metrics:
+
+Number of tests generated to cover combinations of GridMessages = 42
+All combinations in GridMessages are used in tests
+
+Number of tests generated to cover combinations of Singleton-InterfaceVersion = 4
+All combinations in Singleton-InterfaceVersion are used in tests
+
+All coverage groups are used in tests
+

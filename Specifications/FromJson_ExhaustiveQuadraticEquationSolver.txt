@@ -1,0 +1,682 @@
+Test suite SaveTests : Interface can be saved using any combinations of the parameters
+Number of generated test cases included : 64
+
+----------------------------------------------------------------
+Test case SaveTests-1 : Test 1
+
+When A is 0 
+    and B is 0 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-2 : Test 2
+
+When A is 0 
+    and B is 0 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-3 : Test 3
+
+When A is 0 
+    and B is 0 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-4 : Test 4
+
+When A is 0 
+    and B is 0 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-5 : Test 5
+
+When A is 0 
+    and B is 1 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-6 : Test 6
+
+When A is 0 
+    and B is 1 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-7 : Test 7
+
+When A is 0 
+    and B is 1 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-8 : Test 8
+
+When A is 0 
+    and B is 1 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-9 : Test 9
+
+When A is 0 
+    and B is any integer in the range (-100, -1) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-10 : Test 10
+
+When A is 0 
+    and B is any integer in the range (-100, -1) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-11 : Test 11
+
+When A is 0 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-12 : Test 12
+
+When A is 0 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-13 : Test 13
+
+When A is 0 
+    and B is any integer in the range (2, 100) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-14 : Test 14
+
+When A is 0 
+    and B is any integer in the range (2, 100) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-15 : Test 15
+
+When A is 0 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-16 : Test 16
+
+When A is 0 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then roots are undefined 
+
+
+----------------------------------------------------------------
+Test case SaveTests-17 : Test 17
+
+When A is 1 
+    and B is 0 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-18 : Test 18
+
+When A is 1 
+    and B is 0 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-19 : Test 19
+
+When A is 1 
+    and B is 0 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-20 : Test 20
+
+When A is 1 
+    and B is 0 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-21 : Test 21
+
+When A is 1 
+    and B is 1 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-22 : Test 22
+
+When A is 1 
+    and B is 1 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-23 : Test 23
+
+When A is 1 
+    and B is 1 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-24 : Test 24
+
+When A is 1 
+    and B is 1 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-25 : Test 25
+
+When A is 1 
+    and B is any integer in the range (-100, -1) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-26 : Test 26
+
+When A is 1 
+    and B is any integer in the range (-100, -1) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-27 : Test 27
+
+When A is 1 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-28 : Test 28
+
+When A is 1 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-29 : Test 29
+
+When A is 1 
+    and B is any integer in the range (2, 100) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-30 : Test 30
+
+When A is 1 
+    and B is any integer in the range (2, 100) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-31 : Test 31
+
+When A is 1 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-32 : Test 32
+
+When A is 1 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-33 : Test 33
+
+When A is any integer in the range (-100, -1) 
+    and B is 0 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-34 : Test 34
+
+When A is any integer in the range (-100, -1) 
+    and B is 0 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-35 : Test 35
+
+When A is any integer in the range (-100, -1) 
+    and B is 0 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-36 : Test 36
+
+When A is any integer in the range (-100, -1) 
+    and B is 0 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-37 : Test 37
+
+When A is any integer in the range (-100, -1) 
+    and B is 1 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-38 : Test 38
+
+When A is any integer in the range (-100, -1) 
+    and B is 1 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-39 : Test 39
+
+When A is any integer in the range (-100, -1) 
+    and B is 1 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-40 : Test 40
+
+When A is any integer in the range (-100, -1) 
+    and B is 1 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-41 : Test 41
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (-100, -1) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-42 : Test 42
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (-100, -1) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-43 : Test 43
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-44 : Test 44
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-45 : Test 45
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (2, 100) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-46 : Test 46
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (2, 100) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-47 : Test 47
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-48 : Test 48
+
+When A is any integer in the range (-100, -1) 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-49 : Test 49
+
+When A is any integer in the range (2, 100) 
+    and B is 0 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-50 : Test 50
+
+When A is any integer in the range (2, 100) 
+    and B is 0 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-51 : Test 51
+
+When A is any integer in the range (2, 100) 
+    and B is 0 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-52 : Test 52
+
+When A is any integer in the range (2, 100) 
+    and B is 0 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-53 : Test 53
+
+When A is any integer in the range (2, 100) 
+    and B is 1 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-54 : Test 54
+
+When A is any integer in the range (2, 100) 
+    and B is 1 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-55 : Test 55
+
+When A is any integer in the range (2, 100) 
+    and B is 1 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-56 : Test 56
+
+When A is any integer in the range (2, 100) 
+    and B is 1 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-57 : Test 57
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (-100, -1) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-58 : Test 58
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (-100, -1) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-59 : Test 59
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-60 : Test 60
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (-100, -1) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-61 : Test 61
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (2, 100) 
+    and C is 0 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-62 : Test 62
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (2, 100) 
+    and C is 1 
+    and discriminant (b^2 - 4ac) is 0 
+Then only root is -b/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-63 : Test 63
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (-100, -1) 
+    and discriminant (b^2 - 4ac) is N greater than 0 
+Then first root is (-b + SQRT(b^2 - 4ac))/2a 
+    and second root is (-b - SQRT(b^2 - 4ac))/2a 
+
+
+----------------------------------------------------------------
+Test case SaveTests-64 : Test 64
+
+When A is any integer in the range (2, 100) 
+    and B is any integer in the range (2, 100) 
+    and C is any integer in the range (2, 100) 
+    and discriminant (b^2 - 4ac) is N less than 0 
+Then first imaginary root is (-b + [i]SQRT(4ac - b^2))/2a 
+    and second imaginary root is (-b - [i]SQRT(4ac - b^2))/2a 
+
+
+
+Coverage metrics:
+
+Number of tests generated to cover combinations of CoverageGroupA = 64
+All combinations in CoverageGroupA are used in tests
+
+Number of tests generated to cover combinations of Singleton-Discriminant = 3
+All combinations in Singleton-Discriminant are used in tests
+
+All coverage groups are used in tests
+

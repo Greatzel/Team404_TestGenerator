@@ -80,6 +80,7 @@ namespace Generator.Tests
         {
             string inputFilenameWithPath = $"{FileHelper.PathTestGenerator}\\{inputFilename}";
             string outputFilenameWithPath = $"{FileHelper.PathTestGenerator}\\{outputFilename}";
+            //>>check output destination for outputFilenameWithPath
  
             TestGenerator testGenerator = new TestGenerator();
             Assert.True(

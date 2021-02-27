@@ -1,0 +1,122 @@
+Test suite StatusMessages249896 : Error status messages (ULTI-249896)
+Number of generated test cases included : 12
+
+----------------------------------------------------------------
+Test case StatusMessages249896-1 : Test 1
+
+When UltiPro page is FT monitoring grid 
+    and activities view for 'Informatica Status Event' is without any error 
+    and interface is MK3 834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-2 : Test 2
+
+When UltiPro page is FT monitoring grid 
+    and activities view for 'Informatica Status Event' is with 'file transmission' error 
+    and interface is MK2 non-834 
+Then message is displayed: 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-3 : Test 3
+
+When UltiPro page is FT monitoring grid 
+    and activities view for 'Informatica Status Event' is with 'HIPAA validation' error 
+    and interface is MK2 834 
+Then message is displayed: 'Interface processing failed due to HIPAA validation errors. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-4 : Test 4
+
+When UltiPro page is FT monitoring grid 
+    and activities view for 'Informatica Status Event' is with 'profile not set up' error 
+    and interface is MK3 non-834 
+Then message is displayed: 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-5 : Test 5
+
+When UltiPro page is activity log 
+    and activities view for 'Informatica Status Event' is without any error 
+    and interface is MK3 non-834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-6 : Test 6
+
+When UltiPro page is activity log 
+    and activities view for 'Informatica Status Event' is with 'file transmission' error 
+    and interface is MK3 834 
+Then message is displayed: 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-7 : Test 7
+
+When UltiPro page is activity log 
+    and activities view for 'Informatica Status Event' is with 'HIPAA validation' error 
+    and interface is MK2 non-834 
+Then message is displayed: 'Interface processing failed due to HIPAA validation errors. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-8 : Test 8
+
+When UltiPro page is activity log 
+    and activities view for 'Informatica Status Event' is with 'profile not set up' error 
+    and interface is MK2 834 
+Then message is displayed: 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-9 : Test 9
+
+When UltiPro page is UCN grid 
+    and activities view for 'Informatica Status Event' is without any error 
+    and interface is MK3 non-834 
+Then no error message is displayed in the grid 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-10 : Test 10
+
+When UltiPro page is UCN grid 
+    and activities view for 'Informatica Status Event' is with 'file transmission' error 
+    and interface is MK2 834 
+Then message is displayed: 'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-11 : Test 11
+
+When UltiPro page is UCN grid 
+    and activities view for 'Informatica Status Event' is with 'HIPAA validation' error 
+    and interface is MK3 non-834 
+Then message is displayed: 'Interface processing failed due to HIPAA validation errors. Please contact your support representative.' 
+
+
+----------------------------------------------------------------
+Test case StatusMessages249896-12 : Test 12
+
+When UltiPro page is UCN grid 
+    and activities view for 'Informatica Status Event' is with 'profile not set up' error 
+    and interface is MK2 834 
+Then message is displayed: 'Interface processing failed due to missing file transfer profile. Please contact your support representative.' 
+
+
+
+Coverage metrics:
+
+Number of tests generated to cover combinations of GridMessages = 12
+All combinations in GridMessages are used in tests
+
+Number of tests generated to cover combinations of Singleton-InterfaceVersion = 4
+All combinations in Singleton-InterfaceVersion are used in tests
+
+All coverage groups are used in tests
+

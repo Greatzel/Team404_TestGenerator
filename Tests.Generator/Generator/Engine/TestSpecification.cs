@@ -16,13 +16,16 @@ namespace Generator.Engine
 {
     /// <summary>
     /// Class that encapsulates an XML test specification.
+    /// >>update: XML or Json specification.
     /// </summary>
     public class TestSpecification
     {
         /// <summary>
         /// Specifies text for the GIVEN constraint on the specification.
+        /// >>Environment Condition
         /// </summary>
         public string Given { get; set; }
+        //>>given that its a public accessor, anybody on the outside can 'get'/'set' the value
 
         /// <summary>
         /// The name of the test specification from the XML file.
@@ -38,6 +41,7 @@ namespace Generator.Engine
         /// A list of 0 or more coverage groups in the test specification.
         /// </summary>
         public IList<CoverageGroup> CoverageGroups { get; set; }
+        //>>IList is an abstract list
 
         /// <summary>
         /// A mapping of parameter names onto the structures containing their data.
@@ -128,6 +132,7 @@ namespace Generator.Engine
         {
             string contentsAsString = FileHelper.ContentsAsString(filenameWithPath);
             TestSpecification specification = JsonConvert.DeserializeObject<TestSpecification>(contentsAsString);
+            //>>line above parses json in 1 line
             if (specification == null)
             {
                 return false;

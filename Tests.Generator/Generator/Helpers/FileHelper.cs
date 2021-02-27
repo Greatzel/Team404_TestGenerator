@@ -16,7 +16,8 @@ namespace Generator.Helpers
     /// </summary>
     public class FileHelper
     {
-        public static string PathTestGenerator = "\\\\denver2\\groups\\Cognuts\\Testing\\Specifications";
+        public static string PathTestGenerator = "C:\\Users\\Greatzel\\source\\Repos\\Team404_TestGenerator\\Specifications\\"; 
+        //>>PathTestGenerator = "\\\change to where specifications are located"
 
         /// <summary>
         /// Returns the contents of the specified interface.
