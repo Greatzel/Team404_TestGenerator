@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GGC.TestCaseGenerator", "GGC.TestCaseGenerator.csproj", "{1F3CB78D-E50D-42BC-AF3C-E222FFA7A045}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1F3CB78D-E50D-42BC-AF3C-E222FFA7A045}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F3CB78D-E50D-42BC-AF3C-E222FFA7A045}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F3CB78D-E50D-42BC-AF3C-E222FFA7A045}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F3CB78D-E50D-42BC-AF3C-E222FFA7A045}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C917AC7-633C-4A5D-8CD2-E088BE9E2405}
+	EndGlobalSection
+EndGlobal
