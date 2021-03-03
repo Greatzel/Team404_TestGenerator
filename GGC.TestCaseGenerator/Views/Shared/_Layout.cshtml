@@ -16,17 +16,44 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("CPM Test Generator", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("How to", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Resources", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <!--This is the selection for the Test Specification Input-->
+
+    <div class="container">
+        <h2>Define feature</h2>
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- @Html.ActionLink("Define testable feature", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })-->
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Input Parameters", "Index", "Home")</li>
+                <li>@Html.ActionLink("Coverage Groups", "About", "Home")</li>
+                <li>@Html.ActionLink("Expected Results", "Contact", "Home")</li>
+                <li>@Html.ActionLink("Conditions", "AddSpecification", "Home")</li>
+                <li>@Html.ActionLink("Results", "AddSpecification", "Home")</li>
+            </ul>
+        </div>
+    </div>
+
     <div class="container body-content">
         @RenderBody()
         <hr />
