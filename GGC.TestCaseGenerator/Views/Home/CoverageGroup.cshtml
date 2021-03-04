@@ -1,0 +1,45 @@
+﻿@model GGC.TestCaseGenerator.Models.CoverageGroup
+
+
+@{
+    ViewBag.Title = "Coverage Group";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/showInputField.js"></script>
+
+@using (Html.BeginForm())
+{
+    <div class="jumbotron">
+        <div>
+            <label>Coverage Group Name: </label>
+            <!---->
+            @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+            <!-- <i class="fa fa-plus-square-o" style="font-size:48px;color:lightgreen"></i>-->
+        </div>
+
+        <div>
+            <button style="font-size:18px;color:forestgreen">Add <i class="fa fa-plus-square-o"></i></button>
+        </div>
+        <br>
+        <br>
+        <div>
+            <!--When the add member byutton is cluccked dropdown lists will show up containing input parameters
+                that were entered.-->
+            <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>
+       
+        </div>
+
+        <div>
+            <div id="dropDownContainer">
+
+            </div>
+        </div>
+        <br>
+        <br>
+        <button class="btn btn-success" type="submit" onclick="">Submit</button>
+        <br>
+        <br>
+    </div>
+}
+

@@ -24,6 +24,11 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
+        public ActionResult CoverageGroup()
+        {
+            return View();
+        }
+
         [HttpGet]
         public ActionResult AddSpecification()
         {
