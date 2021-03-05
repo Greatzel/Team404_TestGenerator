@@ -26,7 +26,7 @@ function showInputParam() {
     console.log("IM BEING REFEREHNCED");
     var select = document.createElement("select");
     select.name = "Parameter";
-    select.id = "params"
+    select.id = "params";
 
     for (const val of inputParamsList) {
         var option = document.createElement("option");
@@ -36,7 +36,7 @@ function showInputParam() {
     }
 
     var label = document.createElement("label");
-    label.innerHTML = "Choose parameter: "
+    label.innerHTML = "Choose parameter: ";
     label.htmlFor = "parameters";
 
     document.getElementById("dropDownContainer").appendChild(label).appendChild(select);
