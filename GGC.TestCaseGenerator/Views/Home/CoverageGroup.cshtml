@@ -1,45 +1,59 @@
-﻿@model GGC.TestCaseGenerator.Models.CoverageGroup
+﻿ @model GGC.TestCaseGenerator.Models.CoverageGroup
 
 
-@{
+    @{
     ViewBag.Title = "Coverage Group";
     Layout = "~/Views/Shared/_Layout.cshtml";
-}
+    }
 
 
-@using (Html.BeginForm())
+    @using (Html.BeginForm())
 {
-    <div class="jumbotron">
-        <div>
-            <label>Coverage Group Name: </label>
-            <!---->
-            @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
-            <!-- <i class="fa fa-plus-square-o" style="font-size:48px;color:lightgreen"></i>-->
-        </div>
+<div class="jumbotron">
+    <div>
+        <label>Coverage Group Name: </label>
+        <!---->
+        @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+        <!-- <i class="fa fa-plus-square-o" style="font-size:48px;color:lightgreen"></i>-->
+    </div>
 
-        <div>
-            <button style="font-size:18px;color:forestgreen">Add <i class="fa fa-plus-square-o"></i></button>
-        </div>
+    <div id="div">
+        <label>
+            Enter your Coverage Group:
+        </label>
         <br>
+        @Html.TextBox("CG1")
+        <br>
+        <button onclick="appendRow()" value="Add Row">Add Another Coverage Group</button>
+        <!-- <button onclick="appendRow()" value="Add Row">Add Row</button>-->
+    </div>
+        <script>
+            var x = 1
+            function appendRow()
+            {
+                var d = document.getElementById('div');
+                d.innerHTML += "<input type='text' id='tst" + x++ + "'><br >";
+            }
+        </script>
+
         <br>
         <div>
             <!--When the add member byutton is cluccked dropdown lists will show up containing input parameters
                 that were entered.-->
-            <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>
-       
-        </div>
-
-        <div>
-            <div id="dropDownContainer">
-
-            </div>
-        </div>
-        <br>
-        <br>
-        <button class="btn btn-success" type="submit" onclick="">Submit</button>
-        <br>
-        <br>
+        <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>
     </div>
+
+    <div>
+        <div id="dropDownContainer">
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <button class="btn btn-success" type="submit" onclick="">Submit</button>
+    <br>
+    <br>
+</div>
 }
 
-<script src="~/Scripts/showInputField.js"></script>
+    <script src="~/Scripts/showInputField.js"></script>
