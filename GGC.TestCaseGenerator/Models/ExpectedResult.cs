@@ -6,40 +6,40 @@ using System.Web;
 namespace GGC.TestCaseGenerator.Models
 {
     /// <summary>
-    /// Class that encapsulates an equivalence class for a test specification's
-    /// input parameter.
+    /// Class that encapsulates a test specification's expected result.
     /// </summary>
-    public class EquivalenceClass
+    public class ExpectedResult
     {
+
         /// <summary>
-        /// Specifies text for the GIVEN condition on the equivalence class.
+        /// Specifies text for the GIVEN constraint on the expected result.
         /// </summary>
         public string Given { get; set; }
 
         /// <summary>
-        /// The name of the equivalence class from the XML file.
+        /// The name of the expected result from the XML file.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// The text associated with the equivalence class from the XML file.
+        /// The text associated with the expected result from the XML file.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Condition that must be true in any test using this parameter.
+        /// The boolean expression associated with the expected result from the XML file.
         /// </summary>
         public Expression ConditionExpression { get; set; }
 
         /// <summary>
-        /// Condition represented as strings (INFIX notation).
+        /// The boolean expression represented as a string (INFIX notation).
         /// </summary>
         public string Condition { get; set; }
 
         /// <summary>
-        /// Constructs and initializes an instance object of the class EquivalenceClass.
+        /// Constructs and initializes an instance object of the class ExpectedResult.
         /// </summary>
-        public EquivalenceClass()
+        public ExpectedResult()
         {
             Given = null;
             Name = null;
@@ -51,18 +51,27 @@ namespace GGC.TestCaseGenerator.Models
         /// <summary>
         /// Sets the data members of the class and returns true if successful.
         /// </summary>
-        public bool Set(string given, string name, string text, IList<Expression> conditions)
+        public bool Set(string given, string name, string text, Expression condition)
         {
             Given = given;
             Name = name;
             Text = text;
-            ConditionExpression = ((conditions == null) || !conditions.Any()) ? null : conditions[0];
+            ConditionExpression = condition;
             return true;
         }
 
         /// <summary>
-        /// Parses the strings containing the expression conditions. Returns true if all are successful.
+        /// Writes the expected result as a string and returns it.
         /// </summary>
+        public string WriteAsString()
+        {
+            return $"{Text} ";
+        }
+
+        /// <summary>
+        /// Parses the string containing the boolean expression. Returns true if successful.
+        /// </summary>
+        /// <returns></returns>
         public bool ParseConditions()
         {
             if (string.IsNullOrEmpty(Condition))
@@ -81,7 +90,14 @@ namespace GGC.TestCaseGenerator.Models
         /// </summary>
         public bool Validate(IList<string> errors)
         {
-            return true;
+            bool validate = true;
+            if ((Condition == null) || (ConditionExpression == null))
+            {
+                errors.Add($"expected result {Name} is defined by no condition");
+                validate = false;
+            }
+
+            return validate;
         }
     }
 }

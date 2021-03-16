@@ -6,28 +6,32 @@ using System.Web;
 namespace GGC.TestCaseGenerator.Models
 {
     /// <summary>
-    /// Class that encapsulates an equivalence class for a test specification's
-    /// input parameter.
+    /// Class that encapsulates a test specification's input parameter.
     /// </summary>
-    public class EquivalenceClass
+    public class InputParameter
     {
         /// <summary>
-        /// Specifies text for the GIVEN condition on the equivalence class.
+        /// Specifies text for the GIVEN condition on the input parameter.
         /// </summary>
         public string Given { get; set; }
 
         /// <summary>
-        /// The name of the equivalence class from the XML file.
+        /// The name of the input parameter from the XML file.
         /// </summary>
         public string Name { get; set; }
 
         /// <summary>
-        /// The text associated with the equivalence class from the XML file.
+        /// The text associated with the input parameter from the XML file.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// Condition that must be true in any test using this parameter.
+        /// A mapping of the equivalence classes' names onto their data.
+        /// </summary>
+        public IDictionary<string, EquivalenceClass> EquivalenceClasses { get; set; }
+
+        /// <summary>
+        /// LCondition that must be true in any test using this parameter.
         /// </summary>
         public Expression ConditionExpression { get; set; }
 
@@ -37,13 +41,14 @@ namespace GGC.TestCaseGenerator.Models
         public string Condition { get; set; }
 
         /// <summary>
-        /// Constructs and initializes an instance object of the class EquivalenceClass.
+        /// Constructs and initializes an instance object of the class InputParameter.
         /// </summary>
-        public EquivalenceClass()
+        public InputParameter()
         {
             Given = null;
             Name = null;
             Text = null;
+            EquivalenceClasses = null;
             ConditionExpression = null;
             Condition = null;
         }
@@ -51,11 +56,17 @@ namespace GGC.TestCaseGenerator.Models
         /// <summary>
         /// Sets the data members of the class and returns true if successful.
         /// </summary>
-        public bool Set(string given, string name, string text, IList<Expression> conditions)
+        public bool Set(
+            string given,
+            string name,
+            string text,
+            IDictionary<string, EquivalenceClass> equivalenceClasses,
+            IList<Expression> conditions)
         {
             Given = given;
             Name = name;
             Text = text;
+            EquivalenceClasses = equivalenceClasses;
             ConditionExpression = ((conditions == null) || !conditions.Any()) ? null : conditions[0];
             return true;
         }
@@ -81,7 +92,18 @@ namespace GGC.TestCaseGenerator.Models
         /// </summary>
         public bool Validate(IList<string> errors)
         {
-            return true;
+            bool validated = true;
+            if ((EquivalenceClasses == null) || !EquivalenceClasses.Any())
+            {
+                errors.Add($"input parameter {Name} has no equivalence classes");
+                validated = false;
+            }
+            else foreach (EquivalenceClass equivalenceClass in EquivalenceClasses.Values)
+                {
+                    validated = equivalenceClass.Validate(errors) && validated;
+                }
+
+            return validated;
         }
     }
 }

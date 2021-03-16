@@ -124,7 +124,21 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\FileHelper.cs" />
+    <Compile Include="Helpers\JsonHelper.cs" />
+    <Compile Include="Models\CoverageGroup.cs" />
+    <Compile Include="Models\CoverageMetrics.cs" />
+    <Compile Include="Models\Dependencies.cs" />
+    <Compile Include="Models\EquivalenceClass.cs" />
+    <Compile Include="Models\ExpectedResult.cs" />
+    <Compile Include="Models\Expression.cs" />
+    <Compile Include="Models\ExpressionParser.cs" />
+    <Compile Include="Models\InputParameter.cs" />
+    <Compile Include="Models\ParameterAssignment.cs" />
+    <Compile Include="Models\TestCase.cs" />
     <Compile Include="Models\TestGenerator.cs" />
+    <Compile Include="Models\TestSpecification.cs" />
+    <Compile Include="Models\TestSuite.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
