@@ -25,8 +25,8 @@
         <div>
             <!--When the add member byutton is cluccked dropdown lists will show up containing input parameters
                 that were entered.-->
-            <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>
-       
+            <button style="font-size:18px;color:forestgreen" onclick="showInputParam">Add member <i class="fa fa-plus-square-o"></i></button>
+
         </div>
 
         <div>
@@ -36,10 +36,17 @@
         </div>
         <br>
         <br>
-        <button class="btn btn-success" type="submit" onclick="">Submit</button>
+        <button class="btn btn-success" type="submit" onclick="showInputParam()">Submit</button>
         <br>
         <br>
     </div>
 }
 
-<script src="~/Scripts/showInputField.js"></script>
+<script src="~/Scripts/specification-converage.js"></script>
+
+//FORM TEST
+
+<form action="/home/Test" method="POST">
+    <input type="text" name="text" />
+    <input type="submit" name="Test" />
+</form>

@@ -1,4 +1,4 @@
-﻿var inputParamsList = ["Parameter 1", "Parameter 2","Parameter 3"];
+﻿var inputParamsList = ["Parameter 1", "Parameter 2", "Parameter 3"];
 
 /*document.getElementById('generate').onclick = function () {
 

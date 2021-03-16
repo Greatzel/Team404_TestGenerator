@@ -46,5 +46,15 @@ namespace GGC.TestCaseGenerator.Controllers
 
             return Redirect("/");
         }
+
+        //Get data test
+        [HttpPost]
+        public ActionResult Test(string text)
+        {
+            ViewBag.DisplayText = text;
+            return Redirect(text);
+
+            //return View();
+        }
     }
 }
