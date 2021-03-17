@@ -1,6 +1,7 @@
 ﻿@model GGC.TestCaseGenerator.Models.CoverageGroup
 
 
+
 @{
     ViewBag.Title = "Coverage Group";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -11,42 +12,52 @@
 {
     <div class="jumbotron">
         <div>
-            <label>Coverage Group Name: </label>
-            <!---->
-            @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+            <!--  <label>Coverage Group Name: </label>-->
             <!-- <i class="fa fa-plus-square-o" style="font-size:48px;color:lightgreen"></i>-->
         </div>
 
-        <div>
-            <button style="font-size:18px;color:forestgreen">Add <i class="fa fa-plus-square-o"></i></button>
+        <div id="CovDiv">
+            <!--<label>
+                Enter your Coverage Group:
+            </label>
+            <br>-->
+            <button onclick="appendRow()" value="Add Row">Add Coverage Group</button>
+            <br>
+            <!-- <button onclick="appendRow()" value="Add Row">Add Row</button>-->
         </div>
-        <br>
+  
+        <script>
+            var x = 1
+            function appendRow() {
+                var d = document.getElementById('CovDiv');
+                //d.innerHTML += "<label>Coverage Group Name: </label>";
+                d.innerHTML += "<label>Coverage Group Name:</label><input type='text' id='CovGroupName" + x++ + "'>";
+                d.innerHTML += "<button style='font - size: 18px; color: forestgreen' onclick='apprendDropDown()'>Add member <i class='fa fa - plus - square - o'></i></button><br>";
+                d.innerHTML += "<div id='MemberDiv'></div>";
+            }
+
+            //append drop down is supposed to show a drop down box but currently it wont even show a label and input.
+            var y = 1;
+            function apprendDropDown() {
+                var parameter = document.getElementById('MemberDiv');
+                parameter.innerHTML += "<label>Members:</label>";
+                parameter.innerHTML += "<input type='text' id='CovMembers" + y++ + "'>";
+            }
+        </script>
+
         <br>
         <div>
             <!--When the add member byutton is cluccked dropdown lists will show up containing input parameters
-                that were entered.-->
-            <button style="font-size:18px;color:forestgreen" onclick="showInputParam">Add member <i class="fa fa-plus-square-o"></i></button>
-
-        </div>
-
-        <div>
-            <div id="dropDownContainer">
-
-            </div>
+                  that were entered.-->
+            <!-- <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>-->
         </div>
         <br>
         <br>
-        <button class="btn btn-success" type="submit" onclick="showInputParam()">Submit</button>
+        <button class="btn btn-success" type="submit" onclick="" stylefont-size: 16px>Submit</button>
         <br>
         <br>
     </div>
+
 }
 
-<script src="~/Scripts/specification-converage.js"></script>
-
-//FORM TEST
-
-<form action="/home/Test" method="POST">
-    <input type="text" name="text" />
-    <input type="submit" name="Test" />
-</form>
+<!--<script src="~/Scripts/specification-converage.js"></script>-->
