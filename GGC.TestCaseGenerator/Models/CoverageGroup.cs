@@ -16,6 +16,7 @@ namespace GGC.TestCaseGenerator.Models
         public string Name { get; set; }
 
         //Define list of input parameters that make a coverage group
+
         public IList<string> Parameters { get; set; }
 
         //Defines a no arg constructor to initialize coverage group

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using GGC.TestCaseGenerator.Models;
 
 namespace GGC.TestCaseGenerator.Controllers
 {
@@ -13,18 +14,37 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Contact()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult About()
+        {
+            return View();
+        }
+
+        public ActionResult CoverageGroup()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AddSpecification()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSpecification(InputParameter testSpecification)
         {
             ViewBag.Message = "Your contact page.";
+            //Save Specification
+            InputParameter input = new InputParameter(testSpecification.Name, testSpecification.Text);
 
-            return View();
+            //Redirect
+
+            return Redirect("/");
         }
     }
 }
