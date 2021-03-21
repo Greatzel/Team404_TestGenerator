@@ -54,6 +54,15 @@ namespace GGC.TestCaseGenerator.Models
         }
 
         /// <summary>
+        /// Constructs and initializes an instance object of the class InputParameter.
+        /// </summary>
+        public InputParameter(string name, string text)
+        {
+            Name = name;
+            Text = text;
+        }
+
+        /// <summary>
         /// Sets the data members of the class and returns true if successful.
         /// </summary>
         public bool Set(

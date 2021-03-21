@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Text;
 using System.Web;
 
 namespace GGC.TestCaseGenerator.Models
@@ -126,7 +128,7 @@ namespace GGC.TestCaseGenerator.Models
         /// </summary>
         public bool WriteAsString()
         {
-            StringBuilder writtenForm = new StringBuilder();
+            System.Text.StringBuilder writtenForm = new StringBuilder();
 
             writtenForm.AppendLine();
             writtenForm.AppendLine($"Coverage metrics:");
@@ -165,7 +167,7 @@ namespace GGC.TestCaseGenerator.Models
         /// </summary>
         public bool WriteToFile(string filenameWithPath)
         {
-            using (StreamWriter writer = new StreamWriter(filenameWithPath))
+            using (System.IO.StreamWriter writer = new StreamWriter(filenameWithPath))
             {
                 writer.WriteLine(WrittenForm);
             }

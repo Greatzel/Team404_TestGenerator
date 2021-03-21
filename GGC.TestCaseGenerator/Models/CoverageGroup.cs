@@ -26,6 +26,12 @@ namespace GGC.TestCaseGenerator.Models
             Parameters = null;
         }
 
+        //Defines a one arg str constructor to initialize coverage group
+        public CoverageGroup(String name)
+        {
+            Name = name;
+        }
+
         //Sets the data of members of the class and 
         //returns true if successful
         public bool Set(string name, IList<string> parameters)

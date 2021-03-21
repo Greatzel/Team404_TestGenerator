@@ -29,14 +29,43 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult AddSpecification()
+        public ActionResult AddMembers()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddSpecification(InputParameter testSpecification)
+        public ActionResult CoverageGroup(FormCollection fc)
+        {
+            string groupName = fc["groupname"];
+            CoverageGroup group = new CoverageGroup(groupName);
+            return View("AddMembers");
+        }
+
+        public ActionResult AddSpecification()
+        {
+            return View();
+        }
+
+        public ActionResult HowTo()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult InputParameter()
+        {
+            return View();
+        }
+        public ActionResult ExpectedResult(ExpectedResult resultSpecification)
+        {
+            ViewBag.Message = "Expected Results";
+            ExpectedResult input = new ExpectedResult();
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult InputParameter(InputParameter testSpecification)
         {
             ViewBag.Message = "Your contact page.";
             //Save Specification
@@ -45,6 +74,16 @@ namespace GGC.TestCaseGenerator.Controllers
             //Redirect
 
             return Redirect("/");
+        }
+
+        //Get data test
+        [HttpPost]
+        public ActionResult Test(string text)
+        {
+            ViewBag.DisplayText = text;
+            return Redirect(text);
+
+            //return View();
         }
     }
 }

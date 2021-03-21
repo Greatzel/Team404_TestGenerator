@@ -1,0 +1,71 @@
+﻿@model GGC.TestCaseGenerator.Models.ExpectedResult
+
+@{
+    ViewBag.Title = "ExpectedResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .labelResult {padding-right:70px;}
+</style>
+
+<div class="jumbotron">
+    <h2>ExpectedResult</h2>
+    <br>
+    
+    <form method="post">
+
+        <div id="ExpectedResultGroup">
+
+            <label class="labelResult">Name</label> <label class="labelResult">Text</label> <label class="labelResult">Condition</label>
+            <br>
+            <input name="name" type="text" value="" style="width:100px" />
+            <input name="text" type="text" value="" style="width:100px" />
+            <input name="condition" type="text" value="" style="width:200px" />
+
+            <input class="btn btn-success" type="button" onclick="AddInputField()" value="Add Expected Result" />
+            <br>
+            <br>
+        </div>
+    </form>
+    
+    <br>
+        <!-- <br>
+        Input Name: at Html.TextBox("Name")
+        Input Text: at Html.TextBox("Text")
+        Input Condition: at Html.TextBox("Condition")
+        <br> -->
+ 
+    <script>
+        var ExpectedResultNameList = [];
+        var ExpectedResult = [];
+        var name = document.getElementById('name').value;
+        var text = document.getElementById('text').value;
+        var condition = document.getElementById('condition').value;
+
+        function GetDynamicTextbox(value) {
+            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "text" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Group Name" /></div> <br><br>';
+        }
+
+        function AddInputField() {
+            var div = document.createElement('DIV');
+            div.innerHTML = GetDynamicTextbox("");
+            document.getElementById("ExpectedResultGroup").appendChild(div);
+        }
+
+        function RemoveTextBox(div) {
+            document.getElementById("ExpectedResultGroup").removeChild(div.parentNode.parentNode);
+        }
+
+        function SubmitResult() {
+            groupNameList.push(groupname);
+            console.log(groupNameList);
+            console.log(groupname);
+        }
+    </script>
+
+    <br>
+    <br>
+    <button class="btn btn-success" type="submit" onclick="" stylefont-size: 16px>Submit</button>
+    <br>
+    <br>
+</div>
