@@ -29,14 +29,36 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        [HttpGet]
-        public ActionResult AddSpecification()
+        public ActionResult AddMembers()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddSpecification(InputParameter testSpecification)
+        public ActionResult CoverageGroup(FormCollection fc)
+        {
+            string groupName = fc["groupname"];
+            CoverageGroup group = new CoverageGroup(groupName);
+            return View("AddMembers");
+        }
+        public ActionResult AddSpecification()
+        {         
+            return View();
+        }
+
+        public ActionResult HowTo()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult InputParameter()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult InputParameter(InputParameter testSpecification)
         {
             ViewBag.Message = "Your contact page.";
             //Save Specification

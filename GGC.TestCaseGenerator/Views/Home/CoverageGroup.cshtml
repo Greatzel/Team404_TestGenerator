@@ -7,57 +7,87 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<style>
 
-@using (Html.BeginForm())
-{
+    button {
+        margin-right: 15px;
+    }
+</style>
+
+<body>
     <div class="jumbotron">
-        <div>
-            <!--  <label>Coverage Group Name: </label>-->
-            <!-- <i class="fa fa-plus-square-o" style="font-size:48px;color:lightgreen"></i>-->
-        </div>
-
-        <div id="CovDiv">
-            <!--<label>
-                Enter your Coverage Group:
-            </label>
-            <br>-->
+        <!--<div id="CovDiv">
             <button onclick="appendRow()" value="Add Row">Add Coverage Group</button>
+            <button onclick="removeRow()" value="Remove Row">Remove Coverage Group</button><br />
+        </div>-->
+        <form method="post">
             <br>
-            <!-- <button onclick="appendRow()" value="Add Row">Add Row</button>-->
-        </div>
-  
-        <script>
-            var x = 1
-            function appendRow() {
-                var d = document.getElementById('CovDiv');
-                //d.innerHTML += "<label>Coverage Group Name: </label>";
-                d.innerHTML += "<label>Coverage Group Name:</label><input type='text' id='CovGroupName" + x++ + "'>";
-                d.innerHTML += "<button style='font - size: 18px; color: forestgreen' onclick='apprendDropDown()'>Add member <i class='fa fa - plus - square - o'></i></button><br>";
-                d.innerHTML += "<div id='MemberDiv'></div>";
-            }
-
-            //append drop down is supposed to show a drop down box but currently it wont even show a label and input.
-            var y = 1;
-            function apprendDropDown() {
-                var parameter = document.getElementById('MemberDiv');
-                parameter.innerHTML += "<label>Members:</label>";
-                parameter.innerHTML += "<input type='text' id='CovMembers" + y++ + "'>";
-            }
-        </script>
-
-        <br>
-        <div>
-            <!--When the add member byutton is cluccked dropdown lists will show up containing input parameters
-                  that were entered.-->
-            <!-- <button style="font-size:18px;color:forestgreen" id="generate">Add member <i class="fa fa-plus-square-o"></i></button>-->
-        </div>
-        <br>
-        <br>
-        <button class="btn btn-success" type="submit" onclick="" stylefont-size: 16px>Submit</button>
-        <br>
-        <br>
+            <label>Add Coverage Group</label>
+            <p style="font-size:small;">Please enter the coverage group names of your test specification.</p>
+            <div id="CovGroupName">
+                <input type="text" id="groupname" name="groupname" style="width:200px" /><input type="button" onclick="AddInputField()" value="Add Group Name" />
+            </div><br />
+            <input class="btn btn-success" onclick="SubmitGroupName()" type="submit" value="Submit Coverage Group Names" />
+            <!--<button class="btn btn-success" onclick="SubmitGroupName()" type="submit" stylefont-size: 16px>Submit Coverage Group Names</button>-->
+            <br>
+        </form>
     </div>
 
-}
+</body>
 
+<script type="text/javascript">
+
+    var groupNameList = [];
+    var groupname = document.getElementById('groupname').value;
+
+    function GetDynamicTextbox(value) {
+        return '<div><input type="text" name="groupname" style="width:200px" /><input type ="button" onclick="RemoveTextBox(this)" value="Remove Group Name"/></div>';
+    }
+
+    function AddInputField() {
+        var div = document.createElement('DIV');
+        div.innerHTML = GetDynamicTextbox("");
+        document.getElementById("CovGroupName").appendChild(div);
+    }
+
+    function RemoveTextBox(div) {
+        document.getElementById("CovGroupName").removeChild(div.parentNode.parentNode);
+    }
+
+    function SubmitGroupName() {
+        groupNameList.push(groupname);
+        console.log(groupNameList);
+        console.log(groupname);
+    }
+
+</script>
+
+
+<!-- <script>
+     var CovGroupList = ['Test'];
+     var x = 1
+     function appendRow() {
+
+         var d = document.getElementById('CovDiv');
+         d.innerHTML += "<label>Coverage Group Name:</label><input type='text' id='CovGroupName" + x++ + "'><br >";
+
+     }
+
+
+
+     //append drop down is supposed to show a drop down box but currently it wont even show a label and input.
+     var y = 1;
+     function apprendDropDown() {
+         var parameter = document.getElementById('MemberDiv');
+         parameter.innerHTML += "<label>Members:</label>";
+         parameter.innerHTML += "<input type='text' id='CovMembers" + y++ + "'>";
+     }
+
+     var check = 1
+     function submitGroupName() {
+         var input = document.getElementById('CovDiv');
+         CovGroupList.push(CovGroupName);
+         console.log(CovGroupList);
+     }
+ </script>-->
 <!--<script src="~/Scripts/specification-converage.js"></script>-->

@@ -3,23 +3,18 @@
 }
 
 <div class="jumbotron">
-    <h1>Welcome to Testing centers</h1>
+    <h3>Category Parition Method</h3>
     <br>
-    <div id="IP1">
-        <button onclick="appendRow()" value="Add box">Add InputParameters</button><br>
-        <br>
-        Input Name: @Html.TextBox("Name");
-        Input Text: @Html.TextBox("Text");
-        <br>
-        <br />
+    <div>
+        <p>
+            A method for creating functional test suites has been developed in zohich a
+            test engineer analyzes the system specification, writes a series of formal test
+            specifications, and then uses a generator tool to produce test descriptions
+            from which test scripts are written. The advantages of this method are that
+            the tester can easily modify the test specification when necessary, and can
+            control the complexity and number of the tests by annotating the tests
+            specification with constraints.<br /><br />
+            <span> - THOMAS J. OSTRAND and MARC J. BALCER</span>
+        </p>
     </div>
-    <script>
-        var x = 1
-        function appendRow() {
-            var d = document.getElementById("IP1");          
-            d.innerHTML += "Enter Equivalance Class";
-            d.innerHTML += "<input type='text' id='tst" + x++ + "'><br >";
-            d.innerHTML += "<input type='text' id='tst" + x++ + "'><br >";
-        }
-    </script>
 </div>

@@ -1,0 +1,25 @@
+﻿@model GGC.TestCaseGenerator.Models.InputParameter
+
+@{
+    ViewBag.Title = "InputParameter";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="jumbotron">
+    <div id="IP1">
+        <button onclick="appendRow()" value="Add box">Add InputParameters</button><br>
+        <br>
+        Input Name: @Html.TextBox("Name");
+        Input Text: @Html.TextBox("Text");
+        <br>
+        <br />
+    </div>
+    <script>
+        var x = 1
+        function appendRow() {
+            var d = document.getElementById("IP1");
+            d.innerHTML += "Enter Equivalance Class";
+            d.innerHTML += "<input type='text' id='tst" + x++ + "'><br >";
+            d.innerHTML += "<input type='text' id='tst" + x++ + "'><br >";
+        }
+    </script>
+</div>

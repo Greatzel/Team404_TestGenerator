@@ -14,9 +14,9 @@ namespace GGC.TestCaseGenerator.Models
         public IList<string> Parameters { get; set; }
 
         //Defines a no arg constructor to initialize coverage group
-        public CoverageGroup()
+        public CoverageGroup(string name)
         {
-            Name = null;
+            Name = name;
             Parameters = null;
         }
 
@@ -46,6 +46,5 @@ namespace GGC.TestCaseGenerator.Models
             }
             return validated;
         }
-
     }
 }

@@ -28,6 +28,9 @@ namespace GGC.TestCaseGenerator
 
             bundles.Add(new ScriptBundle("~/bundles/testSpecificationJs").Include(
                         "~/Scripts/specification-coverage.js"));
+
+            bundles.Add(new ScriptBundle("~/bundles/testSpecificationJs").Include(
+                       "~/Scripts/specification-{model}.js"));
         }
     }
 }

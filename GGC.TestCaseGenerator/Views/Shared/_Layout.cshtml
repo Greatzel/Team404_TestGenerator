@@ -9,7 +9,6 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    @Scripts.Render("~/bundles/specification")
 
 
 </head>
@@ -26,7 +25,7 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("How to", "Index", "Home")</li>
+                    <li>@Html.ActionLink("How to", "HowTo", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Resources", "Contact", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -39,7 +38,7 @@
     <!--This is the selection for the Test Specification Input-->
 
     <div class="container">
-        <h2>Define feature</h2>
+        <h2>Define Test Specification</h2>
         <div class="navbar-header">
 
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -51,7 +50,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Input Parameters", "Index", "Home")</li>
+                <li>@Html.ActionLink("Input Parameters", "InputParameter", "Home")</li>
                 <li>@Html.ActionLink("Coverage Groups", "CoverageGroup", "Home")</li>
                 <li>@Html.ActionLink("Expected Results", "Contact", "Home")</li>
                 <li>@Html.ActionLink("Conditions", "AddSpecification", "Home")</li>
