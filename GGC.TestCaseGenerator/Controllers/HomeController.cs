@@ -29,6 +29,11 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
+        public ActionResult Resources()
+        {
+            return View();
+        }
+
         public ActionResult AddMembers()
         {
             return View();
