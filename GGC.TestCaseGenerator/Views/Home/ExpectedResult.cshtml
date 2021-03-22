@@ -34,16 +34,14 @@
         Input Text: at Html.TextBox("Text")
         Input Condition: at Html.TextBox("Condition")
         <br> -->
- 
     <script>
-        var ExpectedResultNameList = [];
         var ExpectedResult = [];
         var name = document.getElementById('name').value;
         var text = document.getElementById('text').value;
         var condition = document.getElementById('condition').value;
 
         function GetDynamicTextbox(value) {
-            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "text" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Group Name" /></div> <br><br>';
+            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "text" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Expected Result" /></div> <br>';
         }
 
         function AddInputField() {
@@ -57,9 +55,13 @@
         }
 
         function SubmitResult() {
-            groupNameList.push(groupname);
-            console.log(groupNameList);
-            console.log(groupname);
+            ExpectedResult.push(name);
+            ExpectedResult.push(text);
+            ExpectedResult.push(condition);
+            console.log(ExpectedResult);
+            console.log(name);
+            console.log(text);
+            console.log(condition);
         }
     </script>
 

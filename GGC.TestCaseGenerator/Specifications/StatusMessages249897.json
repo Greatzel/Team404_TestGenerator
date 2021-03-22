@@ -1,0 +1,90 @@
+{
+  "Name": "StatusMessages249897",
+  "Text": "Error status messages (ULTI-249897)",
+  "CoverageGroups": [
+    {
+      "Name": "GridMessages",
+      "Parameters": [ "ViewedGrid", "InformaticaStatusEvent" ]
+    }
+  ],
+  "InputParameters": {
+    "InterfaceVersion": {
+      "Name": "InterfaceVersion",
+      "Text": "interface",
+      "EquivalenceClasses": {
+        "MK2Non834": {
+          "Name": "MK2Non834",
+          "Text": "MK2 non-834"
+        },
+        "MK2834": {
+          "Name": "MK2834",
+          "Text": "MK2 834"
+        },
+        "MK3Non834": {
+          "Name": "MK3Non834",
+          "Text": "MK3 non-834"
+        },
+        "MK3834": {
+          "Name": "MK3834",
+          "Text": "MK3 834"
+        }
+      }
+    },
+    "ViewedGrid": {
+      "Name": "ViewedGrid",
+      "Text": "UltiPro page",
+      "EquivalenceClasses": {
+        "FileTransfersMonitoring": {
+          "Name": "FileTransfersMonitoring",
+          "Text": "FT monitoring grid"
+        },
+        "IntegrationStudioActivityLog": {
+          "Name": "IntegrationStudioActivityLog",
+          "Text": "activity log"
+        },
+        "IntegrationStudioUCN": {
+          "Name": "IntegrationStudioUCN",
+          "Text": "UCN grid"
+        }
+      }
+    },
+    "InformaticaStatusEvent": {
+      "Name": "InformaticaStatusEvent",
+      "Text": "Informatica state",
+      "EquivalenceClasses": {
+        "State00": {
+          "Name": "State00",
+          "Text": "no file transmission error"
+        },
+        "State01": {
+          "Name": "State01",
+          "Text": "delivery failure (unable to find host)"
+        },
+        "State02": {
+          "Name": "State02",
+          "Text": "delivery failure (error sending to partner)"
+        },
+        "State03": {
+          "Name": "State03",
+          "Text": "routing error (cannot locate profile)"
+        },
+        "State04": {
+          "Name": "State04",
+          "Text": "routing error (cannot locate outbound endpoint)"
+        }
+      }
+    }
+  },
+  "ExpectedResults": {
+    "StatusMessage00": {
+      "Name": "StatusMessage00",
+      "Text": "Informatica status event is normal",
+      "Condition": "InformaticaStatusEvent = State00"
+    },
+    "StatusMessage01": {
+      "Name": "StatusMessage01",
+      "Text": "Informatica status event is 'File Transmission Error'",
+      "Condition": "InformaticaStatusEvent = [State01,State02,State03,State04]"
+    }
+  }
+}
