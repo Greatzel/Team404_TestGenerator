@@ -44,15 +44,16 @@ namespace GGC.TestCaseGenerator.Controllers
         public ActionResult CoverageGroup(FormCollection fc)
         {
             string groupName = fc["groupname"];
-            //CoverageGroup group = new CoverageGroup(groupName);
-            var groupname = Request.Form["groupname"];
+            CoverageGroup group = new CoverageGroup();
             var member1 = Request.Form["tempmembername1"];
+            IList<string> membersList = group.Split(member1);
 
-            ArrayList membersList = new ArrayList();
-            membersList.Add(member1);
+            //set object Name and Parameters
+            group.Name = Request.Form["groupname"];
 
-            CoverageGroup group = new CoverageGroup(groupname, membersList);
-            // return View("AddMembers");
+            //need to validate members in case it is null
+            group.Parameters = membersList;
+
             return View();
         }
 

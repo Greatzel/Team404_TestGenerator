@@ -25,13 +25,17 @@
     <div class="jumbotron">
         <form method="post">
             <br>
-            <label>Add Coverage Group</label>
-            <p style="font-size:small;">Please enter the coverage group names of your test specification.</p>
             <div id="CovGroupName">
-                <input type="text" id="groupname" name="groupname" style="width:200px" /><input type="button" onclick="AddInputField()" value="Add Group Name" /><br /><br />
-          
-           <label>Add Members</label><br />
-                <input type="text" name="tempmembername1" style="width: 200px" /><br />     
+                <label>Add Coverage Group</label>
+                <p style="font-size:small;">Please enter the coverage group names of your test specification.</p>
+                <input type="text" id="groupname" name="groupname" style="width:200px" /><br /><br />
+                <!--<input type="button" onclick="AddInputField()" value="Add Group Name" /><br /><br />-->
+
+                <label>Add Members</label><br />
+                <p style="font-size:small; padding-right: 45%">Please enter the members of your coverage group 
+                    <strong>separate them with a comma <mark>","</mark></strong> of your test specification.<br />
+                For example: </p>
+                <input type="text" name="tempmembername1" style="width: 200px" /><br />
             </div><br />
             <input class="btn btn-success" onclick="SubmitGroupName()" type="submit" value="Submit Coverage Group Names" />
             <br>
