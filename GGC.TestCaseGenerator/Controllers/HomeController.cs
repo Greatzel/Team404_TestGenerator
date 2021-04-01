@@ -9,6 +9,15 @@ namespace GGC.TestCaseGenerator.Controllers
 {
     public class HomeController : Controller
     {
+        /// <summary>
+        /// controller's reference to the data model
+        /// </summary>
+        private readonly ModelInterface model;
+
+        public HomeController(ModelInterface modelInterface)
+        {
+            model = modelInterface;
+        }
         public ActionResult Index()
         {
             return View();
@@ -57,10 +66,20 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
+
+        [HttpPost]
         public ActionResult ExpectedResult(ExpectedResult resultSpecification)
         {
             ViewBag.Message = "Expected Results";
             ExpectedResult input = new ExpectedResult();
+            var name = Request.Form["name"];
+            var text = Request.Form["text"];
+            var condition = Request.Form["condition"];
+            return View();
+        }
+
+        public ActionResult ExpectedResultJson(ExpectedResult resultSpecification)
+        {
             return View();
         }
 
