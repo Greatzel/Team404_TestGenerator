@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -43,9 +44,18 @@ namespace GGC.TestCaseGenerator.Controllers
         public ActionResult CoverageGroup(FormCollection fc)
         {
             string groupName = fc["groupname"];
-            CoverageGroup group = new CoverageGroup(groupName);
-            return View("AddMembers");
+            //CoverageGroup group = new CoverageGroup(groupName);
+            var groupname = Request.Form["groupname"];
+            var member1 = Request.Form["tempmembername1"];
+
+            ArrayList membersList = new ArrayList();
+            membersList.Add(member1);
+
+            CoverageGroup group = new CoverageGroup(groupname, membersList);
+            // return View("AddMembers");
+            return View();
         }
+
         public ActionResult AddSpecification()
         {         
             return View();
@@ -56,7 +66,7 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        [HttpGet]
+        [HttpPost]
         public ActionResult InputParameter()
         {
             return View();
@@ -82,6 +92,13 @@ namespace GGC.TestCaseGenerator.Controllers
             return Redirect(text);
 
             //return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMembers(FormCollection members)
+        {
+           
+            return View();
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,12 +15,12 @@ namespace GGC.TestCaseGenerator.Models
         public IList<string> Parameters { get; set; }
 
         //Defines a no arg constructor to initialize coverage group
-        public CoverageGroup(string name)
+        public CoverageGroup(string name, ArrayList parameters)
         {
             Name = name;
-            Parameters = null;
-        }
-
+            Parameters = (IList<string>)parameters;
+        }       
+      
         //Sets the data of members of the class and 
         //returns true if successful
         public bool Set(string name, IList<string> parameters)
@@ -27,6 +28,11 @@ namespace GGC.TestCaseGenerator.Models
             Name = name;
             Parameters = parameters;
             return true;
+        }
+
+        public void Split(String members)
+        {
+
         }
 
         /*In Jim's original code, at this point there is an XML reader.
