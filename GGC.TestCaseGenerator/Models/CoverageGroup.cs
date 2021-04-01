@@ -37,20 +37,6 @@ namespace GGC.TestCaseGenerator.Models
             return true;
         }
 
-        //splits the string coming from the user to populate members array
-        public IList<string> Split(string members)
-        {
-            string[] memberSplitList = members.Split(',');
-            IList<string> membersArray = new List<string>();
-
-            foreach(var member in memberSplitList)
-            {
-                membersArray.Add(member);
-            }
-
-            return membersArray;
-        }
-
         /*In Jim's original code, at this point there is an XML reader.
             but since we are not going to save test specifications in XML
             but in JSON instead, then I will leave it out.*/

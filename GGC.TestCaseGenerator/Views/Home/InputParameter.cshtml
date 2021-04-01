@@ -7,9 +7,11 @@
 <div class="jumbotron">
     <div id="IP1">
         <button onclick="appendRow()" value="Add box">Add InputParameters</button><br>
-        <br>
-        Input Name: @Html.TextBox("Name");
-        Input Text: @Html.TextBox("Text");
+        <br> 
+        <input type="text" id="InputParamId" name="InputParamName" /><br /><br />
+
+        <label>Add Equivalence Cases</label><br />
+        <input type="text" id="EquivalenceCaseId" name="EquivalenceCaseName" />
         <br>
         <br />
     </div>

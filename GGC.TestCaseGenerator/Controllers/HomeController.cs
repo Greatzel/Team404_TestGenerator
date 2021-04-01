@@ -39,21 +39,21 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
+        public ActionResult Result()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult CoverageGroup(FormCollection fc)
         {
-            string groupName = fc["groupname"];
-            CoverageGroup group = new CoverageGroup();
-            var member1 = Request.Form["tempmembername1"];
-            IList<string> membersList = group.Split(member1);
+            ModelInterfaceController tempNameInterface = new ModelInterfaceController();
+         
+            /*var members = Request.Form["tempmembername1"];
+            var groupName = Request.Form["groupname"];*/
 
-            //set object Name and Parameters
-            group.Name = Request.Form["groupname"];
-
-            //need to validate members in case it is null
-            group.Parameters = membersList;
-
+            tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
+                Request.Form["tempmembername1"]);         
             return View();
         }
 
@@ -66,8 +66,6 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
-
-        [HttpPost]
         public ActionResult InputParameter()
         {
             return View();

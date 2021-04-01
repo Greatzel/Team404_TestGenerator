@@ -3,7 +3,6 @@
 //Add Coverage Group Name Script
 
 var groupNameList = [];
-var groupname = document.getElementById("groupname").value;
 
 function GetDynamicTextbox(value) {
     return '<div><input type="text" id="groupmember" name="member" style="width:200px" /><input type ="button" onclick="RemoveTextBox(this)" value="Remove Members"/></div>';
@@ -13,7 +12,7 @@ function AddInputField() {
     var div = document.createElement('DIV');
     div.innerHTML = GetDynamicTextbox("");
     document.getElementById("CovGroupName").appendChild(div);
-    console.log(groupname);    
+    console.log(covGroupName);    
 }
 
 function RemoveTextBox(div) {
@@ -21,10 +20,11 @@ function RemoveTextBox(div) {
 }
 
 function SubmitGroupName() {
-    groupNameList.push(groupname);
-    console.log(groupname); 
+    var covGroupName = document.getElementById("groupnameId").value;
+    groupNameList.push(covGroupName);
+    console.log(covGroupName);
+    console.log(inputParamsList);
 }
-
 
 //Generate Group Names List Labels
 function GroupNamesList() {
@@ -34,7 +34,6 @@ function GroupNamesList() {
         document.getElementById("groupNamesList");
     }
 }
-
 
 function GetMemberSetDropdown(value) {
     return '<div id="selectMember">< label for= "members" > Group A:</label ><input type="button" onclick="AddMemberDropdown()" value="Add Members" /><input type="button" onclick="testReference()" value="TEST REF" /><div id="memberBox" style="padding-left: 50px;"></div></div > <br />';
