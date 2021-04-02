@@ -6,41 +6,42 @@
 <div class="jumbotron">
     <h1>Welcome to Testing centers</h1>
     <br>
-    <div id="IP1">
-        <form method="post">
-            <br />
-            <p><b>Click to add other Input Parameter</b></p><button onclick="appendRow1()" value="Add box">Add Input Parameter</button>
-            </br>
-            <label id="IN1" name="IN2">Input Name:</label>
-            <input id="IPara1" name="IPara1" placeholder="Enter Input Name Here" type="text" style="width:200px" /><br />
-            <label id="IT1">Input Text:</label>
-            <input id="IPara2" placeholder="Enter Input Text Here" type="text" style="width:200px" />
-            <br>
- 
-        </form>
-    </div>
-  
+    <form method="post">
+        <div id="IP1">
 
-    <div id="IP2">
-        <br />
-        <form>
-        <p><b>Click to add other Equilvalence Classes</b></p><button onclick="appendRow2()" value="Add box">Add Equilavalence Classes</button>
-        </br>
-        <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
-        <input id="IPara1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
-        <label id="IT1">Enter Equilvalence Class:</label>
-        <input id="IPara2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
-        <br>
-        </form>
-    </div>
-    <script>
-        var y = 1
-        function appendRow2() {
-            var t = document.getElementById('IP2');
-            t.innerHTML += "<br><b>Enter other Equilavalence Classes:</b>"
-            t.innerHTML += "<br>Enter Equilvalence class Name: <input type='text' id='tst" + y++ + "'><br >";
-            t.innerHTML += "Enter Equilavalence Classes:<input type='text' id='tst" + y++ + "'><br >";
-        }
-    </script>
-    <button onclick="" type="submit">Submit</button>
+            <br />
+            <p>
+                <h3><b>Click to add other Input Parameter</b></h3>
+                </br>
+                <label id="IN1" name="IN2">Input Name:</label>
+                <input id="IPara1" name="IPara1" placeholder="Enter Input Name Here" type="text" style="width:200px" /><br />
+                <label id="IT1">Input Text:</label>
+                <input id="IPara2" placeholder="Enter Input Text Here" type="text" style="width:200px" />
+                <br>
+                </div>
+
+
+        <div id="IP2">
+            <br />
+
+            <label><b>Click to add other Equilvalence Classes</b></label><button onclick="appendRow2()" value="Add box">Add Equilavalence Classes</button>
+            </br>
+            <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
+            <input id="IPara1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
+            <label id="IT1">Enter Equilvalence Class:</label>
+            <input id="IPara2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
+            <br>
+
+        </div>
+</form>
+<script>
+    var y = 1
+    function appendRow2() {
+        var t = document.getElementById('IP2');
+        t.innerHTML += "<br><b>Enter other Equilavalence Classes:</b>"
+        t.innerHTML += "<br>Enter Equilvalence class Name: <input type='text' id='tst" + y++ + "'><br >";
+        t.innerHTML += "Enter Equilavalence Classes:<input type='text' id='tst" + y++ + "'><br >";
+    }
+</script>
+<button onclick="" type="submit">Submit</button>
 </div>

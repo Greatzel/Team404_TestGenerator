@@ -19,6 +19,16 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
+        [HttpPost]
+        public ActionResult ExpectedResult(FormCollection re)
+        {
+            var s = Request.Form["ERName"];
+            return View();
+        }
+        public ActionResult ExpectedResult()
+        {
+            return View();
+        }
         public ActionResult Contact()
         {
             return View();
