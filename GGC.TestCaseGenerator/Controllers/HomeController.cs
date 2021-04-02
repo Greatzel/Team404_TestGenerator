@@ -10,12 +10,12 @@ namespace GGC.TestCaseGenerator.Controllers
     public class HomeController : Controller
     {
         [HttpPost]
-        public ActionResult Index(FormCollection fc)
+        public ActionResult InputParameter(FormCollection fc)
         {
-            var s = Request.Form["IN2"];
+            var s = Request.Form["IPara1"];
             return View();
         }
-        public ActionResult Index()
+        public ActionResult InputParameter()
         {
             return View();
         }

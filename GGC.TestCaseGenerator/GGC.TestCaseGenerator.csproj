@@ -168,6 +168,8 @@
     <Content Include="Views\Home\AddSpecification.cshtml" />
     <Content Include="Views\Home\CoverageGroup.cshtml" />
     <Content Include="Content\jQueryFixes.js" />
+    <Content Include="Views\Home\E.cshtml" />
+    <Content Include="Views\Home\InputParameter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
