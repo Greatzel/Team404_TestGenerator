@@ -9,11 +9,16 @@ namespace GGC.TestCaseGenerator.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpPost]
+        public ActionResult Index(FormCollection fc)
+        {
+            var s = Request.Form["IN2"];
+            return View();
+        }
         public ActionResult Index()
         {
             return View();
         }
-
         public ActionResult Contact()
         {
             return View();
