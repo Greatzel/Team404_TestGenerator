@@ -10,11 +10,10 @@ namespace GGC.TestCaseGenerator.Models
         public string Name { get; set; }
         public string Text { get; set; }
 
-        public InputParameter (string name, string text)
+        public InputParameter(string name, string text)
         {
             Name = name;
             Text = text;
         }
-
     }
 }

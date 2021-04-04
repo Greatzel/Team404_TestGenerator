@@ -21,40 +21,37 @@ namespace GGC.TestCaseGenerator.Controllers
         }
 
         //method that returns a list of coverage groups from the user input
-        public String CreateCoverageGroup(string groupName, string members)
+        public CoverageGroup CreateCoverageGroup(string groupName, string members)
         {
-            string result = "Coverage group submitted";
-
             //Need validation if parameters are empty or not
-            group.Name = groupName;
-            group.Parameters = Split(members);
-
-            ToJsonFile(group);
-            return result;
+           this.group.Name = groupName;
+           this.group.Parameters = Split(members);
+        
+            return this.group;
         }
 
         //splits the string coming from the user to populate members array
         public IList<string> Split(string members)
-        {
-            string[] memberSplitList = members.Split(',');
-            IList<string> membersArray = new List<string>();
+        {          
+            IList<string> memberSplitList = members.Split(',').ToList();          
+            return memberSplitList;
+        }
 
-            foreach (var member in memberSplitList)
+        public IList<string> AddMembers(string member)
+        {
+            IList<string> test = new List<string>();
+            int index = member.Length - 1;
+            char memberLastDigit = member[index];
+            index = memberLastDigit - '0';
+          
+            for(int i = 0; i < index; i++)
             {
-                membersArray.Add(member);
+
             }
 
-            return membersArray;
+            return test;
         }
-
+        
         //method to turn test specification object into json script
-
-        public void ToJsonFile(CoverageGroup coveragegroup)
-        {
-            string jsondata = new JavaScriptSerializer().Serialize(coveragegroup);
-            string filePath = Server.MapPath("~/App_Data/");
-            System.IO.File.WriteAllText(filePath + "testOutput.json", jsondata);        
-        }
-
     }
 }

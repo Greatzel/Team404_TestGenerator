@@ -30,13 +30,44 @@
                 <!--<input type="button" onclick="AddInputField()" value="Add Group Name" /><br /><br />-->
 
                 <label>Add Members</label><br />
-                <p style="font-size:small; padding-right: 45%">Please enter the members of your coverage group 
+                <p style="font-size:small; padding-right: 45%">
+                    Please enter the members of your coverage group
                     <strong>separate them with a comma <mark>","</mark></strong> of your test specification.<br />
-                For example: </p>
-                <input type="text" name="tempmembername1" style="width: 200px" /><br />
+                    For example:
+                </p>
+                <input type="text" name="tempmembername1" style="width: 200px" /><br /><br />
+
+                <div id="dropDownID">
+                    <p><h5><label>Select Members</label></h5></p>
+                    <button onclick="appendRow2()" value="Add box">Add Member</button><br />
+                    <select id="selectNumber"></select>
+                    <br>
+
+                </div>
+                <br />
+                <br />
+                <!--=======================================================================-->
+              <!--  <div id="dropDownID2">
+                    <button onclick="appendRow3()" value="Add box">
+                  Add Member appendRow3()</button>
+
+                </div>
+                <br />
+                <br /> -->
+                <!--TEST 5-->
+
+                <div id="dropDownID5">
+                    <button onclick="appendRow5()" value="Add box">Add Member appendRow5()</button>
+                </div>
+
             </div><br />
+
+
             <input class="btn btn-success" onclick="SubmitGroupName()" type="submit" value="Submit Coverage Group Names" />
             <br>
         </form>
     </div>
 </body>
+
+
+

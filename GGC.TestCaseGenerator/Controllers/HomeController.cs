@@ -10,6 +10,8 @@ namespace GGC.TestCaseGenerator.Controllers
 {
     public class HomeController : Controller
     {
+
+        ModelInterfaceController tempNameInterface = new ModelInterfaceController();
         public ActionResult Index()
         {
             return View();
@@ -47,10 +49,12 @@ namespace GGC.TestCaseGenerator.Controllers
         [HttpPost]
         public ActionResult CoverageGroup(FormCollection fc)
         {
-            ModelInterfaceController tempNameInterface = new ModelInterfaceController();
-         
-            /*var members = Request.Form["tempmembername1"];
-            var groupName = Request.Form["groupname"];*/
+          
+
+            var member1 = Request.Form["selectNumber"];
+            var member2 = Request.Form["memberSelect1"];
+            var member3 = Request.Form["memberSelect2"];
+            var member4 = Request.Form["memberSelect3"];
 
             tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
                 Request.Form["tempmembername1"]);         
