@@ -1,7 +1,7 @@
 ﻿//Add Coverage Group Name Script
 
 var groupMemberList = [];
-var inputParamsList = ["Parameter 1", "Parameter 2", "Parameter 3", "Parameter 4", "Parameter 5"];
+var inputParamsList = ["Param 1", "Param 2", "Param 3", "Param 4", "Param 5"];
 
 function GetDynamicTextbox(value) {
     return '<div><input type="text" id="groupmember" name="member" style="width:200px" /><input type ="button" onclick="RemoveTextBox(this)" value="Remove Members"/></div>';
@@ -33,7 +33,7 @@ function GetMemberSetDropdown(value) {
 
 //Generate Member Drop down non-Functional
 
-var select = document.getElementById("selectNumber");
+/*var select = document.getElementById("selectNumber");
 
 for (var i = 0; i < inputParamsList.length; i++) {
     var opt = inputParamsList[i];
@@ -41,7 +41,7 @@ for (var i = 0; i < inputParamsList.length; i++) {
     el.textContent = opt;
     el.value = opt;
     select.appendChild(el);
-}
+}*/
 
 //Generate Member Dropdown -- Functional
 
@@ -87,11 +87,10 @@ var idval5 = 0;
 var select5 = 0;
 var appendCount5 = 0;
 
-
 function appendRow5() {
     select5++;
     var t = document.getElementById('dropDownID5');
-    t.innerHTML += "<br><b>Select Members:</b>"
+    t.innerHTML += "<br><b>Select Members:</b>";
     t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect" + select5 + "'>";
     var selectTest = document.getElementById('selectMemberID' + select5);
     console.log(selectTest.value);
@@ -115,6 +114,9 @@ function SubmitGroupName() {
         groupMemberList.push(memberValue);
         console.log(groupMemberList);
     }
+
+    var res = document.getElementById('results');
+    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='" + groupMemberList + "' />";
     console.log(groupMemberList);
 }
 

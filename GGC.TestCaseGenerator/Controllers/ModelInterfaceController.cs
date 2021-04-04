@@ -20,14 +20,14 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        //method that returns a list of coverage groups from the user input
+        //method that returns a coverage group with a list of parameters from input
         public CoverageGroup CreateCoverageGroup(string groupName, string members)
         {
             //Need validation if parameters are empty or not
-           this.group.Name = groupName;
-           this.group.Parameters = Split(members);
+           group.Name = groupName;
+           group.Parameters = Split(members);
         
-            return this.group;
+            return group;
         }
 
         //splits the string coming from the user to populate members array

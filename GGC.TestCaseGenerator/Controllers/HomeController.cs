@@ -49,15 +49,8 @@ namespace GGC.TestCaseGenerator.Controllers
         [HttpPost]
         public ActionResult CoverageGroup(FormCollection fc)
         {
-          
-
-            var member1 = Request.Form["selectNumber"];
-            var member2 = Request.Form["memberSelect1"];
-            var member3 = Request.Form["memberSelect2"];
-            var member4 = Request.Form["memberSelect3"];
-
             tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
-                Request.Form["tempmembername1"]);         
+                Request.Form["CoverageGroupArrayName"]);         
             return View();
         }
 
