@@ -151,6 +151,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
     <Content Include="Scripts\showInputField.js" />
+    <Content Include="Scripts\Specification-InputParameters.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -167,7 +168,6 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\AddSpecification.cshtml" />
     <Content Include="Views\Home\CoverageGroup.cshtml" />
-    <Content Include="Content\jQueryFixes.js" />
     <Content Include="Views\Home\InputParameter.cshtml" />
     <Content Include="Views\Home\ExpectedResult.cshtml" />
   </ItemGroup>

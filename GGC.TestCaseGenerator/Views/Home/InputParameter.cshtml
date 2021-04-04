@@ -2,8 +2,12 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<!--@section scripts
+{
+    <script src="~/Scripts/Specification-InputParameters.js"></script>
+}-->
 
-<div class="jumbotron">
+<div class="jumbotron" id="jumbotron">
     <h1>Welcome to Testing centers</h1>
     <br>
     <form method="post">
@@ -12,36 +16,97 @@
             <br />
             <p>
                 <h3><b>Click to add other Input Parameter</b></h3>
-                </br>
+                <br>
                 <label id="IN1" name="IN2">Input Name:</label>
                 <input id="IPara1" name="IPara1" placeholder="Enter Input Name Here" type="text" style="width:200px" /><br />
                 <label id="IT1">Input Text:</label>
                 <input id="IPara2" placeholder="Enter Input Text Here" type="text" style="width:200px" />
                 <br>
-                </div>
+        </div>
 
 
         <div id="IP2">
             <br />
             <label><b>Click to add other Equilvalence Classes</b></label>
             <br />
-            <button onclick="appendRow2()" value="Add box">Add Equilavalence Classes</button><br />
+            <button onclick="appendRow2()" value="Addbox">Add Equilavalence Classes</button><br />
+
             <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
-            <input id="IPara1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
+            <input id="IEC1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
             <label id="IT1">Enter Equilvalence Class:</label>
-            <input id="IPara2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
+            <input id="IEC2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
             <br>
 
         </div>
-</form>
+        <button type="button" id="add">Submit</button>
+        <button type="button" onclick="addrecord2()" id="tst">test</button>
+        <button type="button" id="display">Display</button>
+    </form>
 <script>
-    var y = 1
+    var counter = 0;
     function appendRow2() {
+        counter++;
         var t = document.getElementById('IP2');
+
         t.innerHTML += "<br><b>Enter other Equilavalence Classes:</br>"
-        t.innerHTML += "<br>Enter Equilvalence class Name: <input type='text' id='tst" + y++ + "'><br >";
-        t.innerHTML += "Enter Equilavalence Classes:<input type='text' id='tst" + y++ + "'><br >";
+        t.innerHTML += "<br>Enter Equilvalence class Name: <input type='text' id='EquilvalenceClassesName" + counter + "'><br >";
+        t.innerHTML += "Enter Equilavalence Class Text:<input type='text' id='EquilvalenceClassesText" + counter + "'><br >";
     }
+
+    let addButton = document.querySelector('#add');
+    let displayButton = document.querySelector('#display');
+    let recordsName = [];
+    let recordsNametst = [];
+    let recordsText = [];
+
+    addButton.addEventListener('click', addRecord);
+    displayButton.addEventListener('click', displayAll);
+
+    function addRecord() {
+        let record = document.querySelector('#IPara1').value;
+        let record2 = document.querySelector('#IPara2').value;
+        let record3 = document.querySelector('#IEC1').value;
+        let record4 = document.querySelector('#IEC2').value;
+        if (!record) {
+            return;
+        }
+        if (!record2) {
+            return;
+        }
+        if (!record3) {
+            return;
+        }
+        if (!record4) {
+            return;
+        }
+        recordsName.push(record);
+        recordsText.push(record2);
+        recordsName.push(record3);
+        recordsText.push(record4);
+        document.querySelector('#IPara1').value = '';
+        document.querySelector('#IPara2').value = '';
+        document.querySelector('#IEC1').value = '';
+        document.querySelector('#IEC2').value = '';
+        }
+    function addrecord2() {
+        var tst;
+            element = document.querySelector('EquilvalenceClassesName');
+        if (element != null) {
+            tst = element.value;
+        }
+        else {
+            tst = null;
+        }
+        console.log("im being clicked");
+    }
+    function displayAll() {
+
+        alert(recordsName)
+        alert(recordsText)
+        console.log(recordsName);
+        console.log(recordsText);
+        console.log(recordsNametst);
+    }
+    
 </script>
-<button onclick="" type="submit">Submit</button>
 </div>
