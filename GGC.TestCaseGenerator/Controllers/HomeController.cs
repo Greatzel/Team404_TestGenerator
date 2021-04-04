@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,6 +10,8 @@ namespace GGC.TestCaseGenerator.Controllers
 {
     public class HomeController : Controller
     {
+
+        ModelInterfaceController tempNameInterface = new ModelInterfaceController();
         /// <summary>
         /// controller's reference to the data model
         /// </summary>
@@ -169,6 +172,28 @@ namespace GGC.TestCaseGenerator.Controllers
         }
 
         [HttpPost]
+        public ActionResult Resources()
+        {
+            return View();
+        }
+
+        public ActionResult AddMembers()
+        {
+            return View();
+        }
+        public ActionResult Result()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CoverageGroup(FormCollection fc)
+        {
+            tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
+                Request.Form["CoverageGroupArrayName"]);         
+            return View();
+        }
+
         public ActionResult AddSpecification()
         {
             model.SetNewSpecificationAndName(Request.Form["name"]);
@@ -185,6 +210,15 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
+        public ActionResult HowTo()
+        {
+            return View();
+        }
+        public ActionResult InputParameter()
+        {
+            return View();
+        }
+
         public ActionResult EquivalenceClass()
         {
             model.NewEquivalenceClass("inputParameterName", "equivalenceClassName");
@@ -195,6 +229,7 @@ namespace GGC.TestCaseGenerator.Controllers
         }
         [HttpPost]
         public ActionResult ExpectedResult()
+        public ActionResult InputParameter(InputParameter testSpecification)
         {
             model.NewExpectedResult(Request.Form["name"]);
             model.SetExpectedResultText(EntityEnum.Given, Request.Form["name"], Request.Form["given"]);
@@ -211,6 +246,23 @@ namespace GGC.TestCaseGenerator.Controllers
             return Redirect(text);
 
             //return View();
+        }
+
+        //Get data test
+        [HttpPost]
+        public ActionResult Test(string text)
+        {
+            ViewBag.DisplayText = text;
+            return Redirect(text);
+
+            //return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMembers(FormCollection members)
+        {
+           
+            return View();
         }
     }
 }

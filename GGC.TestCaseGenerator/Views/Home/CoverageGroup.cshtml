@@ -12,7 +12,9 @@
 }
 
 <style>
-    button {
+
+    button 
+    {
         margin-right: 15px;
     }
 </style>
@@ -21,22 +23,46 @@
     <div class="jumbotron">
         <form method="post">
             <br>
-            <div id="CovGroupName">
-                <label>Add Coverage Group</label>
-                <p style="font-size:small;">Please enter the coverage group names of your test specification.</p>
-                <input type="text" id="groupnameId" name="groupname" style="width:200px" /><br /><br />
-                <!--<input type="button" onclick="AddInputField()" value="Add Group Name" /><br /><br />-->
+                <div id="CovGroupName">
+                    <label>Add Coverage Group</label>
+                    <p style="font-size:small;">Please enter the coverage group names of your test specification.</p>
+                    <input type="text" id="groupnameId" name="groupname" style="width:200px" /><br /><br />
+                    <!--<input type="button" onclick="AddInputField()" value="Add Group Name" /><br /><br />-->
+                    <!--<label>Add Members</label><br />
+                    <p style="font-size:small; padding-right: 45%">
+                        Please enter the members of your coverage group
+                        <strong>separate them with a comma <mark>","</mark></strong> of your test specification.<br />
+                        For example:
+                    </p>
+                    <input type="text" name="tempmembername1" style="width: 200px" /><br /><br />-->
+                            <!--<div id="">
+                    <p><h5><label>Select Members</label></h5></p>-->
+                            <!--<button onclick="appendRow2()" value="Add box">Add Member</button><br />-->
+                            <!--<select id="selectNumber"></select>-->
+                    <br>
+                </div>
+                <!--=======================================================================-->
+ 
+                <!--TEST 5-->
+                <div id="dropDownID5">
+                    <label>Add Members</label>
+                    <p style="font-size:small; padding-right: 45%">
+                        Please select the members of your coverage group from the Parameters drop down option by
+                        <strong>clicking the <mark>Add Members</mark> button.</strong>
+                    </p>
+                        <button onclick="appendRow5()" value="Add box">Add Member</button>
+                </div>
 
-                <label>Add Members</label><br />
-                <p style="font-size:small; padding-right: 45%">
-                    Please enter the members of your coverage group
-                    <strong>separate them with a comma <mark>","</mark></strong> of your test specification.<br />
-                    For example:
-                </p>
-                <input type="text" name="tempmembername1" style="width: 200px" /><br />
-            </div><br />
-            <input class="btn btn-success" onclick="SubmitGroupName()" type="submit" value="Submit Coverage Group Names" />
+                <div id="results">
+
+                </div>
+
+            <input class="btn btn-success" onclick="SubmitGroupName()" type="submit" value="Submit Coverage Group" />
             <br>
         </form>
     </div>
 </body>
+
+
+
+

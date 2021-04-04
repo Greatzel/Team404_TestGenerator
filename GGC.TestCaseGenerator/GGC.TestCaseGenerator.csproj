@@ -313,6 +313,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\ModelInterface\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

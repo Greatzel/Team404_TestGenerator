@@ -1,8 +1,11 @@
-﻿using Newtonsoft.Json;
+﻿using GGC.TestCaseGenerator.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
+using System.Web.Script.Serialization;
 
 namespace GGC.TestCaseGenerator.Controllers
 {
@@ -201,7 +204,7 @@ namespace GGC.TestCaseGenerator.Controllers
             }
 
             if (testSpecification.ExpectedResults == null)
-            {
+    {
                 testSpecification.ExpectedResults = new Dictionary<string, Models.ExpectedResult>();
             }
 
@@ -215,17 +218,25 @@ namespace GGC.TestCaseGenerator.Controllers
         /// Creates a new coverage group with the given name and returns true if successful.
         /// </summary>
         public bool NewCoverageGroup(string coverageGroupName)
+        // GET: ModelInterface
+        public ActionResult Index()
         {
             if (testSpecification == null)
             {
                 return false;
-            }
+            return View();
+        }
 
             if (testSpecification.CoverageGroups == null)
-            {
+        //method that returns a coverage group with a list of parameters from input
+        public CoverageGroup CreateCoverageGroup(string groupName, string members)
+        {
                 testSpecification.CoverageGroups = new List<Models.CoverageGroup>();
             }
-
+            //Need validation if parameters are empty or not
+           group.Name = groupName;
+           group.Parameters = Split(members);
+        
             Models.CoverageGroup coverageGroup = new Models.CoverageGroup();
             coverageGroup.Name = coverageGroupName;
             testSpecification.CoverageGroups.Add(coverageGroup);
@@ -293,10 +304,13 @@ namespace GGC.TestCaseGenerator.Controllers
             if (inputParameter == null)
             {
                 return;
-            }
+            return group;
+        }
 
             switch (entity)
-            {
+        //splits the string coming from the user to populate members array
+        public IList<string> Split(string members)
+        {          
                 case EntityEnum.Given:
                     inputParameter.Given = text;
                     break;
@@ -313,6 +327,8 @@ namespace GGC.TestCaseGenerator.Controllers
                 default:
                     break;
             }
+            IList<string> memberSplitList = members.Split(',').ToList();          
+            return memberSplitList;
         }
 
         /// <summary>
@@ -322,11 +338,17 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             Models.EquivalenceClass equivalenceClass = GetEquivalenceClass(parameterName, equivalenceClassName);
             if (equivalenceClass == null)
-            {
+        public IList<string> AddMembers(string member)
+        {
                 return;
             }
-
+            IList<string> test = new List<string>();
+            int index = member.Length - 1;
+            char memberLastDigit = member[index];
+            index = memberLastDigit - '0';
+          
             switch (entity)
+            for(int i = 0; i < index; i++)
             {
                 case EntityEnum.Given:
                     equivalenceClass.Given = text;
@@ -375,8 +397,9 @@ namespace GGC.TestCaseGenerator.Controllers
                 default:
                     break;
             }
+            return test;
         }
-
+        
         /// <summary>
         /// writes the current working specification to an output file
         /// </summary>
@@ -388,5 +411,6 @@ namespace GGC.TestCaseGenerator.Controllers
             //testSpecification.Normalize();
             return written;
         }
+        //method to turn test specification object into json script
     }
 }

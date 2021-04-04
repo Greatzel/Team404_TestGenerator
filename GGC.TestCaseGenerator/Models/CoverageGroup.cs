@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,22 +17,31 @@ namespace GGC.TestCaseGenerator.Models
         public string Name { get; set; }
 
         //Define list of input parameters that make a coverage group
-
         public IList<string> Parameters { get; set; }
 
-        //Defines a no arg constructor to initialize coverage group
+        //Defines a with arg constructor to initialize coverage group
+        public CoverageGroup(string name, ArrayList parameters)
+        {
+            Name = name;
+            Parameters = (IList<string>)parameters;
+        }     
+        
+        //Defines a no arg constructor to initialize a coverage group
         public CoverageGroup()
         {
-            Name = null;
-            Parameters = null;
-        }
+            Name = "Default Coverage Group Name";
+            Parameters = new List<string> {"Default Parameter Group Member"};
+        } 
 
+<<<<<<< HEAD
         //Defines a one arg str constructor to initialize coverage group
         public CoverageGroup(String name)
         {
             Name = name;
         }
 
+=======
+>>>>>>> Merge-Greatzel
         //Sets the data of members of the class and 
         //returns true if successful
         public bool Set(string name, IList<string> parameters)
@@ -51,13 +61,20 @@ namespace GGC.TestCaseGenerator.Models
         public bool Validate(IList<string> errors)
         {
             bool validated = true;
+<<<<<<< HEAD
             if ((Parameters == null) || !Parameters.Any())
+=======
+            if((Parameters == null) || !Parameters.Any())
+>>>>>>> Merge-Greatzel
             {
                 errors.Add($"Coverage group {Name} has no parameters");
                 validated = false;
             }
             return validated;
         }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Merge-Greatzel
     }
 }
