@@ -32,16 +32,11 @@ namespace GGC.TestCaseGenerator.Models
             Name = "Default Coverage Group Name";
             Parameters = new List<string> {"Default Parameter Group Member"};
         } 
-
-<<<<<<< HEAD
-        //Defines a one arg str constructor to initialize coverage group
         public CoverageGroup(String name)
         {
             Name = name;
         }
 
-=======
->>>>>>> Merge-Greatzel
         //Sets the data of members of the class and 
         //returns true if successful
         public bool Set(string name, IList<string> parameters)
@@ -61,20 +56,13 @@ namespace GGC.TestCaseGenerator.Models
         public bool Validate(IList<string> errors)
         {
             bool validated = true;
-<<<<<<< HEAD
+
             if ((Parameters == null) || !Parameters.Any())
-=======
-            if((Parameters == null) || !Parameters.Any())
->>>>>>> Merge-Greatzel
             {
                 errors.Add($"Coverage group {Name} has no parameters");
                 validated = false;
             }
             return validated;
         }
-<<<<<<< HEAD
-
-=======
->>>>>>> Merge-Greatzel
     }
 }

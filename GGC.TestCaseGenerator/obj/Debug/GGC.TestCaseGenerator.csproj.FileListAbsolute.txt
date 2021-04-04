@@ -238,7 +238,6 @@ C:/Users/Master R/Downloads/software dev 2/Git repo/Team404_TestGenerator/GGC.Te
 /Users/syronerobinson/Projects/Team404_TestGenerator/GGC.TestCaseGenerator/obj/Debug/GGC.TestCaseGenerator.csproj.CopyComplete
 /Users/syronerobinson/Projects/Team404_TestGenerator/GGC.TestCaseGenerator/obj/Debug/GGC.TestCaseGenerator.dll
 /Users/syronerobinson/Projects/Team404_TestGenerator/GGC.TestCaseGenerator/obj/Debug/GGC.TestCaseGenerator.pdb
-<<<<<<< HEAD
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csprojAssemblyReference.cache
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csproj.CoreCompileInputs.cache
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.dll
@@ -301,7 +300,6 @@ C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\bin\ro
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\bin\roslyn\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\bin\nunit.framework.dll
 C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\bin\nunit.framework.xml
-=======
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\GGC.TestCaseGenerator.dll.config
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\GGC.TestCaseGenerator.dll
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\GGC.TestCaseGenerator.pdb
@@ -381,4 +379,3 @@ C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\D
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.dll
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.pdb
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csprojAssemblyReference.cache
->>>>>>> Merge-Greatzel

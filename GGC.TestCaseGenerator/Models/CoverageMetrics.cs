@@ -1,19 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.IO;
 using System.Linq;
 using System.Text;
-=======
-using System.Linq;
->>>>>>> Merge-Greatzel
 using System.Web;
 
 namespace GGC.TestCaseGenerator.Models
 {
     public class CoverageMetrics
     {
-<<<<<<< HEAD
         /// <summary>
         /// The written form of the entire test suite.
         /// </summary>
@@ -236,7 +231,5 @@ namespace GGC.TestCaseGenerator.Models
 
             return combinationMappings;
         }
-=======
->>>>>>> Merge-Greatzel
     }
 }

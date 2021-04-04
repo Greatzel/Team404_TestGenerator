@@ -49,10 +49,6 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
-        public ActionResult InputParameter(InputParameter input)
-        {
-            return View();
-        }
         public ActionResult CoverageGroup()
         {
             return View();
@@ -70,7 +66,7 @@ namespace GGC.TestCaseGenerator.Controllers
             model.SetSpecificationText(EntityEnum.Name, "SaveTest");
             model.SetSpecificationText(EntityEnum.Description, "Interface can be saved using any combinations of the parameters");
 
-            model.NewCoverageGroup("CoverageGroupA");
+            model.NewCoverageGroup(Request.Form["groupname"]);
             model.NewCoverageGroup("CoverageGroupB");
             model.NewCoverageGroup("CoverageGroupC");
 
@@ -176,21 +172,8 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
-
-        public ActionResult AddMembers()
-        {
-            return View();
-        }
         public ActionResult Result()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult CoverageGroup(FormCollection fc)
-        {
-            tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
-                Request.Form["CoverageGroupArrayName"]);         
             return View();
         }
 
@@ -210,15 +193,6 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        public ActionResult HowTo()
-        {
-            return View();
-        }
-        public ActionResult InputParameter()
-        {
-            return View();
-        }
-
         public ActionResult EquivalenceClass()
         {
             model.NewEquivalenceClass("inputParameterName", "equivalenceClassName");
@@ -227,8 +201,7 @@ namespace GGC.TestCaseGenerator.Controllers
             model.SetEquivalenceClassText(EntityEnum.Condition, "inputParameterName", "equivalenceClassName", "Condition");
             return View();
         }
-        [HttpPost]
-        public ActionResult ExpectedResult()
+
         public ActionResult InputParameter(InputParameter testSpecification)
         {
             model.NewExpectedResult(Request.Form["name"]);
@@ -236,16 +209,6 @@ namespace GGC.TestCaseGenerator.Controllers
             model.SetExpectedResultText(EntityEnum.Given, Request.Form["name"], Request.Form["value"]);
             model.SetExpectedResultText(EntityEnum.Given, Request.Form["name"], Request.Form["condition"]);
             return View();
-        }
-
-        //Get data test
-        [HttpPost]
-        public ActionResult Test(string text)
-        {
-            ViewBag.DisplayText = text;
-            return Redirect(text);
-
-            //return View();
         }
 
         //Get data test
