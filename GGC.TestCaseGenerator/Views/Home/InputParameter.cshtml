@@ -57,16 +57,21 @@
 
     function submitTest()
     {
-        var testArray = [];
+        var classNameArray = [];
+        var classTextArray = [];
         console.log("Button Pressed");
 
         for (var i = 1; i <= counter; i++ )
         {
             var equivalenceClass = document.getElementById('EquilvalenceClassesName' + i);
+            var equivalenceText = document.getElementById('EquilvalenceClassesText' + i);
             var equivalanceClassVal = equivalenceClass.value;
-            testArray.push(equivalanceClassVal);
+            var equivalanceTextVal = equivalenceText.value;
+            classNameArray.push(equivalanceClassVal);
+            classTextArray.push(equivalanceTextVal);
         }
-        console.log("submitTest Check " + testArray);
+        console.log("submitTest className Array Check " + classNameArray);
+        console.log("submitTest classText Array Check " + classTextArray);
     }
     //<====================================================>
 
