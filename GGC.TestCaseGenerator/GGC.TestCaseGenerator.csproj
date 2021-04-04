@@ -124,7 +124,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\ModelInterface.cs" />
+    <Compile Include="Controllers\ModelInterfaceController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -195,6 +195,8 @@
     <Content Include="Scripts\popper.js" />
     <Content Include="Scripts\popper.min.js" />
     <Content Include="Scripts\showInputField.js" />
+    <Content Include="Scripts\specification-addgroup.js" />
+    <Content Include="Scripts\specification-addmember.js" />
     <Content Include="Scripts\src\index.js" />
     <Content Include="Scripts\src\methods\defaults.js" />
     <Content Include="Scripts\src\methods\destroy.js" />
@@ -306,6 +308,8 @@
     <Content Include="Specifications\StatusMessages249854.json" />
     <Content Include="Specifications\StatusMessages249896.json" />
     <Content Include="Specifications\StatusMessages249897.json" />
+    <Content Include="Views\Home\Results.cshtml" />
+    <Content Include="Views\Home\InputParameter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

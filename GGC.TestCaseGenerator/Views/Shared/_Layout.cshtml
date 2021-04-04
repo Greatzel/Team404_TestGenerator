@@ -9,7 +9,7 @@
     <title>@ViewBag.Title - My ASP.NET Application</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-   
+
 
 </head>
 <body>
@@ -50,11 +50,11 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li>@Html.ActionLink("Input Parameters", "Index", "Home")</li>
+                <li>@Html.ActionLink("Input Parameters", "InputParameter", "Home")</li>
                 <li>@Html.ActionLink("Coverage Groups", "CoverageGroup", "Home")</li>
                 <li>@Html.ActionLink("Expected Results", "ExpectedResult", "Home")</li>
                 <li>@Html.ActionLink("Conditions", "AddSpecification", "Home")</li>
-                <li>@Html.ActionLink("Results", "AddSpecification", "Home")</li>
+                <li>@Html.ActionLink("Results", "Result", "Home")</li>
             </ul>
         </div>
     </div>

@@ -19,7 +19,7 @@
             <label class="labelResult">Name</label> <label class="labelResult">Text</label> <label class="labelResult">Condition</label>
             <br>
             <input name="name" type="text" value="" style="width:100px" />
-            <input name="text" type="text" value="" style="width:100px" />
+            <input name="value" type="text" value="" style="width:100px" />
             <input name="condition" type="text" value="" style="width:200px" />
 
             <input class="btn btn-success" type="button" onclick="AddInputField()" value="Add Expected Result" />
@@ -37,11 +37,11 @@
     <script>
         var ExpectedResult = [];
         var name = document.getElementById('name').value;
-        var text = document.getElementById('text').value;
+        var text = document.getElementById('value').value;
         var condition = document.getElementById('condition').value;
 
         function GetDynamicTextbox(value) {
-            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "text" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Expected Result" /></div> <br>';
+            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "value" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Expected Result" /></div> <br>';
         }
 
         function AddInputField() {
@@ -56,11 +56,11 @@
 
         function SubmitResult() {
             ExpectedResult.push(name);
-            ExpectedResult.push(text);
+            ExpectedResult.push(value);
             ExpectedResult.push(condition);
             console.log(ExpectedResult);
             console.log(name);
-            console.log(text);
+            console.log(value);
             console.log(condition);
         }
     </script>
