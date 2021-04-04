@@ -5,27 +5,29 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <style>
-    .labelResult {padding-right:70px;}
+    .labelResult {
+        padding-right: 70px;
+    }
 </style>
 
 <div class="jumbotron">
-    <h2>ExpectedResult</h2>
-    <br>
-    
-    <form method="post">
-
-        <div id="ExpectedResultGroup">
-
-            <label class="labelResult">Name</label> <label class="labelResult">Text</label> <label class="labelResult">Condition</label>
-            <br>
-            <input name="name" type="text" value="" style="width:100px" />
-            <input name="value" type="text" value="" style="width:100px" />
-            <input name="condition" type="text" value="" style="width:200px" />
-
-            <input class="btn btn-success" type="button" onclick="AddInputField()" value="Add Expected Result" />
-            <br>
-            <br>
-        </div>
+    <div id="ER1">
+        <br />
+        <form>
+            <h3><b>Click to add other Expected Results</b></h3><button onclick="appendRow()" value="Add box">Add Expected Results</button>
+            </br>
+            
+                <label>Enter Expected Results Name:</label>
+                <input id="ERName"placeholder="Enter Expected Results Name Here" type="text" style="width:200px" />
+                <br />
+                <label>Enter Expected Results Text:</label>
+                <input placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
+                <br>
+                <label>Enter Expected Results Condition:</label>
+                <input placeholder="Enter Expected Results Condition" type="text" style="width:200px" />
+          
+        </form>
+    </div>
     </form>
     
     <br>
@@ -35,39 +37,14 @@
         Input Condition: at Html.TextBox("Condition")
         <br> -->
     <script>
-        var ExpectedResult = [];
-        var name = document.getElementById('name').value;
-        var text = document.getElementById('value').value;
-        var condition = document.getElementById('condition').value;
-
-        function GetDynamicTextbox(value) {
-            return '<div><input type = "text" name = "name" style = "width:100px" /> <input type = "text" name = "value" style = "width:100px" /> <input type = "text" name = "condition" style = "width:200px" /> <input type = "button" onclick = "RemoveTextBox(this)" value = "Remove Expected Result" /></div> <br>';
-        }
-
-        function AddInputField() {
-            var div = document.createElement('DIV');
-            div.innerHTML = GetDynamicTextbox("");
-            document.getElementById("ExpectedResultGroup").appendChild(div);
-        }
-
-        function RemoveTextBox(div) {
-            document.getElementById("ExpectedResultGroup").removeChild(div.parentNode.parentNode);
-        }
-
-        function SubmitResult() {
-            ExpectedResult.push(name);
-            ExpectedResult.push(value);
-            ExpectedResult.push(condition);
-            console.log(ExpectedResult);
-            console.log(name);
-            console.log(value);
-            console.log(condition);
+        var y = 1
+        function appendRow() {
+            var s = document.getElementById('ER1');
+            s.innerHTML += "<br><b>Enter other Expected Results:</b></p>"
+            s.innerHTML += "<br>Enter Expected Results Name: <input type='text' id='tst" + y++ + "'><br >";
+            s.innerHTML += "Enter Expected Results Text: <input type='text' id='tst" + y++ + "'><br >";
+            s.innerHTML += "Enter Expected Results Condition:<input type='text' id='tst" + y++ + "'><br >";
         }
     </script>
-
-    <br>
-    <br>
-    <button class="btn btn-success" type="submit" onclick="" stylefont-size: 16px>Submit</button>
-    <br>
-    <br>
+    <button onclick="" type="submit">Submit</button>
 </div>

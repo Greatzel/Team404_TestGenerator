@@ -1,17 +1,42 @@
 ﻿@{
-    ViewBag.Title = "Contact";
+    ViewBag.Title = "ExpectedResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title</h2>
-<h3>@ViewBag.Message</h3>
+<style>
+    .labelResult {
+        padding-right: 70px;
+    }
+</style>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<div class="jumbotron">
+    <h1>Welcome to Testing centers</h1>
+    <br>
+    <div id="ER1">
+        <br />
+        <form>
+            <h3><b>Click to add other Expected Results</b></h3><button onclick="appendRow()" value="Add box">Add Expected Results</button>
+            </br>
+            <section>
+            <label>Enter Expected Results Name:</label>
+            <input placeholder="Enter Expected Results Name Here" type="text" style="width:200px" />
+            <br />
+            <label>Enter Expected Results Text:</label>
+            <input placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
+            <br>
+            <label>Enter Expected Results Condition:</label>
+            <input placeholder="Enter Expected Results Condition" type="text" style="width:200px" />
+            </section>
+        </form>
+    </div>
+    <script>
+        var y = 1
+        function appendRow() {
+            var s = document.getElementById('ER1');
+            s.innerHTML += "<br><b>Enter other Expected Results:</b></p>"
+            s.innerHTML += "<br>Enter Expected Results Name: <input type='text' id='tst" + y++ + "'><br >";
+            s.innerHTML += "Enter Expected Results Text: <input type='text' id='tst" + y++ + "'><br >";
+            s.innerHTML += "Enter Expected Results Condition:<input type='text' id='tst" + y++ + "'><br >";
+        }
+    </script>
+    <button onclick="" type="submit">Submit</button>
+</div>

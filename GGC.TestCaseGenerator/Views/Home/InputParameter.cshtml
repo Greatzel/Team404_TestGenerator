@@ -1,17 +1,24 @@
 ﻿@model GGC.TestCaseGenerator.Models.InputParameter
 
 @{
-    ViewBag.Title = "InputParameter";
+    ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="jumbotron">
+@section scripts
+{
+    <script src="~/Scripts/specification-inputparameter.js"></script>
+}
+
+<div class="jumbotron" id="jumbotron">
+    <h1>Welcome to Testing centers</h1>
+    <br>
     <form method="post">
         <div id="IP1">
 
             <br />
             <p>
                 <h3><b>Click to add other Input Parameter</b></h3>
-                </br>
+                <br>
                 <label id="IN1" name="IN2">Input Name:</label>
                 <input id="IPara1" name="IPara1" placeholder="Enter Input Name Here" type="text" style="width:200px" /><br />
                 <label id="IT1">Input Text:</label>
@@ -22,9 +29,9 @@
 
         <div id="IP2">
             <br />
-            <label><b>Click to add other Equilvalence Classes</b></label>
+            <label><b>Click to add more Equilvalence Classes</b></label>
             <br />
-            <button onclick="appendRow2()" value="Add box">Add Equilavalence Classes</button><br />
+            <button onclick="appendRow2()" value="Addbox">Add Equilavalence Classes</button><br />
             <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
             <input id="IPara1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
             <label id="IT1">Enter Equilvalence Class:</label>
@@ -32,16 +39,12 @@
             <br>
 
         </div>
+        <button type="button" onclick="someFunc()" id="add">Submit</button>
+        <button type="button" id="display">Display</button>
     </form>
-    <script>
-        var y = 1
-        function appendRow2() {
-            var t = document.getElementById('IP2');
-            t.innerHTML += "<br><b>Enter other Equilavalence Classes:</br>"
-            t.innerHTML += "<br>Enter Equilvalence class Name: <input type='text' id='tst" + y++ + "'><br >";
-            t.innerHTML += "Enter Equilavalence Cl asses:<input type='text' id='tst" + y++ + "'><br >";
-        }    
-           
+</div>
+
+
     </script>
 
     <button onclick="" type="submit">Submit</button>
