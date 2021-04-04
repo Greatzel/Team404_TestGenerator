@@ -83,27 +83,38 @@ function appendRow3() {
 
 var nameval5 = 1
 var testval5 = 1;
-var idval5 = 1;
+var idval5 = 0;
 var select5 = 0;
 var appendCount5 = 0;
+
 
 function appendRow5() {
     select5++;
     var t = document.getElementById('dropDownID5');
     t.innerHTML += "<br><b>Select Members:</b>"
-    t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect>" + testval5++ + "' name='memberSelect"
-        + nameval5++ + "' id='selectMember" + idval5++ + "'>";
+    t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect" + select5 + "'>";
     var selectTest = document.getElementById('selectMemberID' + select5);
-    for (var i = 0; i <= inputParamsList.length; i++) {
+    console.log(selectTest.value);
+    for (var i = 0; i <= inputParamsList.length-1; i++) {
 
-        selectTest.innerHTML += "<option>appendRow5() TEST " + inputParamsList[i] + "</option>";
+        selectTest.innerHTML += "<option name= 'Name" + inputParamsList[i] + "' value = '" + inputParamsList[i] +"'>appendRow5() TEST "
+            + inputParamsList[i] + "</option>";
 
     }
-
+    console.log("appenRow5 TEST");
     t.innerHTML += "</select><br />"
 }
 
 
 function SubmitGroupName() {
-
+    console.log("SubmitGroupName Select5 num: " + select5);
+    for (var i = 1; i <= select5; i++) {
+        var members = document.getElementById('selectMemberID' + i);
+        var memberValue = members.value;
+        console.log("Variable Members " + memberValue);
+        groupMemberList.push(memberValue);
+        console.log(groupMemberList);
+    }
+    console.log(groupMemberList);
 }
+
