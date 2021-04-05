@@ -1,26 +1,21 @@
-﻿@model GGC.TestCaseGenerator.Models.InputParameter
-@{
-    ViewBag.Title = "Add Specification";
+﻿@model GGC.TestCaseGenerator.Models.TestSpecification
+
+@{ 
+    ViewBag.Title = "Add Specification";        
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<h2>@ViewBag.Title</h2>
+
 <h3>@ViewBag.Message</h3>
 
-@using (Html.BeginForm())
-{
-<div>
-    <div>
-        <label>Specification Name: </label>
-        @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
-    </div>
-    <br>
-    <div>
-        <label>Specification Text: </label>
-        @Html.TextBoxFor(t => t.Text, new { @class = "form-control" })
-    </div>
-    <br>
-    <button class="btn btn-success" type="submit" onclick="">Submit</button>
+<div class="jumbotron">
+    <form method="post">
+        <label>Enter test specification name</label>
+        <input type="text" id="specificationNameId" name="specificationName" /><br /><br />
+        <label>Enter test specification text</label>
+        <input type="text" id="specificationNameId" name="specificationTextName" />
+        <br><br />
+        <button class="btn btn-success" type="submit" onclick="">Submit Specification</button>
+    </form>
     <br>
     <br>
 </div>
-}

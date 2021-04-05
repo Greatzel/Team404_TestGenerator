@@ -60,6 +60,17 @@ namespace GGC.TestCaseGenerator.Controllers
 
         [HttpPost]
         public ActionResult CoverageGroup(FormCollection fc)
+        { 
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Resources()
+        {
+            return View();
+        }
+
+        public ActionResult Result()
         {
             model.SetNewSpecificationAndName("NewTest");
             model.SetSpecificationText(EntityEnum.Name, "SaveTest");
@@ -161,26 +172,19 @@ namespace GGC.TestCaseGenerator.Controllers
             model.SetExpectedResultText(EntityEnum.Value, "UndefinedRoots", "roots are undefined");
             model.SetExpectedResultText(EntityEnum.Condition, "UndefinedRoots", "A = 0");
             model.WriteSpecification("Test1234456");
-            
-
-            return View();
-        }
-
-        [HttpPost]
-        public ActionResult Resources()
-        {
-            return View();
-        }
-        public ActionResult Result()
-        {
             return View();
         }
 
         public ActionResult AddSpecification()
         {
-            model.SetNewSpecificationAndName(Request.Form["name"]);
-            model.SetSpecificationText(EntityEnum.Given, Request.Form["given"]);
-            model.SetSpecificationText(EntityEnum.Description, Request.Form["Description"]);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSpecification(FormCollection cc)
+        {
+            var addSpecificationName = Request.Form["specificationName"];
+            var addSpecificationText = Request.Form["specificationTextName"];
             return View();
         }
 
