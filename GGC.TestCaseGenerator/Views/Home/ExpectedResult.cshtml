@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "ExpectedResult";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section scripts
+{
+    <script src="~/Scripts/specification-expectedresult.js"></script>
+}
+<div class="jumbotron">
+    <div class="w3-card">
+        <p style="font-size:small;">
+            Enter Expected Results Name 1: Results 1<br /><br />
+            Enter Expected Results Text 1: Text 1<br /><br />
+            Enter Expected Results Condition 1: Condition 1<br /><br />
+        </p>
+        <button value="Remove">Remove</button>
+    </div><br />
+
+    <div class="w3-card">
+        <p style="font-size:small;">
+            Enter Expected Results Name 2: Results 2<br /><br />
+            Enter Expected Results Text 2: Text 2<br /><br />
+            Enter Expected Results Condition 2: Condition 2<br /><br />
+        </p>
+        <button value="Remove">Remove</button>
+    </div>
+        <form method="post">
+            <div id="ER1">
+                <br />
+                <h3><b>Click to add other Expected Results</b></h3>
+                <button onclick="appendRow()" value="Addbox">Add Expected Results</button>
+                <br />
+                <label>Enter Expected Results Name:</label>
+            </div>
+
+            <div id="results">
+
+            </div>
+            <button type="submit" onclick="submittingExtraExpectedResults()" id="add">Submit</button>
+            <button type="submit" onclick="displayAllArrayData()" id="display">Display</button>
+        </form>
+</div>

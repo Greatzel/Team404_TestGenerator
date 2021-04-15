@@ -3,81 +3,48 @@
 var groupMemberList = [];
 var inputParamsList = ["Param 1", "Param 2", "Param 3", "Param 4", "Param 5"];
 
-function GetDynamicTextbox(value) {
-    return '<div><input type="text" id="groupmember" name="member" style="width:200px" /><input type ="button" onclick="RemoveTextBox(this)" value="Remove Members"/></div>';
+//coverage group constructor function
+function coveragegroup(name, members) {
+    this.name = name;
+    this.members = members;
 }
 
-function AddInputField() {
-    var div = document.createElement('DIV');
-    div.innerHTML = GetDynamicTextbox("");
-    document.getElementById("CovGroupName").appendChild(div);
-    console.log(covGroupName);    
+//=========================retrieve test ==============================
+
+var inputGet = localStorage.getItem('inputNameSeshStored');
+console.log(inputGet);
+
+var inputList = inputGet.split(',');
+
+var finalInputList = [];
+
+for (var i = 0; i <= inputList.length-1; i++)
+{
+    console.log( "Value " + i);
+    if (i === 0)
+        {
+            var holder = inputList[i].substring(2, inputList[i].length - 1);
+            console.log("Holder var " + holder);
+            finalInputList.push(holder);
+        }
+    else if (i !== inputList.length-1)
+        {
+            var holder2 = inputList[i].substring(1, inputList[i].length - 1);
+            finalInputList.push(holder2);
+            console.log("Holder2 var " + holder2);
+        }
+    else if (i === inputList.length - 1)
+        {
+            var holder1 = inputList[i].substring(1, inputList[i].length - 2);
+            finalInputList.push(holder1);
+            console.log("Holder1 var " + holder1);
+        }
 }
 
-function RemoveTextBox(div) {
-    document.getElementById("CovGroupName").removeChild(div.parentNode.parentNode);
-}
+console.log(finalInputList);
+console.log(inputList);
 
-//Generate Group Names List Labels
-function GroupNamesList() {
-    for (var i = 0; i <= inputParamsList.length; i++) {
-        var div = document.createElement('div');
-        div.innerHTML = GetMemberSetDropdown("");
-        document.getElementById("groupNamesList");
-    }
-}
-
-function GetMemberSetDropdown(value) {
-    return '<div id="selectMember">< label for= "members" > Group A:</label ><input type="button" onclick="AddMemberDropdown()" value="Add Members" /><input type="button" onclick="testReference()" value="TEST REF" /><div id="memberBox" style="padding-left: 50px;"></div></div > <br />';
-}
-
-//Generate Member Drop down non-Functional
-
-/*var select = document.getElementById("selectNumber");
-
-for (var i = 0; i < inputParamsList.length; i++) {
-    var opt = inputParamsList[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}*/
-
-//Generate Member Dropdown -- Functional
-
-var nameval = 1
-var testval = 1;
-var idval = 1;
-function appendRow2() {
-    var t = document.getElementById('dropDownID');
-    t.innerHTML += "<br><b>Select Members:</b>"
-    t.innerHTML += "<input type='text' value = 'Test" + testval++ +"' name='memberSelect"
-        + nameval++ + "' id='selectMember" + idval++ + "'><br >";
-}
-
-//non functional test
-
-var nameval1 = 1
-var testval1 = 1;
-var idval1 = 1;
-var select1 = 1;
-var appendCount = 0;
-
-function appendRow3() {
-    var t = document.getElementById('dropDownID2');
-    t.innerHTML += "<br><b>Select Members:</b>"
-    t.innerHTML += "<select id='selectMemberID' name='memberSelect>" + testval1++ + "' name='memberSelect"
-        + nameval1++ + "' id='selectMember" + idval1++ + "'>";
-
-    for (var i = 0; i <= inputParamsList.length; i++)
-    {
-        var selectTest = document.getElementById('selectMemberID');
-        selectTest.innerHTML += "<option>appendRow3() TEST" + inputParamsList[i]+ "</option>";
-
-    }
-
-    t.innerHTML += "</select><br />"
-}
+//===================================================================
 
 //IT WORKS!!!!!!!!!!! MEMBERS DROPDOWN
 
@@ -94,14 +61,14 @@ function appendRow5() {
     t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect" + select5 + "'>";
     var selectTest = document.getElementById('selectMemberID' + select5);
     console.log(selectTest.value);
-    for (var i = 0; i <= inputParamsList.length-1; i++) {
+    for (var i = 0; i <= inputList.length-1; i++) {
 
-        selectTest.innerHTML += "<option name= 'Name" + inputParamsList[i] + "' value = '" + inputParamsList[i] +"'>appendRow5() TEST "
-            + inputParamsList[i] + "</option>";
+        selectTest.innerHTML += "<option name= 'Name" + inputList[i] + "' value = '" + inputList[i] +"'>"
+            + inputList[i] + "</option>";
 
     }
-    console.log("appenRow5 TEST");
-    t.innerHTML += "</select><br />"
+  
+    t.innerHTML += "</select><br />";
 }
 
 
@@ -116,7 +83,7 @@ function SubmitGroupName() {
     }
 
     var res = document.getElementById('results');
-    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='" + groupMemberList + "' />";
+    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='"
+        + groupMemberList + "' />";
     console.log(groupMemberList);
 }
-

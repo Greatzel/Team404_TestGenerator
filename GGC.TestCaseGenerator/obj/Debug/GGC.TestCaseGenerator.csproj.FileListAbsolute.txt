@@ -317,3 +317,13 @@ C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\D
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.dll
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.pdb
 C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csprojAssemblyReference.cache
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\nunit.framework.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\nunit.framework.xml
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.Analytics.UnitTest.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.TestTools.UITest.Extension.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.Analytics.Interfaces.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.OLE.Interop.dll
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Greatzel\source\Repos\Team404_TestGenerator\GGC.TestCaseGenerator\bin\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml

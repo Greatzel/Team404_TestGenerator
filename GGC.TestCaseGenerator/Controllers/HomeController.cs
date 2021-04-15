@@ -11,7 +11,13 @@ namespace GGC.TestCaseGenerator.Controllers
     public class HomeController : Controller
     {
 
-        ModelInterfaceController tempNameInterface = new ModelInterfaceController();
+        private readonly ModelInterfaceController model;
+
+        public HomeController()
+        {
+            model = new ModelInterfaceController();
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -46,16 +52,63 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        [HttpPost]
-        public ActionResult CoverageGroup(FormCollection fc)
+        public ActionResult AddSpecification()
         {
-            tempNameInterface.CreateCoverageGroup(Request.Form["groupname"], 
-                Request.Form["CoverageGroupArrayName"]);         
             return View();
         }
 
-        public ActionResult AddSpecification()
-        {         
+        [HttpPost]
+        public ActionResult ExpectedResult(FormCollection re)
+        {
+            var name = Request.Form["ExpectedResultsName"];
+            var text = Request.Form["ExpectedResultsText"];
+            var conditions = Request.Form["ExpectedResultsCondition"];
+            var test = "Breakpoint test";
+            return View();
+        }
+        public ActionResult ExpectedResult()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddSpecification(FormCollection cc)
+        {
+            //========================================================
+            /*
+             */
+            //========================================================
+            var addSpecificationName = Request.Form["specificationName"];
+            var addSpecificationText = Request.Form["specificationTextName"];
+            var test = "Breakpoint test";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult CoverageGroup(FormCollection fc)
+        {
+
+            //<===============================Greatzel1===============================>
+            /*
+             * groupNameString - contains the entered NAME of the GROUP 
+             *  eg: "Group A"
+             * groupMembersString - contains the entered MEMBERS selected in one STRING
+             *  eg: "Member1","Member2","Member3"           
+             */
+
+            //var groupNameString = Request.Form["groupname"];
+            //var groupMembersString = Request.Form["CoverageGroupArrayName"];
+
+
+            //<========================================================================>
+
+            var groupNameString = Request.Form["groupname"];
+            var groupMembersString = Request.Form["CoverageGroupArrayName"];
+
+            model.CreateCoverageGroup(Request.Form["groupname"], 
+                Request.Form["CoverageGroupArrayName"]);
+
+            var test = "break point test";
             return View();
         }
 
@@ -63,21 +116,38 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public ActionResult InputParameter(FormCollection gc)
+        {
+
+            //<===============================Greatzel1===============================>
+            /*
+             * inputParametersNameString - contains the entered LIST of NAMES of the INPUT PARAMETERS 
+             *  eg: "Input A", "Input B", "Input C"
+             * inputParametersTextString - contains the entered MEMBERS selected in one STRING
+             *  eg: "Member1","Member2","Member3"     
+             * EquivalenceNamesString - contains the entered LIST of NAMES of the INPUT PARAMETERS 
+             *  eg: "Input A", "Input B", "Input C"
+             * EquivalenceTextString - contains the entered MEMBERS selected in one STRING
+             *  eg: "Member1","Member2","Member3"
+             */
+
+            //var groupNameString = Request.Form["groupname"];
+            //var groupMembersString = Request.Form["CoverageGroupArrayName"];
+
+            var inputParameterNameString = Request.Form["InputParameterNames"];
+            var inputParameterTextString = Request.Form["InputParameterText"];
+            var EquivalenceNamesString = Request.Form["EquivalenceClassNames"];
+            var EquivalenceTextString = Request.Form["EquivalenceClassText"];
+            var test = "break point test";
+
+            //<========================================================================>         
+            return View();
+        }
         public ActionResult InputParameter()
         {
             return View();
-        }
-
-        [HttpPost]
-        public ActionResult InputParameter(InputParameter testSpecification)
-        {
-            ViewBag.Message = "Your contact page.";
-            //Save Specification
-            InputParameter input = new InputParameter(testSpecification.Name, testSpecification.Text);
-
-            //Redirect
-
-            return Redirect("/");
         }
 
         //Get data test
