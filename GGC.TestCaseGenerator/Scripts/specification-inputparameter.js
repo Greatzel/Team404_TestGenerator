@@ -1,9 +1,11 @@
 ﻿    function someFunc() {
         addRecord();
         submitTest();
-    }
+        save();
+}
+    
     let addButton = document.querySelector('#add');
-let displayButton = document.querySelector('#display');
+    let displayButton = document.querySelector('#display');
     //Equilvalence Class Array Below:
     let recordsName = [];
     let recordsText = [];
@@ -13,6 +15,7 @@ let displayButton = document.querySelector('#display');
     var counter = 0;
     addButton.addEventListener('click', addRecord);
     displayButton.addEventListener('click', displayAll);
+
     function appendRow2() {
         counter++;
         var t = document.getElementById('IP2');
@@ -45,8 +48,13 @@ let displayButton = document.querySelector('#display');
         InputText.push(record2);
         document.querySelector('#IPara1').value = '';
         document.querySelector('#IPara2').value = '';
-    }
+}
+
+    function save() {
+    
+        }
 function displayAll() {
+        
         alert(InputName)
         alert(InputText)
         alert(recordsName)

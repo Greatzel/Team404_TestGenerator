@@ -27,7 +27,7 @@
             }
         }
         function displayAllArrayData() {
-                    alert(ExpectedResultsName);
+            alert(ExpectedResultsName);
             alert(ExpectedResultsText);
             alert(ExpectedResultsCondition);
             console.log("submitTest ExpectedResultsName Array Check " + ExpectedResultsName);
