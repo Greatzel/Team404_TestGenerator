@@ -1,0 +1,43 @@
+{
+  "Name": "Multi-tenant Onboarding Security",
+  "Text": "Test planning for multi-tenant security for Onboarding",
+  "CoverageGroups": [
+    {
+      "Name": "Onboarding",
+      "Parameters": [ "Domain", "OnboardingObjects" ]
+    }
+  ],
+  "InputParameters": {
+    "Domain": {
+      "Name": "Domain",
+      "Text": "HR domain",
+      "EquivalenceClasses": {
+        "Onboarding": {
+          "Name": "Onboarding",
+          "Text": "Onboarding"
+        }
+      }
+    },
+    "OnboardingObjects": {
+      "Name": "OnboardingObjects",
+      "Text": "Onboarding objects",
+      "EquivalenceClasses": {
+        "NewHire": {
+          "Name": "NewHire",
+          "Text": "New hire"
+        },
+        "ProcessStep": {
+          "Name": "ProcessStep",
+          "Text": "Process step"
+        }
+      }
+    }
+  },
+  "ExpectedResults": {
+    "OnboardingJiraIsCreated": {
+      "Name": "OnboardingJiraIsCreated",
+      "Text": "JIRA is created for Onboarding",
+      "Condition": "Domain = Onboarding"
+    }
+  }
+}

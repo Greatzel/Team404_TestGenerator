@@ -110,7 +110,7 @@ namespace GGC.TestCaseGenerator.Models
             else foreach (EquivalenceClass equivalenceClass in EquivalenceClasses.Values)
                 {
                     validated = equivalenceClass.Validate(errors) && validated;
-                }
+        }
 
             return validated;
         }

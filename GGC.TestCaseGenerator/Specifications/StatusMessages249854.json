@@ -1,0 +1,158 @@
+{
+  "Name": "StatusMessages249854",
+  "Text": "Error status messages (ULTI-249854)",
+  "CoverageGroups": [
+    {
+      "Name": "GridMessages",
+      "Parameters": [ "ViewedGrid", "ExecutionState" ]
+    }
+  ],
+  "InputParameters": {
+    "InterfaceVersion": {
+      "Name": "InterfaceVersion",
+      "Text": "interface",
+      "EquivalenceClasses": {
+        "MK2Non834": {
+          "Name": "MK2Non834",
+          "Text": "MK2 non-834"
+        },
+        "MK2834": {
+          "Name": "MK2834",
+          "Text": "MK2 834"
+        },
+        "MK3Non834": {
+          "Name": "MK3Non834",
+          "Text": "MK3 non-834"
+        },
+        "MK3834": {
+          "Name": "MK3834",
+          "Text": "MK3 834"
+        }
+      },
+      "Constraints": []
+    },
+    "ViewedGrid": {
+      "Name": "ViewedGrid",
+      "Text": "UltiPro page",
+      "EquivalenceClasses": {
+        "FileTransfersMonitoring": {
+          "Name": "FileTransfersMonitoring",
+          "Text": "FT monitoring grid"
+        },
+        "IntegrationStudioActivityLog": {
+          "Name": "IntegrationStudioActivityLog",
+          "Text": "activity log"
+        },
+        "IntegrationStudioUCN": {
+          "Name": "IntegrationStudioUCN",
+          "Text": "UCN grid"
+        }
+      },
+      "Constraints": []
+    },
+    "ExecutionState": {
+      "Name": "ExecutionState",
+      "Text": "activities view",
+      "EquivalenceClasses": {
+        "State00": {
+          "Name": "State00",
+          "Text": "without error for the interface"
+        },
+        "State01a": {
+          "Name": "State01a",
+          "Text": "with 'output path in IEX_InterfaceConfig inaccessible' error"
+        },
+        "State01b": {
+          "Name": "State01b",
+          "Text": "with 'output path in RbsSiteValues inaccessible' error"
+        },
+        "State02a": {
+          "Name": "State02a",
+          "Text": "with 'Informatica status unavailable' error"
+        },
+        "State02b": {
+          "Name": "State02b",
+          "Text": "with 'Informatica data transformation unavailable' error"
+        },
+        "State02c": {
+          "Name": "State02c",
+          "Text": "without error in the DQR"
+        },
+        "State03a": {
+          "Name": "State03a",
+          "Text": "with 'fatal SQL error in MK2' error"
+        },
+        "State03b": {
+          "Name": "State03b",
+          "Text": "with 'fatal configured-file-stop error in MK2' error"
+        },
+        "State04": {
+          "Name": "State04",
+          "Text": "with 'data transformation error' error (DT error log)"
+        },
+        "State05": {
+          "Name": "State05",
+          "Text": "with 'partner inactive' error"
+        },
+        "State06": {
+          "Name": "State06",
+          "Text": "with (AR number, company code) mismatch error"
+        },
+        "State07": {
+          "Name": "State07",
+          "Text": "with endpoint mismatch error"
+        },
+        "State08": {
+          "Name": "State08",
+          "Text": "with HIPAA validation error"
+        },
+        "State10": {
+          "Name": "State10",
+          "Text": "with 'profile not set up' error"
+        }
+      }
+    }
+  },
+  "ExpectedResults": {
+    "StatusMessage00": {
+      "Name": "StatusMessage00",
+      "Text": "no error message is displayed in the grid",
+      "Condition": "ExecutionState = State00"
+    },
+    "StatusMessage01": {
+      "Name": "StatusMessage01",
+      "Text": "'Output directory path not available. Please contact your support representative.'",
+      "Condition": "ExecutionState = [State01a,State01b]"
+    },
+    "StatusMessage02": {
+      "Name": "StatusMessage02",
+      "Text": "'Interface data processing executed. File formatting and transmission not selected.'",
+      "Condition": "ExecutionState = [State02a,State02b,State02c]"
+    },
+    "StatusMessage03": {
+      "Name": "StatusMessage03",
+      "Text": "'Interface processing failed; please see error log for details or contact your support representative.'",
+      "Condition": "ExecutionState = [State03a,State03b]"
+    },
+    "StatusMessage04-05-06-07": {
+      "Name": "StatusMessage04-05-06-07",
+      "Text": "'Interface processing failed. Please contact your support representative.'",
+      "Condition": "ExecutionState = [State04,State05,State06,State07]"
+    },
+    "StatusMessage08": {
+      "Name": "StatusMessage08",
+      "Text": "'Interface completed but file transmission errors occurred. File not sent to vendor. Please contact your support representative.'",
+      "Condition": "ExecutionState = State08"
+    },
+    "StatusMessage09": {
+      "Name": "StatusMessage09",
+      "Text": "'Interface processing failed due to HIPAA validation errors. Please contact your support representative.'",
+      "Condition": "ExecutionState = State09"
+    },
+    "StatusMessage10": {
+      "Name": "StatusMessage10",
+      "Text": "'Interface processing failed due to missing file transfer profile. Please contact your support representative.'",
+      "Condition": "ExecutionState = State10"
+    }
+  }
+}

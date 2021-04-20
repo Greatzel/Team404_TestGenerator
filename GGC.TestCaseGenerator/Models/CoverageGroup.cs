@@ -6,9 +6,14 @@ using System.Web;
 
 namespace GGC.TestCaseGenerator.Models
 {
+    /// <summary>
+    /// Class that encapsulates a list of parameters used for coverage.
+    /// </summary>
     public class CoverageGroup
     {
-        //Defining coverage group name
+        /// <summary>
+        /// The name of the coverage group from the XML file.
+        /// </summary>
         public string Name { get; set; }
 
         //Define list of input parameters that make a coverage group
@@ -27,6 +32,10 @@ namespace GGC.TestCaseGenerator.Models
             Name = "Default Coverage Group Name";
             Parameters = new List<string> {"Default Parameter Group Member"};
         } 
+        public CoverageGroup(String name)
+        {
+            Name = name;
+        }
 
         //Sets the data of members of the class and 
         //returns true if successful
@@ -47,7 +56,8 @@ namespace GGC.TestCaseGenerator.Models
         public bool Validate(IList<string> errors)
         {
             bool validated = true;
-            if((Parameters == null) || !Parameters.Any())
+
+            if ((Parameters == null) || !Parameters.Any())
             {
                 errors.Add($"Coverage group {Name} has no parameters");
                 validated = false;

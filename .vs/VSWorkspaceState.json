@@ -1,6 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\GGC.TestCaseGenerator",
+    "\\GGC.TestCaseGenerator\\Views",
+    "\\GGC.TestCaseGenerator\\Views\\Home"
   ],
+  "SelectedNode": "\\GGC.TestCaseGenerator.sln",
   "PreviewInSolutionExplorer": false
 }
