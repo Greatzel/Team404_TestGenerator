@@ -1,0 +1,91 @@
+﻿@model GGC.TestCaseGenerator.Models.CoverageGroup
+
+@{
+    ViewBag.Title = "AddMembers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section scripts
+ {
+
+    <script src="~/Scripts/specification-addmember.js"></script>
+}
+
+<style>
+
+    button{
+        margin-right: 15px;
+    }
+</style>
+
+<body>
+    <div class="jumbotron">
+
+        <div id="groupNamesList">
+
+        </div>
+
+        <form method="post">
+            <br>
+            <label>Add Member</label>
+            <p style="font-size:small;">Choose group name then add input parameters as group members.</p>
+
+            <div id="selectMember">
+                <label for="members">Group Name</label>
+               
+                <input type="button" onclick="AddMemberDropdown()" value="Add Members" />
+                <input type="button" onclick="testReference()" value="TEST REF" />
+                <div id="memberBox" style="padding-left: 50px;"></div>
+            </div><br />
+
+            <input class="btn btn-success" onclick="SubmitGroup()" type="submit" value="Submit Coverage Group" />
+        </form>
+    </div>
+
+</body>
+
+<!--
+<script type="text/javascript">
+
+    var groupNameList = [];
+    var member = document.getElementById('member').value;
+
+    //Adding members to group ...
+
+    /*function GetDynamicTextbox(value) {
+        return '<div><label for= "member"> Choose groupSX name:</label><select id="member" name="member"><option value="Val1">Value 1</option><option value="Val2">Value 2</option><option value="Val3">Value 3</option><option value="Val4">Value 4</option></select><input type="button" onclick="RemoveTextBox()" value="Remove Group" /></div>';
+    }
+
+    function AddInputField() {
+        var div = document.createElement('DIV');
+        div.innerHTML = GetDynamicTextbox("");
+        document.getElementById("selectMember").appendChild(div);
+    }
+
+    function RemoveTextBox(div) {
+        document.getElementById("selectMember").removeChild(div.parentNode.parentNode);
+    }*/
+
+    //Dropdown box
+
+    function GetMemberDropdown(value) {
+        return '<div><label for= "member"> Choose member:</label><select id="member" name="member"><option value="Val1">Value 1</option><option value="Val2">Value 2</option><option value="Val3">Value 3</option><option value="Val4">Value 4</option></select><input type="button" onclick="RemoveMemberDropdown()" value="Remove Member" /></div>';
+    }
+
+    function AddMemberDropdown() {
+        var div = document.createElement('DIV');
+        div.innerHTML = GetDynamicTextbox("");
+        document.getElementById("memberBox").appendChild(div);
+    }
+
+    function RemoveMemberDropdown(div) {
+        document.getElementById("memberBox").removeChild(div.parentNode.parentNode);
+    }
+
+    function SubmitGroupName() {
+        groupNameList.push(groupname);
+        console.log(groupNameList);
+        console.log(groupname);
+    }
+</script> -->
+<!-- <script type="text/javascript" src="Scripts/common.js"></script> -->

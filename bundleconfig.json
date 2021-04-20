@@ -1,0 +1,8 @@
+[
+  {
+    "outputFileName": "Scripts/specification.coverage.min.js",
+    "inputFiles": [
+      "Scripts/specification.coverage.js"
+    ]
+  }
+]
