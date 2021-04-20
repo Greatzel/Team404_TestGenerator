@@ -3,11 +3,21 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section scripts
+{
+    <script src="~/Scripts/specification-result.js"></script>
+}
+
 <h2>Result</h2>
 
 <div class="jumbotron">
     <form method="post">
-        <input class="btn btn-success" onclick="" type="submit" value="Generate Json File" />
-       
+        <input class="btn btn-success" onclick="" type="submit" value="Generate Json File" /><br /><br />
+        <input type="file" id="selectFiles" value="Upload" /><br />
     </form>
+    <button id="import">Import</button><br /><br />
+    <textarea id="result"></textarea>
+    <div id="show">
+
+    </div>
 </div>

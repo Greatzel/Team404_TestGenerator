@@ -4,6 +4,9 @@
 }
 let addButton = document.querySelector('#add');
 let displayButton = document.querySelector('#display');
+
+var testArray = ["P1", "P2", "P3", "P4", "P5"];
+
 //Equilvalence Class Array Below:
 let recordsName = [];
 let recordsText = [];
@@ -13,6 +16,7 @@ let InputText = [];
 var counter = 0;
 addButton.addEventListener('click', addRecord);
 displayButton.addEventListener('click', displayAll);
+
 function appendRow2() {
     counter++;
     var t = document.getElementById('IP2');
@@ -22,6 +26,7 @@ function appendRow2() {
 //<===========Test data fetching by Greatzel===========>
 function submitTest() {
     console.log("Button Pressed");
+    console.log(InputName);
     for (var i = 1; i <= counter; i++) {
         var equivalenceClass = document.getElementById('EquilvalenceClassesName' + i);
         var equivalenceText = document.getElementById('EquilvalenceClassesText' + i);
@@ -30,15 +35,15 @@ function submitTest() {
         recordsName.push(equivalanceClassVal);
         recordsText.push(equivalanceTextVal);
     }
+    var res = document.getElementById('results');
+    res.innerHTML += "<input type = 'hidden' name='InputParamList' value='"
+        + testArray + "' />";
 }
 //<====================================================>
 
 //<===========Test data sending by Greatzel===========>
-
-var testArray = ["P1", "P2", "P3", "P4", "P5"];
 var inputJsonString = localStorage.setItem('inputNameSeshStored', JSON.stringify(testArray));
 console.log(testls);
-
 //<====================================================>
 
 function addRecord() {
@@ -56,12 +61,9 @@ function addRecord() {
     document.querySelector('#IPara2').value = '';
 }
 function displayAll() {
-    alert(InputName)
-    alert(InputText)
-    alert(recordsName)
-    alert(recordsText)
     console.log("submitTest className Array Check " + InputName);
     console.log("submitTest classText Array Check " + InputText);
     console.log("submitTest className Array Check " + recordsName);
     console.log("submitTest classText Array Check " + recordsText);
+
 }

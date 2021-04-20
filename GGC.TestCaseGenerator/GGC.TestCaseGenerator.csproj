@@ -183,6 +183,7 @@
     <Content Include="Scripts\specification-addmember.js" />
     <Content Include="Scripts\specification-expectedresult.js" />
     <Content Include="Scripts\specification-inputparameter.js" />
+    <Content Include="Scripts\specification-result.js" />
     <Content Include="Scripts\test-reference.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">

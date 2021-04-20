@@ -9,7 +9,7 @@ function coveragegroup(name, members) {
     this.members = members;
 }
 
-//=========================retrieve test ==============================
+//=========================retrieve test 1 ==============================
 
 var inputGet = localStorage.getItem('inputNameSeshStored');
 console.log(inputGet);
@@ -17,6 +17,8 @@ console.log(inputGet);
 var inputList = inputGet.split(',');
 
 var finalInputList = [];
+
+
 
 for (var i = 0; i <= inputList.length-1; i++)
 {
@@ -44,37 +46,37 @@ for (var i = 0; i <= inputList.length-1; i++)
 console.log(finalInputList);
 console.log(inputList);
 
-//===================================================================
+//===================================================================================
 
 //IT WORKS!!!!!!!!!!! MEMBERS DROPDOWN
 
 var nameval5 = 1
 var testval5 = 1;
 var idval5 = 0;
-var select5 = 0;
+var counter = 0;
 var appendCount5 = 0;
 
-function appendRow5() {
-    select5++;
+function appendRow5() { 
+    counter++;
+
     var t = document.getElementById('dropDownID5');
     t.innerHTML += "<br><b>Select Members:</b>";
-    t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect" + select5 + "'>";
-    var selectTest = document.getElementById('selectMemberID' + select5);
+    t.innerHTML += "<select id='selectMemberID" + counter + "' name='memberSelect" + counter + "'>";
+    var selectTest = document.getElementById('selectMemberID' + counter);
     console.log(selectTest.value);
-    for (var i = 0; i <= inputList.length-1; i++) {
+    for (var i = 0; i <= finalInputList.length-1; i++) {
 
-        selectTest.innerHTML += "<option name= 'Name" + inputList[i] + "' value = '" + inputList[i] +"'>"
-            + inputList[i] + "</option>";
+        selectTest.innerHTML += "<option name= 'Name" + finalInputList[i] + "' value = '" + finalInputList[i] +"'>"
+            + finalInputList[i] + "</option>";
 
     }
   
     t.innerHTML += "</select><br />";
 }
 
-
 function SubmitGroupName() {
-    console.log("SubmitGroupName Select5 num: " + select5);
-    for (var i = 1; i <= select5; i++) {
+    console.log("SubmitGroupName Select5 num: " + counter);
+    for (var i = 1; i <= counter; i++) {
         var members = document.getElementById('selectMemberID' + i);
         var memberValue = members.value;
         console.log("Variable Members " + memberValue);

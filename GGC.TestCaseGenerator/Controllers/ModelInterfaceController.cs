@@ -27,7 +27,7 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             //Need validation if parameters are empty or not
            group.Name = groupName;
-           group.Parameters = SplitString(members);
+          // group.Parameters = SplitString(members);
         
             return group;
             //Checkpoint
