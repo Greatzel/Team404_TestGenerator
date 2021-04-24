@@ -3,6 +3,7 @@
     let ExpectedResultsText = [];
     let ExpectedResultsCondition = [];
     counting = 0;
+
         function appendRow() {
         counting++;
             var h = document.getElementById('ER1');
@@ -24,6 +25,7 @@
                 ExpectedResultsName.push(ExpectedResultsNameVal);
                 ExpectedResultsText.push(ExpectedResultsTextVal);
                 ExpectedResultsCondition.push(ExpectedResultsConditionVal);
+            
             }
         }
         function displayAllArrayData() {
