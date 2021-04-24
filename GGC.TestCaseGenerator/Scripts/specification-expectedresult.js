@@ -4,7 +4,8 @@
     let ExpectedResultsCondition = [];
     counting = 0;
 
-        function appendRow() {
+function appendRow() {
+        console.log("Im being cLicked");
         counting++;
             var h = document.getElementById('ER1');
             h.innerHTML += "<br>Enter Expected Results Name: <input type='text' id='ExpectedResultsName1" + counting + "'><br >";
