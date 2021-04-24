@@ -396,3 +396,7 @@ C:\Users\Greatzel\source\Repo-V2\GGC.TestCaseGenerator\GGC.TestCaseGenerator\GGC
 C:\Users\Greatzel\source\Repo-V2\GGC.TestCaseGenerator\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csproj.CopyComplete
 C:\Users\Greatzel\source\Repo-V2\GGC.TestCaseGenerator\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.dll
 C:\Users\Greatzel\source\Repo-V2\GGC.TestCaseGenerator\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.pdb
+C:\Users\frien\source\repos\Team404_TestGenerator\TestCase\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csprojAssemblyReference.cache
+C:\Users\frien\source\repos\Team404_TestGenerator\TestCase\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.csproj.CoreCompileInputs.cache
+C:\Users\frien\source\repos\Team404_TestGenerator\TestCase\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.dll
+C:\Users\frien\source\repos\Team404_TestGenerator\TestCase\GGC.TestCaseGenerator\GGC.TestCaseGenerator\obj\Debug\GGC.TestCaseGenerator.pdb

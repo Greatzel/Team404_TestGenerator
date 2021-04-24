@@ -35,14 +35,14 @@ function resultShow() {
         console.log(inputParametersList);
 
         //Coverage Group
-
-        
         var coverageMemberList = localStorage.getItem('memberList');
         var groupName = localStorage.getItem('groupName');
         console.log(inputParametersList);
 
-        //Expected REsults
-
+    //Expected REsults
+        var expectedResultsNameRetrieve = localStorage.getItem('ExpectedResultsNameVal');
+        var expectedResultsTextRetrieve = localStorage.getItem('ExpectedResultsNameVal');
+        var expectedResultsConditionRetrieve = localStorage.getItem('ExpectedResultsNameVal');
         //==============Show result============
 
         //Specification Tab
@@ -58,8 +58,7 @@ function resultShow() {
             + inputParametersList + "'</input><br><br>";
 
         //Equivalence Classes
-        res.innerHTML += "Equivalence Classes: <input type ='text' id= 'text' value='Test Value'</input><br><br>";
-
+        res.innerHTML += "Equivalence Classes: <input type ='text' id= 'text' value= </input><br><br>";
         //Coverage Group Tab
         res.innerHTML += "Group Name: <input type ='text' id= 'text' value='"
             + groupName + "'</input><br><br>";
@@ -67,8 +66,13 @@ function resultShow() {
             + coverageMemberList + "'</input><br><br>";
 
         //Expected Results Tab
-        res.innerHTML += "Expected Results List: <input type ='text' id= 'text' value='"
-        + "Test Value" + "'</input><br>";
+        res.innerHTML += "Expected Result Name: <input type ='text' id= 'text' value='"
+        + expectedResultsNameRetrieve + "'</input><br><br>";
+        res.innerHTML += "Expected Result Text: <input type ='text' id= 'text' value='"
+            + expectedResultsTextRetrieve + "'</input><br><br>";
+        res.innerHTML += "Expected Result Condition: <input type ='text' id= 'text' value='"
+            + expectedResultsConditionRetrieve + "'</input><br><br>";
+
 
 
 
