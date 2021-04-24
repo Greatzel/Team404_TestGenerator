@@ -1,13 +1,12 @@
-﻿var specificationName = document.getElementById('specificationName');
-var specificationText = document.getElementById('specificationTextName');
+﻿
 
 
 function submitSpec() {
-    var specificationName = document.getElementById('specificationName');
-    var specificationText = document.getElementById('specificationTextName');
+    var specificationName = document.getElementById("specificationNameId").value;
+    var specificationText = document.getElementById("specificationTextId").value;
 
-    var specNameTest = specificationName.value;
-    var specTextTest = specificationText.value;
+    var specNameTest = specificationName;
+    var specTextTest = specificationText;
 
     console.log(specNameTest);
     console.log(specTextTest);

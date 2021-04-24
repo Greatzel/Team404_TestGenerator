@@ -27,7 +27,7 @@ function resultShow() {
         var specNameRetrieve = localStorage.getItem('specificationName');
         var specTextRetrieve = localStorage.getItem('specificationText');
 
-        //Input Param
+        //Input Param - TEST
         console.log("Loaded Function");
         var inputParametersList = localStorage.getItem('inputNameSeshStored');
         console.log(inputParametersList);

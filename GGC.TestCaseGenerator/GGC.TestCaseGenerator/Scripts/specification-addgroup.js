@@ -2,7 +2,7 @@
 
 var groupMemberList = [];
 var inputParamsList = ["Param 1", "Param 2", "Param 3", "Param 4", "Param 5"];
-var groupName = document.getElementById('groupname');
+var groupName = document.getElementById('groupnameId');
 
 //coverage group constructor function
 function coveragegroup(name, members) {
@@ -95,4 +95,3 @@ function SubmitGroupName() {
         + groupMemberList + "' />";
     console.log(groupMemberList);
 }
-
