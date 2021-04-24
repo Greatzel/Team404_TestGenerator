@@ -1,9 +1,11 @@
 ﻿    //Expected Results Arrays below:
-    let ExpectedResultsName = [];
-    let ExpectedResultsText = [];
-    let ExpectedResultsCondition = [];
+    var ExpectedResultsNameList= [];
+    var ExpectedResultsTextList = [];
+    var ExpectedResultsConditionList = [];
     counting = 0;
 
+let displayButton = document.querySelector('#display');
+displayButton.addEventListener('click', displayAllArrayData);
         function appendRow() {
         counting++;
             var h = document.getElementById('ER1');
@@ -22,16 +24,17 @@
                 var ExpectedResultsTextVal = ECText.value;
                 var ExpectedResultsConditionVal = ECCondition.value;
 
-                ExpectedResultsName.push(ExpectedResultsNameVal);
-                ExpectedResultsText.push(ExpectedResultsTextVal);
-                ExpectedResultsCondition.push(ExpectedResultsConditionVal);
+                ExpectedResultsNameList.push(ExpectedResultsNameVal);
+                ExpectedResultsTextList.push(ExpectedResultsTextVal);
+                ExpectedResultsConditionList.push(ExpectedResultsConditionVal);
             
             }
         }
-        function displayAllArrayData() {
-            alert(ExpectedResultsName);
-            alert(ExpectedResultsText);
-            alert(ExpectedResultsCondition);
+function displayAllArrayData() {
+    console.log("Im being cLicked");
+            alert(ExpectedResultsNameList)
+            alert(ExpectedResultsTextList)
+            alert(ExpectedResultsConditionList)
             console.log("submitTest ExpectedResultsName Array Check " + ExpectedResultsName);
             console.log("submitTest ExpectedResultstext Array Check " + ExpectedResultsText);
             console.log("submitTest ExpectedResultsCondition Array Check " + ExpectedResultsCondition);
