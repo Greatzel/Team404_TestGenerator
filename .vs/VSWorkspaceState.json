@@ -3,11 +3,9 @@
     "",
     "\\GGC.TestCaseGenerator",
     "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator",
-    "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator\\Models",
-    "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator\\Scripts",
-    "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator\\Views",
-    "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator\\Views\\Home"
+    "\\GGC.TestCaseGenerator\\Views",
+    "\\GGC.TestCaseGenerator\\Views\\Home"
   ],
-  "SelectedNode": "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator.sln",
+  "SelectedNode": "\\GGC.TestCaseGenerator\\GGC.TestCaseGenerator.sln",
   "PreviewInSolutionExplorer": false
 }

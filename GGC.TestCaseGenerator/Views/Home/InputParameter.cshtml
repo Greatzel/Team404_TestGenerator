@@ -2,11 +2,11 @@
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
 @section scripts
 {
     <script src="~/Scripts/specification-inputparameter.js"></script>
 }
+
 <div class="jumbotron" id="jumbotron">
     <h1>Welcome to Testing centers</h1>
     <br>
@@ -20,28 +20,23 @@
                 <label id="IN1" name="IN2">Input Name:</label>
                 <input id="IPara1" name="IPara1" placeholder="Enter Input Name Here" type="text" style="width:200px" /><br />
                 <label id="IT1">Input Text:</label>
-                <input id="IPara2" name ="IPara2"placeholder="Enter Input Text Here" type="text" style="width:200px" />
+                <input id="IPara2" placeholder="Enter Input Text Here" type="text" style="width:200px" />
                 <br>
         </div>
 
 
         <div id="IP2">
             <br />
-            <label><b>Click to add other Equilvalence Classes</b></label>
+            <label><b>Click to add more Equilvalence Classes</b></label>
             <br />
-            <button onclick="appendRow2()" value="Addbox">Add Equilavalence Classes</button><br />
-
+            <button onclick="appendRow2()"class="btn btn-success" value="Addbox">Add Equilavalence Classes</button><br />
             <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
-            <!--<input id="IEC1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
-            <label id="IT1">Enter Equilvalence Class:</label>
-            <input id="IEC2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />-->
             <br>
-
         </div>
-        <button type="button" id="add">Submit</button>
-        <button type="button" onclick="addrecord2()" id="tst">test</button>
-        <button type="button" id="display">Display</button>
-        <button type="button" id="TestSubmitTest()" onclick="submitTest()">submitTest() TEST</button>
+        <button type="button" class="btn btn-success" onclick="someFunc()" id="add">Submit</button>
+        <button type="button" class="btn btn-success" id="display">Display</button>
     </form>
 </div>
+
+
 
