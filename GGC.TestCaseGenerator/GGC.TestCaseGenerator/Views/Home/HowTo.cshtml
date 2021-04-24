@@ -1,0 +1,69 @@
+﻿@{
+    ViewBag.Title = "HowTo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>How to define a specification: </h3>
+
+<style>
+    .content {
+        margin-left: 50px;
+    }
+</style>
+
+<div>
+    <p>
+        <span>James Wood Instructions</span><br /><br />
+
+        <h4><a href="~/Views/Home/InputParameter.cshtml">Input Parameters:</a></h4>
+
+        <div class="content">
+            An InputParameter may have the following XML data and tags associated with it:<br />
+            * Attribute - Name: the logical name of the input parameter.<br />
+            * Attribute - Text: the parameter's name as it appears in the output file.<br />
+            * 1 or more EquivalenceClass: an equivalence class that partitions the value space for the parameter.<br /><br />
+
+            An EquivalenceClass may have the following XML data and tags associated with it:<br />
+            * Attribute - Name: the logical name of the equivalence class.<br />
+            * Attribute - Text: the class's value as it appears in the output file.<br />
+            * 0 or 1 Expression: an expression that may be unary ExpressionUnary, binary ExpressionBinary, or relational ExpressionRelational.<br /><br />
+        </div>
+
+        <h4><a href="~/Views/Home/CoverageGroup.cshtml">Coverage Groups:</a></h4>
+
+        <div class="content">
+            A CoverageGroup may have the following XML data and tags associated with it:<br />
+            * Attribute - Name: the logical name of the coverage group.<br />
+            * 1 or more Parameter: names an input parameter that is included in the coverage group.<br /><br />
+        </div>
+
+
+        <h4><a href="~/Views/Home/CoverageGroup.cshtml">Expected Results:</a></h4>
+
+        <div class="content">
+            An ExpectedResult may have the following XML data and tags associated with it:<br />
+            * Attribute - Name: the logical name of the expected result.<br />
+            * Attribute - Text: the name of the expected result as it appears in the output file.<br />
+            * 1 Expression the argument of the expected result that must evaluate to TRUE for the result to belong to a test case.<br /><br />
+        </div>
+
+
+        <h4><a href="~/Views/Home/CoverageGroup.cshtml">Holder Div :</a></h4>
+
+        <div class="content">
+            An ExpressionUnary may have the following XML data and tags associated with it:<br />
+            * Atribute - Operator: the name of the unary operator (e.g. NOT).<br />
+            * 1 Expression: the argument of the unary operator.S<br /><br />
+
+            An ExpressionBinary may have the following XML data and tags associated with it:<br />
+            * Atribute - Operator: the name of the binary operator (e.g. AND, OR).<br />
+            * 1 or more Expression: the ordered arguments of the binary operator.<br /><br />
+
+            An ExpressionRelational may have the following XML data and tags associated with it:<br />
+            * Atribute - Operator: the name of the relational operator (e.g. EQ, NEQ, LT, LE, GT, GE).<br />
+            * Attribute - Parameter: the name of an input parameter.<br />
+            * Attribute - EquivalenceClass: the name of an equivalence class or hard-coded value.<br /><br />
+        </div>
+
+    </p>
+</div>
