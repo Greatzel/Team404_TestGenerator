@@ -1,50 +1,21 @@
-﻿@model GGC.TestCaseGenerator.Models.ExpectedResult
-
-@{
+﻿@{
     ViewBag.Title = "ExpectedResult";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<style>
-    .labelResult {
-        padding-right: 70px;
-    }
-</style>
-
+@section scripts
+{
+    <script src="~/Scripts/specification-expectedresult.js"></script>
+}
 <div class="jumbotron">
-    <div id="ER1">
-        <br />
-        <form>
-            <h3><b>Click to add other Expected Results</b></h3><button onclick="appendRow()" value="Add box">Add Expected Results</button>
-            </br>
-
-            <label>Enter Expected Results Name:</label>
-            <input id="ERName" placeholder="Enter Expected Results Name Here" type="text" style="width:200px" />
+    <form method="post">
+        <div id="ER1">
             <br />
-            <label>Enter Expected Results Text:</label>
-            <input placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
-            <br>
-            <label>Enter Expected Results Condition:</label>
-            <input placeholder="Enter Expected Results Condition" type="text" style="width:200px" />
-
-        </form>
-    </div>
+            <h3><b>Click to add other Expected Results</b></h3>
+            <button onclick="appendRow()" class="btn btn-success" value="Addbox">Add Expected Results</button>
+            <br />
+            <label>Enter Expected Results Name:</label>
+        </div>
+        <button type="submit" class="btn btn-success" onclick="submittingExtraExpectedResults()" id="add">Submit</button>
+        <button type="submit" class="btn btn-success" onclick="displayAllArrayData()" id="display">Display</button>
     </form>
-
-    <br>
-    <!-- <br>
-    Input Name: at Html.TextBox("Name")
-    Input Text: at Html.TextBox("Text")
-    Input Condition: at Html.TextBox("Condition")
-    <br> -->
-    <script>
-        var y = 1
-        function appendRow() {
-            var s = document.getElementById('ER1');
-            s.innerHTML += "<br><b>Enter other Expected Results:</b></p>"
-            s.innerHTML += "<br>Enter Expected Results Name: <input type='text' id='tst" + y++ + "'><br >";
-            s.innerHTML += "Enter Expected Results Text: <input type='text' id='tst" + y++ + "'><br >";
-            s.innerHTML += "Enter Expected Results Condition:<input type='text' id='tst" + y++ + "'><br >";
-        }
-    </script>
-    <button onclick="" type="submit">Submit</button>
 </div>

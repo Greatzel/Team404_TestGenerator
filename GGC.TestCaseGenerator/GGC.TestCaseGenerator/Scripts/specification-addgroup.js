@@ -20,7 +20,7 @@ var inputList = inputGet.split(',');
 var finalInputList = [];
 
 
-
+//How to unJson the Json'ed data
 for (var i = 0; i <= inputList.length - 1; i++) {
     console.log("Value " + i);
     if (i === 0) {
@@ -73,6 +73,8 @@ function appendRow5() {
     selectedMembers.push(htmlSelectMember).value;
     console.log("SELECT MEMBERS: " + selectedMembers);
     t.innerHTML += "</select><br />";
+
+    t.innerHTML += "<input type = 'hidden' name='finalMemberList' value='" + finalInputList + "'/>";
 }
 
 function SubmitGroupName() {

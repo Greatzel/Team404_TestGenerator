@@ -26,6 +26,11 @@ function submittingExtraExpectedResults() {
         ExpectedResultsText.push(ExpectedResultsTextVal);
         ExpectedResultsCondition.push(ExpectedResultsConditionVal);
     }
+
+    var erName = localStorage.setItem('expectedResName', JSON.stringify(ExpectedResultsName));
+    var erText = localStorage.setItem('expectedResText', JSON.stringify(ExpectedResultsText));
+    var erCon = localStorage.setItem('expectedResCon', JSON.stringify(ExpectedResultsCondition));
+
 }
 
 function displayAllArrayData() {

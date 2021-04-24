@@ -1,7 +1,4 @@
-﻿
-
-
-function submitSpec() {
+﻿function submitSpec() {
     var specificationName = document.getElementById("specificationNameId").value;
     var specificationText = document.getElementById("specificationTextId").value;
 
