@@ -1,6 +1,4 @@
-﻿@model GGC.TestCaseGenerator.Models.InputParameter
-
-@{
+﻿@{
     ViewBag.Title = "Home Page";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -10,8 +8,6 @@
 }
 
 <div class="jumbotron" id="jumbotron">
-    <h1>Welcome to Testing centers</h1>
-    <br>
     <form method="post">
         <div id="IP1">
 
@@ -31,21 +27,14 @@
             <br />
             <label><b>Click to add more Equilvalence Classes</b></label>
             <br />
-            <button onclick="appendRow2()" value="Addbox">Add Equilavalence Classes</button><br />
+            <button onclick="appendRow2()" class="btn btn-success" value="Addbox">Add Equilavalence Classes</button><br />
             <label id="IN1" name="IN2">Enter Equilvalence Class Name:</label>
-            <input id="IPara1" placeholder="Enter Equilvalence Class Name Here" type="text" style="width:200px" /><br />
-            <label id="IT1">Enter Equilvalence Class:</label>
-            <input id="IPara2" placeholder="Enter Equilvalence Class Here" type="text" style="width:200px" />
             <br>
-
         </div>
-        <button type="button" onclick="someFunc()" id="add">Submit</button>
-        <button type="button" id="display">Display</button>
+        <button type="button" class="btn btn-success" onclick="someFunc()" id="add">Submit</button>
+        <button type="button" class="btn btn-success" id="display">Display</button>
     </form>
-</div>
+    <div id="result">
 
-
-    </script>
-
-<button onclick="" type="submit">Submit</button>
+    </div>
 </div>

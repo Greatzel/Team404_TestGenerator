@@ -35,16 +35,10 @@ function submitTest() {
         recordsName.push(equivalanceClassVal);
         recordsText.push(equivalanceTextVal);
     }
-    var res = document.getElementById('results');
+    /*var res = document.getElementById('results');
     res.innerHTML += "<input type = 'hidden' name='InputParamList' value='"
-        + testArray + "' />";
+        + InputName + "' />";*/
 }
-//<====================================================>
-
-//<===========Test data sending by Greatzel===========>
-var inputJsonString = localStorage.setItem('inputNameSeshStored', JSON.stringify(testArray));
-console.log(inputJsonString);
-
 //<====================================================>
 
 function addRecord() {
@@ -60,8 +54,18 @@ function addRecord() {
     InputText.push(record2);
     document.querySelector('#IPara1').value = '';
     document.querySelector('#IPara2').value = '';
+
+    var inputJsonString = localStorage.setItem('inputNameSeshStored', JSON.stringify(InputName));
+    var inputTextString = localStorage.setItem('inputTextSeshStored', JSON.stringify(InputText));
+    var equivalenceNameString = localStorage.setItem('inputRecNameSeshStored', JSON.stringify(recordsName));
+    var equivalanceTextString = localStorage.setItem('inputRecTextSeshStored', JSON.stringify(recordsText));
+
+    console.log(inputJsonString);
 }
+
 function displayAll() {
+    alert("Input Names: " + InputName + " Input Text: " + InputText + " recordsNames: " + recordsName
+        + " recordsName: " + recordsText);
     console.log("submitTest className Array Check " + InputName);
     console.log("submitTest classText Array Check " + InputText);
     console.log("submitTest className Array Check " + recordsName);

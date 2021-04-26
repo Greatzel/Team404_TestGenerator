@@ -64,7 +64,7 @@ namespace GGC.TestCaseGenerator.Controllers
             return View();
         }
 
-        [HttpPost]
+       
         public ActionResult Resources()
         {
             return View();

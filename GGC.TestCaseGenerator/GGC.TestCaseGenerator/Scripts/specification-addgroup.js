@@ -1,7 +1,13 @@
 ﻿//Add Coverage Group Name Script
 
+var num = 0;
+console.log(num++);
+
 var groupMemberList = [];
 var inputParamsList = ["Param 1", "Param 2", "Param 3", "Param 4", "Param 5"];
+var selectedMembers = [];
+var groupNamesFinal = [];
+var membersListFinal = [];
 var groupName = document.getElementById('groupnameId');
 
 //coverage group constructor function
@@ -53,8 +59,6 @@ var idval5 = 0;
 var counter = 0;
 var appendCount5 = 0;
 
-var selectedMembers = [];
-
 function appendRow5() {
     counter++;
 
@@ -78,8 +82,12 @@ function appendRow5() {
 }
 
 function SubmitGroupName() {
+
+    addGroupNamesList();
+    addMembersList();
+
     console.log("SubmitGroupName Select5 num: " + counter);
-    for (var i = 1; i <= counter; i++) {
+   /* for (var i = 1; i <= counter; i++) {
         var members = document.getElementById('selectMemberID' + i);
         var memberValue = members.value;
         console.log("Variable Members " + memberValue);
@@ -87,13 +95,33 @@ function SubmitGroupName() {
         console.log(groupMemberList);
     }
 
+    membersListFinal.push(groupMemberList);*/
 
     var groupNameVar = groupName.value;
-    var coverageMemberList = localStorage.setItem('memberList', JSON.stringify(groupMemberList));
-    var coverageGroupNameList = localStorage.setItem('groupName', JSON.stringify(groupNameVar));
 
-    var res = document.getElementById('results');
-    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='"
-        + groupMemberList + "' />";
-    console.log(groupMemberList);
+    var coverageGroupNameList = localStorage.setItem('groupName', JSON.stringify(groupNamesFinal));
+    var coverageMemberList = localStorage.setItem('memberList', JSON.stringify(membersListFinal));
+
+    console.log("SUBMIT groupNamesFinal: " + groupNamesFinal);
+    console.log("SUBMIT membersListFinal: " + membersListFinal);
+  
+}
+
+/*var addCovGroup = document.querySelector('#addCoverage');
+addCovGroup.addEventListener('click', SubmitGroupName);*/
+
+function addGroupNamesList() {
+    var groupNameCov = groupName.value;
+    groupNamesFinal.push(groupNameCov);
+    console.log("groupNamesFinal: " + groupNamesFinal);
+}
+
+function addMembersList() {
+    for (i = 1; i <= counter; i++) {
+        var member = document.getElementById('selectMemberID' + i);
+        var memberVar = member.value;
+
+        membersListFinal.push(memberVar);
+        console.log("addMembersList(): " + membersListFinal);
+    }
 }
