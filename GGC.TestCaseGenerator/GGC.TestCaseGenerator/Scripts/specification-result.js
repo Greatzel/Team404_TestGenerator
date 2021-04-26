@@ -37,6 +37,7 @@ function resultShow() {
         console.log(inputParametersList);
         //Equivalence Class
 
+<<<<<<< HEAD
         var equivalenceName = JSON.parse(localStorage.getItem('inputRecNameSeshStored'));
         var equivalenceText = JSON.parse(localStorage.getItem('inputRecTextSeshStored'));
 
@@ -50,6 +51,17 @@ function resultShow() {
         var expectedResultText = JSON.parse(localStorage.getItem('expectedResText'));
         var expectedResultCondition = JSON.parse(localStorage.getItem('expectedResCon'));
 
+=======
+        //Coverage Group
+        var coverageMemberList = localStorage.getItem('memberList');
+        var groupName = localStorage.getItem('groupName');
+        console.log(inputParametersList);
+
+    //Expected REsults
+        var expectedResultsNameRetrieve = localStorage.getItem('ExpectedResultsNameVal');
+        var expectedResultsTextRetrieve = localStorage.getItem('ExpectedResultsNameVal');
+        var expectedResultsConditionRetrieve = localStorage.getItem('ExpectedResultsNameVal');
+>>>>>>> 4538bab4672892d33ddd622a6bcc82089e84e856
         //==============Show result============
 
         //Specification Tab
@@ -69,6 +81,7 @@ function resultShow() {
 
             //Equivalence Class
 
+<<<<<<< HEAD
         res.innerHTML += "Equivalence Class Name List: <input type ='text' name= 'inputParameters' id= 'text' value='"
             + equivalenceName + "'</input><br><br>";
 
@@ -88,6 +101,24 @@ function resultShow() {
             + expectedResultText + "'</input><br><br>";
         res.innerHTML += "Equivalence Class Condition: <input type ='text' name= 'equivalenceClasses' id= 'text' value='"
         + expectedResultCondition + "'</input><br><br>";
+=======
+        //Equivalence Classes
+        res.innerHTML += "Equivalence Classes: <input type ='text' id= 'text' value= </input><br><br>";
+        //Coverage Group Tab
+        res.innerHTML += "Group Name: <input type ='text' id= 'text' value='"
+            + groupName + "'</input><br><br>";
+        res.innerHTML += "Member List: <input type ='text' id= 'text' value='"
+            + coverageMemberList + "'</input><br><br>";
+
+        //Expected Results Tab
+        res.innerHTML += "Expected Result Name: <input type ='text' id= 'text' value='"
+        + expectedResultsNameRetrieve + "'</input><br><br>";
+        res.innerHTML += "Expected Result Text: <input type ='text' id= 'text' value='"
+            + expectedResultsTextRetrieve + "'</input><br><br>";
+        res.innerHTML += "Expected Result Condition: <input type ='text' id= 'text' value='"
+            + expectedResultsConditionRetrieve + "'</input><br><br>";
+
+>>>>>>> 4538bab4672892d33ddd622a6bcc82089e84e856
 
             
 
