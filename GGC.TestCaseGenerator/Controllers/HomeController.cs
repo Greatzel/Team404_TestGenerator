@@ -64,6 +64,10 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             return View();
         }
+        public ActionResult Resources()
+        {
+            return View();
+        }
 
         [HttpPost]
         public ActionResult AddSpecification(FormCollection fc)
@@ -377,12 +381,6 @@ namespace GGC.TestCaseGenerator.Controllers
             String fileName = Path.GetFileName("TestSpecificationFile.json");
             String fullPath = Path.Combine(path, fileName);
             return File(fullPath, "file/Json", "TestSpecificationFile.json");
-        }
-
-        [HttpPost]
-        public ActionResult Resources()
-        {
-            return View();
         }
 
         /* public ActionResult InputParameter(InputParameter testSpecification)
