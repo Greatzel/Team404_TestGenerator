@@ -1,9 +1,26 @@
-﻿@{ 
-    ViewBag.Title = "Result";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+﻿@{ ViewBag.Title = "Result";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
+
+@section scripts
+{
+    <script src="~/Scripts/specification-result.js"></script>
 }
 
-<h2>Result</h2>
+<div class="jumbotron">
+    <h2>Result</h2>
+    <button class="btn btn-success" id="show" onclick="resultShow()">Show Result</button><br /><br />
+    <form method="post">
+        <div id="showRes">
+        </div><br />
+        <input class="btn btn-success" onclick="storageClear()" type="submit" value="Submit" /><br /><br />
+    </form> <br /><br />
+    <input type="file" id="selectFiles" value="Upload" /><br />
+    <button id="import">Import</button><br /><br />
+    <textarea id="result"></textarea><br /><br />
 
-<input class="btn btn-success" onclick="" type="" value="Generate Json File" />
-<input class="btn btn-success" onclick="" type="submit" value="Submit Test Specfiication" />
+
+</div>
+
+<div>
+    <a href="/Home/Download">Click here to download</a>
+</div>

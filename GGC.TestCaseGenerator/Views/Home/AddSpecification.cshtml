@@ -1,10 +1,13 @@
 ﻿@model GGC.TestCaseGenerator.Models.TestSpecification
 
-@{ 
-    ViewBag.Title = "Add Specification";        
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+@{ ViewBag.Title = "Add Specification";
+                Layout = "~/Views/Shared/_Layout.cshtml"; }
 
+@section scripts
+{
+
+    <script src="~/Scripts/specification-addspecification.js"></script>
+}
 <h3>@ViewBag.Message</h3>
 
 <div class="jumbotron">
@@ -12,9 +15,9 @@
         <label>Enter test specification name</label>
         <input type="text" id="specificationNameId" name="specificationName" /><br /><br />
         <label>Enter test specification text</label>
-        <input type="text" id="specificationNameId" name="specificationTextName" />
+        <input type="text" id="specificationTextId" name="specificationTextName" />
         <br><br />
-        <button class="btn btn-success" type="submit" onclick="">Submit Specification</button>
+        <button class="btn btn-success" type="submit" onclick="submitSpec()">Submit Specification</button>
     </form>
     <br>
     <br>

@@ -2,112 +2,82 @@
 
 var groupMemberList = [];
 var inputParamsList = ["Param 1", "Param 2", "Param 3", "Param 4", "Param 5"];
+var groupName = document.getElementById('groupnameId');
 
-function GetDynamicTextbox(value) {
-    return '<div><input type="text" id="groupmember" name="member" style="width:200px" /><input type ="button" onclick="RemoveTextBox(this)" value="Remove Members"/></div>';
+//coverage group constructor function
+function coveragegroup(name, members) {
+    this.name = name;
+    this.members = members;
 }
 
-function AddInputField() {
-    var div = document.createElement('DIV');
-    div.innerHTML = GetDynamicTextbox("");
-    document.getElementById("CovGroupName").appendChild(div);
-    console.log(covGroupName);    
-}
+//=========================retrieve test 1 ==============================
 
-function RemoveTextBox(div) {
-    document.getElementById("CovGroupName").removeChild(div.parentNode.parentNode);
-}
+var inputGet = localStorage.getItem('inputNameSeshStored');
+console.log(inputGet);
 
-//Generate Group Names List Labels
-function GroupNamesList() {
-    for (var i = 0; i <= inputParamsList.length; i++) {
-        var div = document.createElement('div');
-        div.innerHTML = GetMemberSetDropdown("");
-        document.getElementById("groupNamesList");
+var inputList = inputGet.split(',');
+
+var finalInputList = [];
+
+
+
+for (var i = 0; i <= inputList.length - 1; i++) {
+    console.log("Value " + i);
+    if (i === 0) {
+        var holder = inputList[i].substring(2, inputList[i].length - 1);
+        console.log("Holder var " + holder);
+        finalInputList.push(holder);
+    }
+    else if (i !== inputList.length - 1) {
+        var holder2 = inputList[i].substring(1, inputList[i].length - 1);
+        finalInputList.push(holder2);
+        console.log("Holder2 var " + holder2);
+    }
+    else if (i === inputList.length - 1) {
+        var holder1 = inputList[i].substring(1, inputList[i].length - 2);
+        finalInputList.push(holder1);
+        console.log("Holder1 var " + holder1);
     }
 }
 
-function GetMemberSetDropdown(value) {
-    return '<div id="selectMember">< label for= "members" > Group A:</label ><input type="button" onclick="AddMemberDropdown()" value="Add Members" /><input type="button" onclick="testReference()" value="TEST REF" /><div id="memberBox" style="padding-left: 50px;"></div></div > <br />';
-}
+console.log(finalInputList);
+console.log(inputList);
 
-//Generate Member Drop down non-Functional
-
-/*var select = document.getElementById("selectNumber");
-
-for (var i = 0; i < inputParamsList.length; i++) {
-    var opt = inputParamsList[i];
-    var el = document.createElement("option");
-    el.textContent = opt;
-    el.value = opt;
-    select.appendChild(el);
-}*/
-
-//Generate Member Dropdown -- Functional
-
-var nameval = 1
-var testval = 1;
-var idval = 1;
-function appendRow2() {
-    var t = document.getElementById('dropDownID');
-    t.innerHTML += "<br><b>Select Members:</b>"
-    t.innerHTML += "<input type='text' value = 'Test" + testval++ +"' name='memberSelect"
-        + nameval++ + "' id='selectMember" + idval++ + "'><br >";
-}
-
-//non functional test
-
-var nameval1 = 1
-var testval1 = 1;
-var idval1 = 1;
-var select1 = 1;
-var appendCount = 0;
-
-function appendRow3() {
-    var t = document.getElementById('dropDownID2');
-    t.innerHTML += "<br><b>Select Members:</b>"
-    t.innerHTML += "<select id='selectMemberID' name='memberSelect>" + testval1++ + "' name='memberSelect"
-        + nameval1++ + "' id='selectMember" + idval1++ + "'>";
-
-    for (var i = 0; i <= inputParamsList.length; i++)
-    {
-        var selectTest = document.getElementById('selectMemberID');
-        selectTest.innerHTML += "<option>appendRow3() TEST" + inputParamsList[i]+ "</option>";
-
-    }
-
-    t.innerHTML += "</select><br />"
-}
+//===================================================================================
 
 //IT WORKS!!!!!!!!!!! MEMBERS DROPDOWN
 
 var nameval5 = 1
 var testval5 = 1;
 var idval5 = 0;
-var select5 = 0;
+var counter = 0;
 var appendCount5 = 0;
 
+var selectedMembers = [];
+
 function appendRow5() {
-    select5++;
+    counter++;
+
     var t = document.getElementById('dropDownID5');
     t.innerHTML += "<br><b>Select Members:</b>";
-    t.innerHTML += "<select id='selectMemberID" + select5 + "' name='memberSelect" + select5 + "'>";
-    var selectTest = document.getElementById('selectMemberID' + select5);
+    t.innerHTML += "<select id='selectMemberID" + counter + "' name='memberSelect" + counter + "'>";
+    var selectTest = document.getElementById('selectMemberID' + counter);
     console.log(selectTest.value);
-    for (var i = 0; i <= inputParamsList.length-1; i++) {
+    for (var i = 0; i <= finalInputList.length - 1; i++) {
 
-        selectTest.innerHTML += "<option name= 'Name" + inputParamsList[i] + "' value = '" + inputParamsList[i] +"'>appendRow5() TEST "
-            + inputParamsList[i] + "</option>";
+        selectTest.innerHTML += "<option name= 'Name" + finalInputList[i] + "' value = '" + finalInputList[i] + "'>"
+            + finalInputList[i] + "</option>";
 
     }
-    console.log("appenRow5 TEST");
-    t.innerHTML += "</select><br />"
+    var htmlSelectMember = document.getElementById('memberSelect' + counter);
+    selectedMembers.push(htmlSelectMember).value;
+    console.log("SELECT MEMBERS: " + selectedMembers);
+    t.innerHTML += "</select><br />";
 }
 
-
 function SubmitGroupName() {
-    console.log("SubmitGroupName Select5 num: " + select5);
-    for (var i = 1; i <= select5; i++) {
+    console.log("SubmitGroupName Select5 num: " + counter);
+    for (var i = 1; i <= counter; i++) {
         var members = document.getElementById('selectMemberID' + i);
         var memberValue = members.value;
         console.log("Variable Members " + memberValue);
@@ -115,8 +85,14 @@ function SubmitGroupName() {
         console.log(groupMemberList);
     }
 
+
+    var groupNameVar = groupName.value;
+    var coverageMemberList = localStorage.setItem('memberList', JSON.stringify(groupMemberList));
+    var coverageGroupNameList = localStorage.setItem('groupName', JSON.stringify(groupNameVar));
+
     var res = document.getElementById('results');
-    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='" + groupMemberList + "' />";
+    res.innerHTML += "<input type = 'hidden' name='CoverageGroupArrayName' value='"
+        + groupMemberList + "' />";
     console.log(groupMemberList);
 }
 

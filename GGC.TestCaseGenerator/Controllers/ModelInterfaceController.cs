@@ -26,7 +26,7 @@ namespace GGC.TestCaseGenerator.Controllers
         CoverageGroup group = new CoverageGroup();
 
         private Models.TestSpecification testSpecification;
-
+        private Models.TestGenerator testGenerator;
         private string savedTestSpecificationAsJson;
 
         public ModelInterfaceController()
@@ -420,8 +420,17 @@ namespace GGC.TestCaseGenerator.Controllers
         {
             testSpecification.Clear();
             bool written = Helpers.FileHelper.WriteAsJson(specificationFileName, testSpecification);
-            //testSpecification.Normalize();
+            testSpecification.Normalize();
             return written;
+        }
+
+        public bool WriteScript(string scriptFileName)
+        {
+            if((testGenerator == null) || (testGenerator.GeneratedTestsInSuite == null))
+            {
+                return false;
+            }
+            return testGenerator.GeneratedTestsInSuite.WriteToFile(scriptFileName);
         }
     }
 }

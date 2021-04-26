@@ -27,7 +27,7 @@ namespace GGC.TestCaseGenerator
                       "~/Content/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/testSpecificationJs").Include(
-                       "~/Scripts/specification-{model}.js"));
+                       "~/Scripts/specification-{testSpecification}.js"));
         }
     }
 }

@@ -10,7 +10,7 @@ namespace GGC.TestCaseGenerator.Tests
 {
     public class GeneratorTests
     {
-        /// <summary>
+        /*/// <summary>
         /// Given that I have an input file in XML format that defines a test specification,
         /// when I generate a test suite of 1 or more test cases from the specification,
         /// then that test suite is written as an output file.
@@ -40,7 +40,7 @@ namespace GGC.TestCaseGenerator.Tests
                 testGenerator.CreateSuiteFromSpecificationAndWrite(inputFilenameWithPath, outputFilenameWithPath),
                 $"Failed to create test suite from test specification in {inputFilename} and write it to {outputFilename}");
         }
-     
+        */
         /// <summary>
         /// Given that I have an input file in JSON format that defines a test specification,
         /// when I generate a test suite of 1 or more test cases from the specification,

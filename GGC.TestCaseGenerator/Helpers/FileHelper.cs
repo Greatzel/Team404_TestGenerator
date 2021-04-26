@@ -12,7 +12,7 @@ namespace GGC.TestCaseGenerator.Helpers
     /// </summary>
     public class FileHelper
     {
-        public static string PathTestGenerator = @"C:\Users\rober\Documents\Software Development 2\git\GGC.TestCaseGenerator\Specifications"; 
+        public static string PathTestGenerator = "C:\\Users\\rober\\Documents\\Software Development 2\\git\\GGC.TestCaseGenerator\\Specifications"; 
 
         /// <summary>
         /// Returns the contents of the specified interface.
