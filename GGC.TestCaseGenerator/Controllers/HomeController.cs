@@ -324,9 +324,11 @@ namespace GGC.TestCaseGenerator.Controllers
             testSpecification.SetExpectedResultText(EntityEnum.Name, "UndefinedRoots", "UndefinedRoots");
             testSpecification.SetExpectedResultText(EntityEnum.Value, "UndefinedRoots", "roots are undefined");
             testSpecification.SetExpectedResultText(EntityEnum.Condition, "UndefinedRoots", "A = 0");
-            /*string parameterList = Request.Form["inputNameSheshStored"];
+            /*
+            string parameterList = Request.Form["inputNameSheshStored"];
 
             List<string> inputParameterList = parameterList.Split(',').ToList();
+
             List<string> equivalenceClassList = Request.Form["expectedResName"].Split(',').ToList();
             List<string> equivalenceClassListText = Request.Form["expectedResName"].Split(',').ToList();
             List<string> equivalenceClassListCondition = Request.Form["expectedResName"].Split(',').ToList();
