@@ -40,5 +40,9 @@ A prototype of this project has been implemented already as a Windows console ap
       * Nunit.Engine.Api
       * Nunit.json
       * Nunit.JS
+      * bootstrap
+      * Microsoft.Asp.Net.Razor
+      * .NET Framework
    5. Add Assemblies
       * Assembly/System.Windows.Forms
+   6. Reload the project if necessary otherwise open it again
