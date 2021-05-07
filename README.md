@@ -21,7 +21,8 @@
   * Documentation Lead
   
   
-#### Discord server: (like https://discord.gg/K6JdQ6VE)
+#### Discord server: https://discord.gg/K6JdQ6VE
+#### Screencast: https://youtu.be/zVCKTfZlURY
 
 ### Introduction
 The team will implement a web-based tool that allows a user to specify the functionality of software under test using the category-partition method. This tool will have a web-based client GUI for users and a C# based server for the tool’s functionality. Based on input from the user, this tool will generate a file containing test cases specified in the Cucumber given-when-then notation.
