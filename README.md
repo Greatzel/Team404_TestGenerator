@@ -43,9 +43,7 @@ A prototype of this project has been implemented already as a Windows console ap
       * Nunit.json
       * Nunit.JS
       * bootstrap
-      * JQuery
       * Microsoft.Asp.Net.Razor
-      * JQuery.Validation
       * .NET Framework
    5. Add Assemblies
       * Assembly/System.Windows.Forms
